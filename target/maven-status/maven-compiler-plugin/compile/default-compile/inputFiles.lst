@@ -1,0 +1,16 @@
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/DAO/UsuarioDAO.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/bd/Conexion.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/bd/TestConexion.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/com/mycompany/musicapoo/MusicaPOO.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/interfaces/Login.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/interfaces/RegistroUsuario.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Album.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Cancion.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Capitulos.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Compras.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Multimedia.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Pelicula.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Serie.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/model/Usuario.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/utils/Validaciones.java
+/home/cybergato/NetBeansProjects/MusicaPOO/src/main/java/utils/ValidarDatosJOptionPane.java
