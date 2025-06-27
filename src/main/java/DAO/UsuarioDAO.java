@@ -17,4 +17,8 @@ public class UsuarioDAO {
         System.out.println(usuario);
     }
     
+    public boolean iniciarSesion(String username, String password){
+        return true;
+    }
+    
 }

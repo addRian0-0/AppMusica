@@ -4,6 +4,8 @@
  */
 package interfaces;
 
+import DAO.UsuarioDAO;
+
 /**
  *
  * @author cybergato
@@ -131,7 +133,15 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        // TODO add your handling code here:
+        
+        UsuarioDAO dao = new UsuarioDAO();
+        dao.iniciarSesion(usernameInput.getText(), passInput.getText());
+        
+        MainApp mainScreen = new MainApp();
+        mainScreen.setVisible(true);
+        mainScreen.setLocationRelativeTo(null);
+        this.dispose();
+
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void passInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passInputActionPerformed

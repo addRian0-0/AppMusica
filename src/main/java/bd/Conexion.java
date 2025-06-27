@@ -13,7 +13,7 @@ public class Conexion {
                 + "user=" + dotenv.get("DB_USER") + ";"
                 + "password=" + dotenv.get("DB_PASSWORD") + ";"
                 + "encrypt=true;"
-                + "trustServerCertificate=false;"
+                + "trustServerCertificate=true;"
                 + "loginTimeout=30;";
         return DriverManager.getConnection(url);
     }
