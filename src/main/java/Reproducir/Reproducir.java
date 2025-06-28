@@ -27,4 +27,10 @@ public class Reproducir {
             e.printStackTrace();
         }
     }
+    public static void pausar() {
+        if (player != null) {
+            player.close();
+        }
+    }
+
 }
