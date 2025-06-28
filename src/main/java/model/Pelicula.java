@@ -33,5 +33,63 @@ public class Pelicula extends Multimedia{
         this.actores = actores;
         this.duracion = duracion;
     }
+
+    public Album getSoundtrack() {
+        return soundtrack;
+    }
+
+    public void setSoundtrack(Album soundtrack) {
+        this.soundtrack = soundtrack;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String getCasaProductora() {
+        return casaProductora;
+    }
+
+    public void setCasaProductora(String casaProductora) {
+        this.casaProductora = casaProductora;
+    }
+
+    public String getFormato() {
+        return formato;
+    }
+
+    public void setFormato(String formato) {
+        this.formato = formato;
+    }
+
+    public String getSinopsis() {
+        return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
+    }
+
+    public String getActores() {
+        return actores;
+    }
+
+    public void setActores(String actores) {
+        this.actores = actores;
+    }
+
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
+    }
+    
+    
     
 }
