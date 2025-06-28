@@ -40,7 +40,6 @@ public class MainApp extends javax.swing.JFrame {
     SeriesDAO seriesDAO = new SeriesDAO();
 
     List<Album> albumsList = albumDAO.getAlbum();
-    List<Cancion> cancionesList = pistaDAO.getCanciones();
     List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
     List<Serie> seriesList = seriesDAO.getSeries();
 
@@ -81,7 +80,29 @@ public class MainApp extends javax.swing.JFrame {
         mainContainerPanel = new javax.swing.JPanel();
         mainTitleLabel = new javax.swing.JLabel();
         panelScrollData = new javax.swing.JScrollPane();
-        panelShowData = new javax.swing.JPanel();
+        panelShowData = new javax.swing.JPanel() {
+            @Override
+            public java.awt.Dimension getPreferredSize() {
+                // Alto dinámico, ajusta el valor de 120 según el alto de tus tarjetas
+                return new java.awt.Dimension(800, getComponentCount() * 120);
+            }
+        };
+        panelShowData.setLayout(new javax.swing.BoxLayout(panelShowData, javax.swing.BoxLayout.Y_AXIS));
+        panelShowData.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 16, 16));
+
+
+        this.setMinimumSize(new java.awt.Dimension(1000, 700));
+        this.setPreferredSize(new java.awt.Dimension(1200, 800));
+
+
+        this.setLocationRelativeTo(null); // Centra la ventana en pantalla
+
+        panelScrollData.setViewportView(panelShowData);
+        panelShowData.setPreferredSize(null);
+        panelShowData.revalidate();
+        panelShowData.repaint();
+
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,16 +199,6 @@ public class MainApp extends javax.swing.JFrame {
 
         mainTitleLabel.setText("Pagina principal");
 
-        javax.swing.GroupLayout panelShowDataLayout = new javax.swing.GroupLayout(panelShowData);
-        panelShowData.setLayout(panelShowDataLayout);
-        panelShowDataLayout.setHorizontalGroup(
-            panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 881, Short.MAX_VALUE)
-        );
-        panelShowDataLayout.setVerticalGroup(
-            panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
-        );
 
         panelScrollData.setViewportView(panelShowData);
 
@@ -242,20 +253,19 @@ public class MainApp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCancionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancionesActionPerformed
-        panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
-        panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
-
+    private void btnCancionesActionPerformed(java.awt.event.ActionEvent evt) {
         panelShowData.removeAll();
-        panelShowData.revalidate();
-        panelShowData.repaint();
+
+        CancionDAO pistaDAO = new CancionDAO();
+        List<Cancion> cancionesList = pistaDAO.getPistas1();
 
         for (Cancion p : cancionesList) {
             TarjetaCancion tarjeta = new TarjetaCancion(p);
-            tarjeta.setMaximumSize(new Dimension(Integer.MAX_VALUE, 100)); // Alto fijo, ancho expandible
             panelShowData.add(tarjeta);
         }
 
+        panelShowData.revalidate();
+        panelShowData.repaint();
     }//GEN-LAST:event_btnCancionesActionPerformed
 
     private void btnAlbumesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlbumesActionPerformed
