@@ -72,6 +72,9 @@ public class MainApp extends javax.swing.JFrame {
         btnAlbumes = new javax.swing.JButton();
         btnPeliculas = new javax.swing.JButton();
         btnSeries = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        historialBtn = new javax.swing.JButton();
+        carritoBtn = new javax.swing.JButton();
         mainContainerPanel = new javax.swing.JPanel();
         mainTitleLabel = new javax.swing.JLabel();
         panelScrollData = new javax.swing.JScrollPane();
@@ -113,6 +116,12 @@ public class MainApp extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Compras");
+
+        historialBtn.setText("Historial");
+
+        carritoBtn.setText("Carrito");
+
         javax.swing.GroupLayout sideMenuPanelLayout = new javax.swing.GroupLayout(sideMenuPanel);
         sideMenuPanel.setLayout(sideMenuPanelLayout);
         sideMenuPanelLayout.setHorizontalGroup(
@@ -120,6 +129,9 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(sideMenuPanelLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(carritoBtn)
+                    .addComponent(historialBtn)
+                    .addComponent(jLabel1)
                     .addComponent(btnSeries)
                     .addComponent(btnPeliculas)
                     .addComponent(btnAlbumes)
@@ -140,6 +152,12 @@ public class MainApp extends javax.swing.JFrame {
                 .addComponent(btnPeliculas)
                 .addGap(18, 18, 18)
                 .addComponent(btnSeries)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(historialBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(carritoBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -311,6 +329,9 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JButton btnCanciones;
     private javax.swing.JButton btnPeliculas;
     private javax.swing.JButton btnSeries;
+    private javax.swing.JButton carritoBtn;
+    private javax.swing.JButton historialBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainContainerPanel;
     private javax.swing.JLabel mainTitleLabel;
     private javax.swing.JScrollPane panelScrollData;

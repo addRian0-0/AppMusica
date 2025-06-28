@@ -11,6 +11,7 @@ DAO\SeriesDAO.class
 interfaces\MainApp$1.class
 model\Usuario$TipoUsuario.class
 interfaces\gui\TarjetaSerie.class
+interfaces\gui\TarjetaAlbumCancion$2.class
 interfaces\Login$5.class
 interfaces\MainApp$2.class
 interfaces\gui\TarjetaCancion.class
@@ -22,6 +23,7 @@ interfaces\RegistroUsuario.class
 model\Compras.class
 DAO\CancionDAO$1.class
 DAO\UsuarioDAO.class
+interfaces\gui\TarjetaAlbumCancion$1.class
 model\Cancion.class
 model\Usuario.class
 interfaces\gui\TarjetaPelicula.class
@@ -39,6 +41,7 @@ interfaces\gui\TarjetaPelicula$1.class
 interfaces\Login$1.class
 interfaces\Login$3.class
 model\Serie.class
+interfaces\gui\TarjetaAlbumCancion.class
 DAO\CancionDAO.class
 interfaces\gui\TarjetaAlbum.class
 interfaces\MainApp.class
