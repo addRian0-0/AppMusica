@@ -6,6 +6,8 @@ package interfaces.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Image;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -29,27 +31,12 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         anoLbl.setText(Integer.toString(album.getAnio()));
 
         // Cargar imagen
-        if (album.getUrlPortada()!= null && !album.getUrlPortada().isEmpty()) {
-            SwingUtilities.invokeLater(() -> {
-                try {
-                    URL url = new URL(album.getUrlPortada());
-                    ImageIcon icon = new ImageIcon(url);
-                    Image img = icon.getImage().getScaledInstance(
-                            imagenIconContainer.getWidth() > 0 ? imagenIconContainer.getWidth() : 100,
-                            imagenIconContainer.getHeight() > 0 ? imagenIconContainer.getHeight() : 100,
-                            Image.SCALE_SMOOTH
-                    );
-
-                    JLabel imgLabel = new JLabel(new ImageIcon(img));
-                    imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-                    imgLabel.setVerticalAlignment(SwingConstants.CENTER);
-
-                    imagenIconContainer.setLayout(new BorderLayout());
-                    imagenIconContainer.add(imgLabel, BorderLayout.CENTER);
-                    imagenIconContainer.revalidate();
-                    imagenIconContainer.repaint();
-                } catch (Exception e) {
-                    e.printStackTrace();
+        if (album.getUrlPortada() != null && !album.getUrlPortada().isEmpty()) {
+            imagenIconContainer.addComponentListener(new ComponentAdapter() {
+                @Override
+                public void componentResized(ComponentEvent e) {
+                    imagenIconContainer.removeComponentListener(this); // Para que no se llame más de una vez
+                    cargarImagen(album.getUrlPortada());
                 }
             });
         }
@@ -57,6 +44,31 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         // Refrescar panel
         imagenIconContainer.revalidate();
         imagenIconContainer.repaint();
+    }
+
+    private void cargarImagen(String urlStr) {
+        try {
+            URL url = new URL(urlStr);
+            ImageIcon icon = new ImageIcon(url);
+            Image img = icon.getImage().getScaledInstance(
+                    imagenIconContainer.getWidth(),
+                    imagenIconContainer.getHeight(),
+                    Image.SCALE_SMOOTH
+            );
+
+            JLabel imgLabel = new JLabel(new ImageIcon(img));
+            imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+
+            imagenIconContainer.setLayout(new BorderLayout());
+            imagenIconContainer.removeAll(); // Limpia imágenes anteriores
+            imagenIconContainer.add(imgLabel, BorderLayout.CENTER);
+            imagenIconContainer.revalidate();
+            imagenIconContainer.repaint();
+        } catch (Exception e) {
+            System.out.println("Error cargando imagen: " + urlStr);
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -73,6 +85,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         nombreAlbumLbl = new javax.swing.JLabel();
         nombreArtistaLbl = new javax.swing.JLabel();
         anoLbl = new javax.swing.JLabel();
+        agregarBtn = new javax.swing.JButton();
 
         javax.swing.GroupLayout imagenIconContainerLayout = new javax.swing.GroupLayout(imagenIconContainer);
         imagenIconContainer.setLayout(imagenIconContainerLayout);
@@ -91,6 +104,8 @@ public class TarjetaAlbum extends javax.swing.JPanel {
 
         anoLbl.setText("Año de creacion");
 
+        agregarBtn.setText("Agregar");
+
         javax.swing.GroupLayout panelAlbumLayout = new javax.swing.GroupLayout(panelAlbum);
         panelAlbum.setLayout(panelAlbumLayout);
         panelAlbumLayout.setHorizontalGroup(
@@ -101,9 +116,11 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nombreAlbumLbl)
-                    .addComponent(anoLbl)
-                    .addComponent(nombreArtistaLbl))
-                .addContainerGap(47, Short.MAX_VALUE))
+                    .addComponent(nombreArtistaLbl)
+                    .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(agregarBtn)
+                        .addComponent(anoLbl)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         panelAlbumLayout.setVerticalGroup(
             panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +134,9 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                         .addComponent(nombreArtistaLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(anoLbl)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(agregarBtn)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -134,6 +153,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton agregarBtn;
     private javax.swing.JLabel anoLbl;
     private javax.swing.JPanel imagenIconContainer;
     private javax.swing.JLabel nombreAlbumLbl;

@@ -10,12 +10,12 @@ package model;
  */
 public class Capitulos extends Multimedia{
     
-    private int numCapitulo, numTemporada, duracion;
-    private String sinopsis;
+    private int numCapitulo, numTemporada;
+    private String sinopsis, duracion;
     
     public Capitulos(){}
 
-    public Capitulos(int numCapitulo, int numTemporada, int duracion, String sinopsis, String titulo, String generos, String urlPortada, int anio, float precio) {
+    public Capitulos(int numCapitulo, int numTemporada, String duracion, String sinopsis, String titulo, String generos, String urlPortada, int anio, float precio) {
         super(titulo, generos, urlPortada, anio, precio);
         this.numCapitulo = numCapitulo;
         this.numTemporada = numTemporada;
@@ -39,11 +39,11 @@ public class Capitulos extends Multimedia{
         this.numTemporada = numTemporada;
     }
 
-    public int getDuracion() {
+    public String getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(String duracion) {
         this.duracion = duracion;
     }
 

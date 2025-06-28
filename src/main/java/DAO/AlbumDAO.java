@@ -1,6 +1,10 @@
 package DAO;
 
 import bd.Conexion;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.io.FileReader;
+import java.lang.ProcessBuilder.Redirect.Type;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -19,6 +23,25 @@ import model.Album;
 public class AlbumDAO {
 
     public List<Album> getAlbum() {
+        List<Album> lista = new ArrayList<>();
+
+        try {
+            // Cambia la ruta si ejecutas desde otra ubicación
+            FileReader reader = new FileReader("data/multimedia1.json");
+
+            Gson gson = new Gson();
+            java.lang.reflect.Type albumListType = new TypeToken<List<Album>>() {}.getType();
+            lista = gson.fromJson(reader, albumListType);
+
+            reader.close();
+        } catch (Exception e) {
+            System.out.println("Error al leer el archivo JSON: " + e.getMessage());
+        }
+
+        return lista;
+    }
+    
+    public List<Album> getAlbum1() {
 
         List<Album> lista = new ArrayList<>();
 

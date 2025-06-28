@@ -37,10 +37,13 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="nombreAlbumLbl" min="-2" max="-2" attributes="0"/>
-                      <Component id="anoLbl" min="-2" max="-2" attributes="0"/>
                       <Component id="nombreArtistaLbl" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="agregarBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="anoLbl" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace pref="64" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -58,7 +61,9 @@
                           <Component id="anoLbl" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="agregarBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -92,6 +97,11 @@
         <Component class="javax.swing.JLabel" name="anoLbl">
           <Properties>
             <Property name="text" type="java.lang.String" value="A&#xf1;o de creacion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="agregarBtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Agregar"/>
           </Properties>
         </Component>
       </SubComponents>

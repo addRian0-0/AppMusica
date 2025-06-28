@@ -4,6 +4,15 @@
  */
 package interfaces.gui;
 
+import java.awt.BorderLayout;
+import java.awt.Image;
+import java.net.URL;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import model.Serie;
+
 /**
  *
  * @author PC
@@ -13,8 +22,44 @@ public class TarjetaSerie extends javax.swing.JPanel {
     /**
      * Creates new form TarjetaSerie
      */
-    public TarjetaSerie() {
+    public TarjetaSerie(Serie serie) {
         initComponents();
+        tituloLabel.setText(serie.getTitulo());
+        sinopsisLabel.setText(serie.getSinopsis());
+        anioLabel.setText(Integer.toString(serie.getAnio()));
+        generosLabel.setText(serie.getGeneros());
+        precioLabel.setText(Float.toString(serie.getPrecio()));
+        formatoLabel.setText(serie.getFormato());
+        temporadasLabel.setText(Integer.toString(serie.getTemporadas()));
+        
+        if (serie.getUrlPortada()!= null && !serie.getUrlPortada().isEmpty()) {
+            SwingUtilities.invokeLater(() -> {
+                try {
+                    URL url = new URL(serie.getUrlPortada());
+                    ImageIcon icon = new ImageIcon(url);
+                    Image img = icon.getImage().getScaledInstance(
+                           imgPortada.getWidth() > 0 ?imgPortada.getWidth() : 100,
+                           imgPortada.getHeight() > 0 ?imgPortada.getHeight() : 100,
+                            Image.SCALE_SMOOTH
+                    );
+
+                    JLabel imgLabel = new JLabel(new ImageIcon(img));
+                    imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+                    imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+
+                   imgPortada.setLayout(new BorderLayout());
+                   imgPortada.add(imgLabel, BorderLayout.CENTER);
+                   imgPortada.revalidate();
+                   imgPortada.repaint();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+        
+        imgPortada.revalidate();
+        imgPortada.repaint();
+        
     }
 
     /**
@@ -26,19 +71,178 @@ public class TarjetaSerie extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imgPortada = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        precioLabel = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        tituloLabel = new javax.swing.JLabel();
+        generosLabel = new javax.swing.JLabel();
+        anioLabel = new javax.swing.JLabel();
+        sinopsisLabel = new javax.swing.JLabel();
+        formatoLabel = new javax.swing.JLabel();
+        temporadasLabel = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout imgPortadaLayout = new javax.swing.GroupLayout(imgPortada);
+        imgPortada.setLayout(imgPortadaLayout);
+        imgPortadaLayout.setHorizontalGroup(
+            imgPortadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 124, Short.MAX_VALUE)
+        );
+        imgPortadaLayout.setVerticalGroup(
+            imgPortadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 130, Short.MAX_VALUE)
+        );
+
+        jLabel1.setText("Titulo: ");
+
+        jLabel2.setText("Genero(s):");
+
+        jLabel3.setText("Año de lanzamiento: ");
+
+        jLabel4.setText("Formato:");
+
+        jButton1.setText("Agregar");
+
+        precioLabel.setText("jLabel5");
+
+        jLabel5.setText("Precio:");
+
+        jLabel6.setText("Sinopsis: ");
+
+        jLabel7.setText("Temporadas: ");
+
+        tituloLabel.setText("jLabel8");
+
+        generosLabel.setText("jLabel8");
+
+        anioLabel.setText("jLabel8");
+
+        sinopsisLabel.setText("jLabel8");
+
+        formatoLabel.setText("jLabel8");
+
+        temporadasLabel.setText("jLabel8");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(generosLabel))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tituloLabel))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(anioLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(sinopsisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(formatoLabel))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(temporadasLabel))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(precioLabel)))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(precioLabel)
+                            .addComponent(jLabel5)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(tituloLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(generosLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(anioLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(sinopsisLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(formatoLabel))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(temporadasLabel))
+                        .addGap(38, 38, 38))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel anioLabel;
+    private javax.swing.JLabel formatoLabel;
+    private javax.swing.JLabel generosLabel;
+    private javax.swing.JPanel imgPortada;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel precioLabel;
+    private javax.swing.JLabel sinopsisLabel;
+    private javax.swing.JLabel temporadasLabel;
+    private javax.swing.JLabel tituloLabel;
     // End of variables declaration//GEN-END:variables
 }

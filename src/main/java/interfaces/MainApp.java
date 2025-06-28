@@ -6,8 +6,12 @@ package interfaces;
 
 import DAO.AlbumDAO;
 import DAO.CancionDAO;
+import DAO.PeliculasDAO;
+import DAO.SeriesDAO;
 import interfaces.gui.TarjetaAlbum;
 import interfaces.gui.TarjetaCancion;
+import interfaces.gui.TarjetaPelicula;
+import interfaces.gui.TarjetaSerie;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.List;
@@ -15,6 +19,8 @@ import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import model.Album;
 import model.Cancion;
+import model.Pelicula;
+import model.Serie;
 
 /**
  *
@@ -27,8 +33,13 @@ public class MainApp extends javax.swing.JFrame {
      */
     AlbumDAO albumDAO = new AlbumDAO();
     CancionDAO pistaDAO = new CancionDAO();
+    PeliculasDAO peliculaDAO = new PeliculasDAO();
+    SeriesDAO seriesDAO = new SeriesDAO();
+    
     List<Album> albumsList = albumDAO.getAlbum();
-    List<Cancion> cancionesList = pistaDAO.getPistas();
+    List<Cancion> cancionesList = pistaDAO.getCanciones();
+    List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
+    List<Serie> seriesList = seriesDAO.getSeries();
 
     public MainApp() {
     
@@ -232,15 +243,32 @@ public class MainApp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAlbumesActionPerformed
 
     private void btnPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeliculasActionPerformed
+        panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
+        panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
+        
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
+        
+        for (Pelicula p : peliculasList) {
+            TarjetaPelicula tarjetaPeliculaGUI = new TarjetaPelicula(p);
+            panelShowData.add(tarjetaPeliculaGUI);
+        }
     }//GEN-LAST:event_btnPeliculasActionPerformed
 
     private void btnSeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeriesActionPerformed
+        panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
+        panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
+        
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
+        
+       for (Serie s : seriesList) {
+            TarjetaSerie tarjetaSerie = new TarjetaSerie(s);
+            panelShowData.add(tarjetaSerie);
+        } 
+        
     }//GEN-LAST:event_btnSeriesActionPerformed
 
     /**

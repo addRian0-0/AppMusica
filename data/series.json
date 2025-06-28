@@ -1,0 +1,132 @@
+[
+  {
+    "formato": "Digital",
+    "director": "Vince Gilligan",
+    "casaProductora": "AMC",
+    "sinopsis": "Un profesor de química de secundaria recurre a la fabricación de metanfetamina para asegurar el futuro de su familia.",
+    "temporadas": 5,
+    "listaCapitulos": [
+      {
+        "titulo": "Pilot",
+        "duracion": "58 min",
+        "temporada": 1,
+        "numeroCapitulo": 1
+      },
+      {
+        "titulo": "Felina",
+        "duracion": "55 min",
+        "temporada": 5,
+        "numeroCapitulo": 16
+      }
+    ],
+    "titulo": "Breaking Bad",
+    "generos": "Drama, Crimen",
+    "urlPortada": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "anio": 2008,
+    "precio": 0.0
+  },
+  {
+    "formato": "Digital",
+    "director": "David Benioff & D. B. Weiss",
+    "casaProductora": "HBO",
+    "sinopsis": "Nueve familias nobles luchan por el control de los Siete Reinos de Westeros.",
+    "temporadas": 8,
+    "listaCapitulos": [
+      {
+        "titulo": "Winter Is Coming",
+        "duracion": "62 min",
+        "temporada": 1,
+        "numeroCapitulo": 1
+      },
+      {
+        "titulo": "The Iron Throne",
+        "duracion": "80 min",
+        "temporada": 8,
+        "numeroCapitulo": 6
+      }
+    ],
+    "titulo": "Game of Thrones",
+    "generos": "Fantasía, Drama",
+    "urlPortada": "https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg",
+    "anio": 2011,
+    "precio": 0.0
+  },
+  {
+    "formato": "Streaming",
+    "director": "The Duffer Brothers",
+    "casaProductora": "Netflix",
+    "sinopsis": "Un grupo de niños se enfrenta a fuerzas sobrenaturales en su pequeña ciudad.",
+    "temporadas": 4,
+    "listaCapitulos": [
+      {
+        "titulo": "The Vanishing of Will Byers",
+        "duracion": "49 min",
+        "temporada": 1,
+        "numeroCapitulo": 1
+      },
+      {
+        "titulo": "The Piggyback",
+        "duracion": "98 min",
+        "temporada": 4,
+        "numeroCapitulo": 9
+      }
+    ],
+    "titulo": "Stranger Things",
+    "generos": "Ciencia ficción, Terror",
+    "urlPortada": "https://upload.wikimedia.org/wikipedia/en/f/f7/Stranger_Things_season_1.jpg",
+    "anio": 2016,
+    "precio": 0.0
+  },
+  {
+    "formato": "Digital",
+    "director": "Phoebe Waller-Bridge",
+    "casaProductora": "BBC America",
+    "sinopsis": "Una asesina y una agente del MI6 se obsesionan mutuamente.",
+    "temporadas": 4,
+    "listaCapitulos": [
+      {
+        "titulo": "Nice Face",
+        "duracion": "42 min",
+        "temporada": 1,
+        "numeroCapitulo": 1
+      },
+      {
+        "titulo": "Hello, Losers",
+        "duracion": "42 min",
+        "temporada": 4,
+        "numeroCapitulo": 8
+      }
+    ],
+    "titulo": "Killing Eve",
+    "generos": "Thriller, Drama",
+    "urlPortada": "https://upload.wikimedia.org/wikipedia/en/0/06/Killing_Eve_title_card.png",
+    "anio": 2018,
+    "precio": 0.0
+  },
+  {
+    "formato": "Streaming",
+    "director": "Mike Flanagan",
+    "casaProductora": "Netflix",
+    "sinopsis": "Una familia se enfrenta a su pasado traumático en una mansión embrujada.",
+    "temporadas": 1,
+    "listaCapitulos": [
+      {
+        "titulo": "Steven Sees a Ghost",
+        "duracion": "60 min",
+        "temporada": 1,
+        "numeroCapitulo": 1
+      },
+      {
+        "titulo": "Silence Lay Steadily",
+        "duracion": "71 min",
+        "temporada": 1,
+        "numeroCapitulo": 10
+      }
+    ],
+    "titulo": "The Haunting of Hill House",
+    "generos": "Terror, Drama",
+    "urlPortada": "https://upload.wikimedia.org/wikipedia/en/6/61/The_Haunting_of_Hill_House.png",
+    "anio": 2018,
+    "precio": 0.0
+  }
+]

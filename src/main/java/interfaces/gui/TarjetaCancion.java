@@ -187,7 +187,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
 
     private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed
         Reproducir rep = new Reproducir();
-        rep.Reproducir(this.cancion.getUrlPortada());
+        rep.Reproducir(this.cancion.getUrlCancion());
     }//GEN-LAST:event_reproducirBtnActionPerformed
 
     private void agregarLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarLblActionPerformed

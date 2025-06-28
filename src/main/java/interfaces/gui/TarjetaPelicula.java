@@ -4,17 +4,60 @@
  */
 package interfaces.gui;
 
+import java.awt.BorderLayout;
+import java.awt.Image;
+import java.net.URL;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import model.Pelicula;
+
 /**
  *
  * @author PC
  */
 public class TarjetaPelicula extends javax.swing.JPanel {
 
-    /**
-     * Creates new form TarjetaPelicula
-     */
-    public TarjetaPelicula() {
+    private Pelicula pelicula;
+    public TarjetaPelicula(Pelicula pelicula) {
         initComponents();
+        tituloLabel.setText(pelicula.getTitulo());
+        sinopsisLabel.setText(pelicula.getSinopsis());
+        actoresLabel.setText(pelicula.getActores());
+        anioLabel.setText(Integer.toString(pelicula.getAnio()));
+        duracionLabel.setText(pelicula.getDuracion());
+        generosLabel.setText(pelicula.getGeneros());
+        
+        if (pelicula.getUrlPortada()!= null && !pelicula.getUrlPortada().isEmpty()) {
+            SwingUtilities.invokeLater(() -> {
+                try {
+                    URL url = new URL(pelicula.getUrlPortada());
+                    ImageIcon icon = new ImageIcon(url);
+                    Image img = icon.getImage().getScaledInstance(
+                           imgPortada.getWidth() > 0 ?imgPortada.getWidth() : 100,
+                           imgPortada.getHeight() > 0 ?imgPortada.getHeight() : 100,
+                            Image.SCALE_SMOOTH
+                    );
+
+                    JLabel imgLabel = new JLabel(new ImageIcon(img));
+                    imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+                    imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+
+                   imgPortada.setLayout(new BorderLayout());
+                   imgPortada.add(imgLabel, BorderLayout.CENTER);
+                   imgPortada.revalidate();
+                   imgPortada.repaint();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+        
+        imgPortada.revalidate();
+        imgPortada.repaint();
+        
+        
     }
 
     /**
@@ -27,7 +70,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        imgPortada = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -40,16 +83,18 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         actoresLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         duracionLabel = new javax.swing.JLabel();
-        btnComprar = new javax.swing.JButton();
+        agregarBtn = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        precioLabel = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout imgPortadaLayout = new javax.swing.GroupLayout(imgPortada);
+        imgPortada.setLayout(imgPortadaLayout);
+        imgPortadaLayout.setHorizontalGroup(
+            imgPortadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 118, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        imgPortadaLayout.setVerticalGroup(
+            imgPortadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 118, Short.MAX_VALUE)
         );
 
@@ -77,12 +122,16 @@ public class TarjetaPelicula extends javax.swing.JPanel {
 
         duracionLabel.setText("jLabel7");
 
-        btnComprar.setText("Comprar");
-        btnComprar.addActionListener(new java.awt.event.ActionListener() {
+        agregarBtn.setText("Agregar");
+        agregarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnComprarActionPerformed(evt);
+                agregarBtnActionPerformed(evt);
             }
         });
+
+        jLabel7.setText("Precio:");
+
+        precioLabel.setText("precio");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,14 +139,19 @@ public class TarjetaPelicula extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(btnComprar)
-                        .addGap(38, 38, 38)))
+                        .addComponent(agregarBtn)
+                        .addGap(38, 38, 38))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(5, 5, 5)
+                                .addComponent(precioLabel))
+                            .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -124,7 +178,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(actoresLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,16 +203,18 @@ public class TarjetaPelicula extends javax.swing.JPanel {
                             .addComponent(sinopsisLabel))
                         .addGap(11, 11, 11))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(actoresLabel)
-                    .addComponent(btnComprar))
+                    .addComponent(agregarBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(duracionLabel))
+                    .addComponent(duracionLabel)
+                    .addComponent(jLabel7)
+                    .addComponent(precioLabel))
                 .addGap(8, 8, 8))
         );
 
@@ -166,9 +222,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,25 +230,27 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarActionPerformed
+    private void agregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnComprarActionPerformed
+    }//GEN-LAST:event_agregarBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel actoresLabel;
+    private javax.swing.JButton agregarBtn;
     private javax.swing.JLabel anioLabel;
-    private javax.swing.JButton btnComprar;
     private javax.swing.JLabel duracionLabel;
     private javax.swing.JLabel generosLabel;
+    private javax.swing.JPanel imgPortada;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel precioLabel;
     private javax.swing.JLabel sinopsisLabel;
     private javax.swing.JLabel tituloLabel;
     // End of variables declaration//GEN-END:variables
