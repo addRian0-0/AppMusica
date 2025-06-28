@@ -13,15 +13,13 @@ import java.util.List;
  */
 public class Compras {
     
-    private Date fechaCompra;
+    private String fechaCompra;
     private String correoUsuario, codigoCompra;
     private List<Multimedia> contenidoComprado;
     private List<EnlaceDescarga> listaEnlacesDescarga;
     private boolean estadoCompra; //indica si esta en carrito o ya fue comprada
 
-    public Compras(){}
-    
-    public Compras(Date fechaCompra, String correoUsuario, String codigoCompra, List<Multimedia> contenidoComprado, List<EnlaceDescarga> listaEnlacesDescarga, boolean estadoCompra) {
+    public Compras(String fechaCompra, String correoUsuario, String codigoCompra, List<Multimedia> contenidoComprado, List<EnlaceDescarga> listaEnlacesDescarga, boolean estadoCompra) {
         this.fechaCompra = fechaCompra;
         this.correoUsuario = correoUsuario;
         this.codigoCompra = codigoCompra;
@@ -29,12 +27,14 @@ public class Compras {
         this.listaEnlacesDescarga = listaEnlacesDescarga;
         this.estadoCompra = estadoCompra;
     }
+    
+    public Compras(){}
 
-    public Date getFechaCompra() {
+    public String getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(Date fechaCompra) {
+    public void setFechaCompra(String fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 
@@ -77,7 +77,7 @@ public class Compras {
     public void setEstadoCompra(boolean estadoCompra) {
         this.estadoCompra = estadoCompra;
     }
-    
+
     
     
 }

@@ -157,11 +157,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Historial"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="historialBtnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="carritoBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Carrito"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carritoBtnActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

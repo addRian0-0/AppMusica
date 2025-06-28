@@ -13,13 +13,11 @@ import java.util.Date;
 public class EnlaceDescarga {
     
     private String enlaceGenerado;
-    private Date fechaGeneracion, fechaDescarga, fechaExpiracion;
+    private String fechaGeneracion, fechaDescarga, fechaExpiracion;
     private boolean estadoDescarga, estadoPenalizacion;
     private float penalizacion;
 
-    public EnlaceDescarga(){}
-    
-    public EnlaceDescarga(String enlaceGenerado, Date fechaGeneracion, Date fechaDescarga, Date fechaExpiracion, boolean estadoDescarga, boolean estadoPenalizacion, float penalizacion) {
+    public EnlaceDescarga(String enlaceGenerado, String fechaGeneracion, String fechaDescarga, String fechaExpiracion, boolean estadoDescarga, boolean estadoPenalizacion, float penalizacion) {
         this.enlaceGenerado = enlaceGenerado;
         this.fechaGeneracion = fechaGeneracion;
         this.fechaDescarga = fechaDescarga;
@@ -29,36 +27,40 @@ public class EnlaceDescarga {
         this.penalizacion = penalizacion;
     }
 
+    public String getFechaGeneracion() {
+        return fechaGeneracion;
+    }
+
+    public void setFechaGeneracion(String fechaGeneracion) {
+        this.fechaGeneracion = fechaGeneracion;
+    }
+
+    public String getFechaDescarga() {
+        return fechaDescarga;
+    }
+
+    public void setFechaDescarga(String fechaDescarga) {
+        this.fechaDescarga = fechaDescarga;
+    }
+
+    public String getFechaExpiracion() {
+        return fechaExpiracion;
+    }
+
+    public void setFechaExpiracion(String fechaExpiracion) {
+        this.fechaExpiracion = fechaExpiracion;
+    }
+    
+    
+    
+    public EnlaceDescarga(){}
+
     public String getEnlaceGenerado() {
         return enlaceGenerado;
     }
 
     public void setEnlaceGenerado(String enlaceGenerado) {
         this.enlaceGenerado = enlaceGenerado;
-    }
-
-    public Date getFechaGeneracion() {
-        return fechaGeneracion;
-    }
-
-    public void setFechaGeneracion(Date fechaGeneracion) {
-        this.fechaGeneracion = fechaGeneracion;
-    }
-
-    public Date getFechaDescarga() {
-        return fechaDescarga;
-    }
-
-    public void setFechaDescarga(Date fechaDescarga) {
-        this.fechaDescarga = fechaDescarga;
-    }
-
-    public Date getFechaExpiracion() {
-        return fechaExpiracion;
-    }
-
-    public void setFechaExpiracion(Date fechaExpiracion) {
-        this.fechaExpiracion = fechaExpiracion;
     }
 
     public boolean isEstadoDescarga() {

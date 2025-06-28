@@ -1,0 +1,180 @@
+[
+    {
+        "fechaCompra": "2025-06-28T12:00:00",
+        "correoUsuario": "usuario@example.com",
+        "codigoCompra": "CMP123456",
+        "contenidoComprado": [
+            {
+                "titulo": "Backslide",
+                "generos": "Alternative",
+                "urlPortada": "https://example.com/portada.jpg",
+                "anio": 2024,
+                "precio": 9.99,
+                "formato": "Digital",
+                "edicion": "Original",
+                "artistas": "Twenty One Pilots",
+                "sello": "Fueled by Ramen",
+                "urlCancion": "https://example.com/backslide.mp3",
+                "duracion": 0
+            },
+            {
+                "titulo": "Inception",
+                "generos": "Sci-Fi, Thriller",
+                "urlPortada": "https://example.com/inception.jpg",
+                "anio": 2010,
+                "precio": 14.99,
+                "director": "Christopher Nolan",
+                "casaProductora": "Warner Bros.",
+                "formato": "Blu-ray",
+                "sinopsis": "A skilled thief is given a chance at redemption if he can successfully perform inception.",
+                "actores": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+                "duracion": "148 min",
+                "soundtrack": null
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/1",
+                "fechaGeneracion": "2025-06-28T12:10:00",
+                "fechaDescarga": "2025-06-28T12:30:00",
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": true,
+                "estadoPenalizacion": false,
+                "penalizacion": 0.0
+            },
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/2",
+                "fechaGeneracion": "2025-06-28T12:11:00",
+                "fechaDescarga": null,
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": false,
+                "estadoPenalizacion": true,
+                "penalizacion": 5.0
+            }
+        ],
+        "estadoCompra": true
+    },
+    {
+        "fechaCompra": "2025-06-18T08:00:00",
+        "correoUsuario": "john.doe@example.com",
+        "codigoCompra": "CMP888888",
+        "contenidoComprado": [
+            {
+                "titulo": "Random Access Memories",
+                "generos": "Electronic, Funk",
+                "urlPortada": "https://example.com/ram.jpg",
+                "anio": 2013,
+                "precio": 12.5,
+                "artistas": "Daft Punk",
+                "selloDiscografico": "Columbia",
+                "tipo": "Album",
+                "cancionesAlbum": []
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/2",
+                "fechaGeneracion": "2025-06-28T12:11:00",
+                "fechaDescarga": null,
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": false,
+                "estadoPenalizacion": true,
+                "penalizacion": 5.0
+            }],
+        "estadoCompra": true
+    },
+    {
+        "fechaCompra": "2025-06-15T10:10:00",
+        "correoUsuario": "maria@example.com",
+        "codigoCompra": "CMP20252025",
+        "contenidoComprado": [
+            {
+                "titulo": "Breaking Bad",
+                "generos": "Drama, Crime",
+                "urlPortada": "https://example.com/breakingbad.jpg",
+                "anio": 2008,
+                "precio": 29.99,
+                "formato": "Digital",
+                "director": "Vince Gilligan",
+                "casaProductora": "AMC",
+                "sinopsis": "A high school chemistry teacher turned methamphetamine producer.",
+                "temporadas": 5,
+                "listaCapitulos": []
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/2",
+                "fechaGeneracion": "2025-06-28T12:11:00",
+                "fechaDescarga": null,
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": false,
+                "estadoPenalizacion": true,
+                "penalizacion": 5.0
+            }],
+        "estadoCompra": false
+    },
+    {
+        "fechaCompra": "2025-06-10T14:45:00",
+        "correoUsuario": "jose.luna@example.com",
+        "codigoCompra": "CMP102938",
+        "contenidoComprado": [
+            {
+                "titulo": "Dune",
+                "generos": "Sci-Fi",
+                "urlPortada": "https://example.com/dune.jpg",
+                "anio": 2021,
+                "precio": 16.75,
+                "director": "Denis Villeneuve",
+                "casaProductora": "Legendary Pictures",
+                "formato": "4K",
+                "sinopsis": "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis.",
+                "actores": "Timothée Chalamet, Zendaya",
+                "duracion": "155 min",
+                "soundtrack": null
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/2",
+                "fechaGeneracion": "2025-06-28T12:11:00",
+                "fechaDescarga": null,
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": false,
+                "estadoPenalizacion": true,
+                "penalizacion": 5.0
+            }],
+        "estadoCompra": true
+    },
+    {
+        "fechaCompra": "2025-06-08T09:20:00",
+        "correoUsuario": "lucas.martin@example.com",
+        "codigoCompra": "CMP111777",
+        "contenidoComprado": [
+            {
+                "titulo": "Bohemian Rhapsody",
+                "generos": "Rock",
+                "urlPortada": "https://example.com/queen.jpg",
+                "anio": 1975,
+                "precio": 1.29,
+                "formato": "MP3",
+                "edicion": "Remastered",
+                "artistas": "Queen",
+                "sello": "EMI",
+                "urlCancion": "https://example.com/bohemian.mp3",
+                "duracion": 354
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://descargas.example.com/CMP123456/2",
+                "fechaGeneracion": "2025-06-28T12:11:00",
+                "fechaDescarga": null,
+                "fechaExpiracion": "2025-07-05T12:00:00",
+                "estadoDescarga": false,
+                "estadoPenalizacion": true,
+                "penalizacion": 5.0
+            }],
+        "estadoCompra": false
+    }
+]

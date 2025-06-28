@@ -6,8 +6,10 @@ package interfaces;
 
 import DAO.AlbumDAO;
 import DAO.CancionDAO;
+import DAO.ComprasDAO;
 import DAO.PeliculasDAO;
 import DAO.SeriesDAO;
+import interfaces.gui.CompraHistorialCarrito;
 import interfaces.gui.TarjetaAlbum;
 import interfaces.gui.TarjetaCancion;
 import interfaces.gui.TarjetaPelicula;
@@ -19,6 +21,7 @@ import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import model.Album;
 import model.Cancion;
+import model.Compras;
 import model.Pelicula;
 import model.Serie;
 
@@ -119,8 +122,18 @@ public class MainApp extends javax.swing.JFrame {
         jLabel1.setText("Compras");
 
         historialBtn.setText("Historial");
+        historialBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                historialBtnActionPerformed(evt);
+            }
+        });
 
         carritoBtn.setText("Carrito");
+        carritoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                carritoBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout sideMenuPanelLayout = new javax.swing.GroupLayout(sideMenuPanel);
         sideMenuPanel.setLayout(sideMenuPanelLayout);
@@ -287,6 +300,42 @@ public class MainApp extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnSeriesActionPerformed
+
+    private void historialBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historialBtnActionPerformed
+        panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
+        panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
+
+        panelShowData.removeAll();
+
+        ComprasDAO comprasDAO = new ComprasDAO();
+        List<Compras> lista = comprasDAO.getCompras(); // o getCarrito()
+
+        for (Compras c : lista) {
+            CompraHistorialCarrito componente = new CompraHistorialCarrito(c);
+            panelShowData.add(componente);
+        }
+
+        panelShowData.revalidate();
+        panelShowData.repaint();
+    }//GEN-LAST:event_historialBtnActionPerformed
+
+    private void carritoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carritoBtnActionPerformed
+        panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
+        panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
+
+        panelShowData.removeAll();
+
+        ComprasDAO comprasDAO = new ComprasDAO();
+        List<Compras> lista = comprasDAO.getCarrito(); // o getCarrito()
+
+        for (Compras c : lista) {
+            CompraHistorialCarrito componente = new CompraHistorialCarrito(c);
+            panelShowData.add(componente);
+        }
+
+        panelShowData.revalidate();
+        panelShowData.repaint();
+    }//GEN-LAST:event_carritoBtnActionPerformed
 
     /**
      * @param args the command line arguments
