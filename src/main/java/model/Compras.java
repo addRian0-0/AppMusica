@@ -17,5 +17,67 @@ public class Compras {
     private String correoUsuario, codigoCompra;
     private List<Multimedia> contenidoComprado;
     private List<EnlaceDescarga> listaEnlacesDescarga;
+    private boolean estadoCompra; //indica si esta en carrito o ya fue comprada
+
+    public Compras(){}
+    
+    public Compras(Date fechaCompra, String correoUsuario, String codigoCompra, List<Multimedia> contenidoComprado, List<EnlaceDescarga> listaEnlacesDescarga, boolean estadoCompra) {
+        this.fechaCompra = fechaCompra;
+        this.correoUsuario = correoUsuario;
+        this.codigoCompra = codigoCompra;
+        this.contenidoComprado = contenidoComprado;
+        this.listaEnlacesDescarga = listaEnlacesDescarga;
+        this.estadoCompra = estadoCompra;
+    }
+
+    public Date getFechaCompra() {
+        return fechaCompra;
+    }
+
+    public void setFechaCompra(Date fechaCompra) {
+        this.fechaCompra = fechaCompra;
+    }
+
+    public String getCorreoUsuario() {
+        return correoUsuario;
+    }
+
+    public void setCorreoUsuario(String correoUsuario) {
+        this.correoUsuario = correoUsuario;
+    }
+
+    public String getCodigoCompra() {
+        return codigoCompra;
+    }
+
+    public void setCodigoCompra(String codigoCompra) {
+        this.codigoCompra = codigoCompra;
+    }
+
+    public List<Multimedia> getContenidoComprado() {
+        return contenidoComprado;
+    }
+
+    public void setContenidoComprado(List<Multimedia> contenidoComprado) {
+        this.contenidoComprado = contenidoComprado;
+    }
+
+    public List<EnlaceDescarga> getListaEnlacesDescarga() {
+        return listaEnlacesDescarga;
+    }
+
+    public void setListaEnlacesDescarga(List<EnlaceDescarga> listaEnlacesDescarga) {
+        this.listaEnlacesDescarga = listaEnlacesDescarga;
+    }
+
+    public boolean isEstadoCompra() {
+        return estadoCompra;
+    }
+
+    public void setEstadoCompra(boolean estadoCompra) {
+        this.estadoCompra = estadoCompra;
+    }
+    
+    
     
 }
