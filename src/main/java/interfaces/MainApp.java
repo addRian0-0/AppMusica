@@ -35,21 +35,21 @@ public class MainApp extends javax.swing.JFrame {
     CancionDAO pistaDAO = new CancionDAO();
     PeliculasDAO peliculaDAO = new PeliculasDAO();
     SeriesDAO seriesDAO = new SeriesDAO();
-    
+
     List<Album> albumsList = albumDAO.getAlbum();
     List<Cancion> cancionesList = pistaDAO.getCanciones();
     List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
     List<Serie> seriesList = seriesDAO.getSeries();
 
     public MainApp() {
-    
+
         initComponents();
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
-        
+
         for (Album a : albumsList) {
-            TarjetaAlbum tarjetaAlbumGUI = new TarjetaAlbum(a);
-            panelShowData.add(tarjetaAlbumGUI);
+            TarjetaAlbum tarjetaAlbum = new TarjetaAlbum(a, panelShowData); // ¡Este es el importante!
+            panelShowData.add(tarjetaAlbum);
         }
 
         panelShowData.revalidate();
@@ -68,12 +68,12 @@ public class MainApp extends javax.swing.JFrame {
         backGroundPanel = new javax.swing.JPanel();
         sideMenuPanel = new javax.swing.JPanel();
         titleApp = new javax.swing.JLabel();
-        mainContainerPanel = new javax.swing.JPanel();
-        mainTitleLabel = new javax.swing.JLabel();
         btnCanciones = new javax.swing.JButton();
         btnAlbumes = new javax.swing.JButton();
         btnPeliculas = new javax.swing.JButton();
         btnSeries = new javax.swing.JButton();
+        mainContainerPanel = new javax.swing.JPanel();
+        mainTitleLabel = new javax.swing.JLabel();
         panelScrollData = new javax.swing.JScrollPane();
         panelShowData = new javax.swing.JPanel();
 
@@ -84,27 +84,6 @@ public class MainApp extends javax.swing.JFrame {
 
         titleApp.setForeground(new java.awt.Color(238, 229, 242));
         titleApp.setText("Hobito");
-
-        javax.swing.GroupLayout sideMenuPanelLayout = new javax.swing.GroupLayout(sideMenuPanel);
-        sideMenuPanel.setLayout(sideMenuPanelLayout);
-        sideMenuPanelLayout.setHorizontalGroup(
-            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideMenuPanelLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(titleApp)
-                .addContainerGap(125, Short.MAX_VALUE))
-        );
-        sideMenuPanelLayout.setVerticalGroup(
-            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideMenuPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(titleApp)
-                .addContainerGap(559, Short.MAX_VALUE))
-        );
-
-        mainContainerPanel.setForeground(new java.awt.Color(238, 229, 242));
-
-        mainTitleLabel.setText("Pagina principal");
 
         btnCanciones.setText("Canciones");
         btnCanciones.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +113,40 @@ public class MainApp extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout sideMenuPanelLayout = new javax.swing.GroupLayout(sideMenuPanel);
+        sideMenuPanel.setLayout(sideMenuPanelLayout);
+        sideMenuPanelLayout.setHorizontalGroup(
+            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sideMenuPanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSeries)
+                    .addComponent(btnPeliculas)
+                    .addComponent(btnAlbumes)
+                    .addComponent(btnCanciones)
+                    .addComponent(titleApp))
+                .addContainerGap(77, Short.MAX_VALUE))
+        );
+        sideMenuPanelLayout.setVerticalGroup(
+            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sideMenuPanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(titleApp)
+                .addGap(32, 32, 32)
+                .addComponent(btnCanciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAlbumes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPeliculas)
+                .addGap(18, 18, 18)
+                .addComponent(btnSeries)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mainContainerPanel.setForeground(new java.awt.Color(238, 229, 242));
+
+        mainTitleLabel.setText("Pagina principal");
+
         javax.swing.GroupLayout panelShowDataLayout = new javax.swing.GroupLayout(panelShowData);
         panelShowData.setLayout(panelShowDataLayout);
         panelShowDataLayout.setHorizontalGroup(
@@ -142,7 +155,7 @@ public class MainApp extends javax.swing.JFrame {
         );
         panelShowDataLayout.setVerticalGroup(
             panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
 
         panelScrollData.setViewportView(panelShowData);
@@ -154,16 +167,8 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(mainContainerPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainContainerPanelLayout.createSequentialGroup()
-                        .addComponent(btnCanciones)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAlbumes)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPeliculas)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSeries))
-                    .addComponent(mainTitleLabel)
-                    .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mainTitleLabel))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         mainContainerPanelLayout.setVerticalGroup(
@@ -172,14 +177,8 @@ public class MainApp extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(mainTitleLabel)
                 .addGap(18, 18, 18)
-                .addGroup(mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCanciones)
-                    .addComponent(btnAlbumes)
-                    .addComponent(btnPeliculas)
-                    .addComponent(btnSeries))
-                .addGap(18, 18, 18)
-                .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout backGroundPanelLayout = new javax.swing.GroupLayout(backGroundPanel);
@@ -215,7 +214,7 @@ public class MainApp extends javax.swing.JFrame {
     private void btnCancionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancionesActionPerformed
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
-        
+
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
@@ -231,25 +230,25 @@ public class MainApp extends javax.swing.JFrame {
     private void btnAlbumesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlbumesActionPerformed
         panelShowData.setPreferredSize(new Dimension(760, 500));
         panelShowData.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 16, 16));
-        
+
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
 
         for (Album a : albumsList) {
-            TarjetaAlbum tarjetaAlbumGUI = new TarjetaAlbum(a);
-            panelShowData.add(tarjetaAlbumGUI);
+            TarjetaAlbum tarjetaAlbum = new TarjetaAlbum(a, panelShowData); // ¡Este es el importante!
+            panelShowData.add(tarjetaAlbum);
         }
     }//GEN-LAST:event_btnAlbumesActionPerformed
 
     private void btnPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeliculasActionPerformed
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
-        
+
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
-        
+
         for (Pelicula p : peliculasList) {
             TarjetaPelicula tarjetaPeliculaGUI = new TarjetaPelicula(p);
             panelShowData.add(tarjetaPeliculaGUI);
@@ -259,16 +258,16 @@ public class MainApp extends javax.swing.JFrame {
     private void btnSeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeriesActionPerformed
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
-        
+
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
-        
-       for (Serie s : seriesList) {
+
+        for (Serie s : seriesList) {
             TarjetaSerie tarjetaSerie = new TarjetaSerie(s);
             panelShowData.add(tarjetaSerie);
-        } 
-        
+        }
+
     }//GEN-LAST:event_btnSeriesActionPerformed
 
     /**

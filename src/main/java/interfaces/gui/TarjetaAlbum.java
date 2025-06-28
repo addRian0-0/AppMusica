@@ -11,6 +11,8 @@ import java.awt.event.ComponentEvent;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import model.Album;
@@ -24,12 +26,20 @@ public class TarjetaAlbum extends javax.swing.JPanel {
     /**
      * Creates new form TarjetaAlbum
      */
-    public TarjetaAlbum(Album album) {
+    
+    private Album album;
+    private JPanel panelShowData;
+    
+    public TarjetaAlbum(Album album, JPanel panelShowData) {
+        
+        this.album = album;
+        this.panelShowData = panelShowData;
+        
         initComponents();
         nombreAlbumLbl.setText(album.getTitulo());
         nombreArtistaLbl.setText(album.getArtistas());
         anoLbl.setText(Integer.toString(album.getAnio()));
-
+        
         // Cargar imagen
         if (album.getUrlPortada() != null && !album.getUrlPortada().isEmpty()) {
             imagenIconContainer.addComponentListener(new ComponentAdapter() {
@@ -86,6 +96,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         nombreArtistaLbl = new javax.swing.JLabel();
         anoLbl = new javax.swing.JLabel();
         agregarBtn = new javax.swing.JButton();
+        verCancionesBtn = new javax.swing.JButton();
 
         javax.swing.GroupLayout imagenIconContainerLayout = new javax.swing.GroupLayout(imagenIconContainer);
         imagenIconContainer.setLayout(imagenIconContainerLayout);
@@ -106,21 +117,29 @@ public class TarjetaAlbum extends javax.swing.JPanel {
 
         agregarBtn.setText("Agregar");
 
+        verCancionesBtn.setText("Ver canciones");
+        verCancionesBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verCancionesBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelAlbumLayout = new javax.swing.GroupLayout(panelAlbum);
         panelAlbum.setLayout(panelAlbumLayout);
         panelAlbumLayout.setHorizontalGroup(
             panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAlbumLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(imagenIconContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(agregarBtn)
+                    .addComponent(imagenIconContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nombreAlbumLbl)
                     .addComponent(nombreArtistaLbl)
-                    .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(agregarBtn)
-                        .addComponent(anoLbl)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                    .addComponent(verCancionesBtn)
+                    .addComponent(anoLbl))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         panelAlbumLayout.setVerticalGroup(
             panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +154,9 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(anoLbl)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(agregarBtn)
+                .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agregarBtn)
+                    .addComponent(verCancionesBtn))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -151,6 +172,19 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void verCancionesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verCancionesBtnActionPerformed
+        if (panelShowData == null) {
+            System.err.println("panelShowData es null");
+            return;
+        }
+        panelShowData.removeAll();
+        panelShowData.setLayout(new BorderLayout()); // o el layout que uses
+        panelShowData.add(new PanelPanelSongs(album), BorderLayout.CENTER);
+        panelShowData.revalidate();
+        panelShowData.repaint();
+        
+    }//GEN-LAST:event_verCancionesBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregarBtn;
@@ -159,5 +193,6 @@ public class TarjetaAlbum extends javax.swing.JPanel {
     private javax.swing.JLabel nombreAlbumLbl;
     private javax.swing.JLabel nombreArtistaLbl;
     private javax.swing.JPanel panelAlbum;
+    private javax.swing.JButton verCancionesBtn;
     // End of variables declaration//GEN-END:variables
 }

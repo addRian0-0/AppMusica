@@ -43,8 +43,10 @@ DAO\CancionDAO.class
 interfaces\gui\TarjetaAlbum.class
 interfaces\MainApp.class
 com\mycompany\musicapoo\MusicaPOO.class
+interfaces\gui\PanelPanelSongs.class
 model\Pelicula.class
 interfaces\gui\TarjetaCancion$1.class
+interfaces\gui\TarjetaAlbum$2.class
 DAO\PeliculasDAO.class
 interfaces\RegistroUsuario$3.class
 Reproducir\Reproducir.class
