@@ -65,115 +65,27 @@ public class MainApp extends javax.swing.JFrame {
     private void initComponents() {
 
         backGroundPanel = new javax.swing.JPanel();
-        sideMenuPanel = new javax.swing.JPanel();
-        titleApp = new javax.swing.JLabel();
-        btnCanciones = new javax.swing.JButton();
-        btnAlbumes = new javax.swing.JButton();
-        btnPeliculas = new javax.swing.JButton();
-        btnSeries = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        historialBtn = new javax.swing.JButton();
-        carritoBtn = new javax.swing.JButton();
         mainContainerPanel = new javax.swing.JPanel();
-        mainTitleLabel = new javax.swing.JLabel();
         panelScrollData = new javax.swing.JScrollPane();
         panelShowData = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        titleApp = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        carritoBtn = new javax.swing.JButton();
         comprarBtn = new javax.swing.JButton();
+        historialBtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnAlbumes = new javax.swing.JButton();
+        btnCanciones = new javax.swing.JButton();
+        btnPeliculas = new javax.swing.JButton();
+        btnSeries = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        sideMenuPanel.setBackground(new java.awt.Color(96, 39, 125));
-        sideMenuPanel.setForeground(new java.awt.Color(96, 39, 125));
-
-        titleApp.setForeground(new java.awt.Color(238, 229, 242));
-        titleApp.setText("Hobito");
-
-        btnCanciones.setText("Canciones");
-        btnCanciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancionesActionPerformed(evt);
-            }
-        });
-
-        btnAlbumes.setText("Albumes");
-        btnAlbumes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlbumesActionPerformed(evt);
-            }
-        });
-
-        btnPeliculas.setText("Peliculas");
-        btnPeliculas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPeliculasActionPerformed(evt);
-            }
-        });
-
-        btnSeries.setText("Series");
-        btnSeries.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeriesActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Compras");
-
-        historialBtn.setText("Historial");
-        historialBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                historialBtnActionPerformed(evt);
-            }
-        });
-
-        carritoBtn.setText("Carrito");
-        carritoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carritoBtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout sideMenuPanelLayout = new javax.swing.GroupLayout(sideMenuPanel);
-        sideMenuPanel.setLayout(sideMenuPanelLayout);
-        sideMenuPanelLayout.setHorizontalGroup(
-            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideMenuPanelLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(carritoBtn)
-                    .addComponent(historialBtn)
-                    .addComponent(jLabel1)
-                    .addComponent(btnSeries)
-                    .addComponent(btnPeliculas)
-                    .addComponent(btnAlbumes)
-                    .addComponent(btnCanciones)
-                    .addComponent(titleApp))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        sideMenuPanelLayout.setVerticalGroup(
-            sideMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideMenuPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(titleApp)
-                .addGap(32, 32, 32)
-                .addComponent(btnCanciones)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAlbumes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPeliculas)
-                .addGap(18, 18, 18)
-                .addComponent(btnSeries)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(historialBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(carritoBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
+        mainContainerPanel.setBackground(new java.awt.Color(219, 182, 235));
         mainContainerPanel.setForeground(new java.awt.Color(238, 229, 242));
 
-        mainTitleLabel.setText("Pagina principal");
+        panelShowData.setBackground(new java.awt.Color(235, 220, 236));
 
         javax.swing.GroupLayout panelShowDataLayout = new javax.swing.GroupLayout(panelShowData);
         panelShowData.setLayout(panelShowDataLayout);
@@ -183,16 +95,133 @@ public class MainApp extends javax.swing.JFrame {
         );
         panelShowDataLayout.setVerticalGroup(
             panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 579, Short.MAX_VALUE)
         );
 
         panelScrollData.setViewportView(panelShowData);
 
-        comprarBtn.setText("Comprar");
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel1.setForeground(new java.awt.Color(238, 229, 242));
+
+        titleApp.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 1, 55)); // NOI18N
+        titleApp.setForeground(new java.awt.Color(153, 0, 153));
+        titleApp.setText("Hobito");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hobitomini.png"))); // NOI18N
+
+        carritoBtn.setBackground(new java.awt.Color(204, 153, 255));
+        carritoBtn.setForeground(new java.awt.Color(204, 153, 255));
+        carritoBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart_icon-icons.com_64848 (1).png"))); // NOI18N
+        carritoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                carritoBtnActionPerformed(evt);
+            }
+        });
+
+        comprarBtn.setBackground(new java.awt.Color(204, 153, 255));
+        comprarBtn.setForeground(new java.awt.Color(204, 153, 255));
+        comprarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartphone_credit_card_buy_payment_icon_143289.png"))); // NOI18N
         comprarBtn.setDoubleBuffered(true);
+        comprarBtn.setOpaque(true);
         comprarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comprarBtnActionPerformed(evt);
+            }
+        });
+
+        historialBtn.setBackground(new java.awt.Color(204, 153, 255));
+        historialBtn.setForeground(new java.awt.Color(204, 153, 255));
+        historialBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clock_counter_clockwise_icon_173246 (1).png"))); // NOI18N
+        historialBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                historialBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titleApp)
+                .addGap(199, 199, 199)
+                .addComponent(historialBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(carritoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(comprarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(67, 67, 67))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(historialBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(carritoBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(comprarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(titleApp)))
+                .addGap(82, 82, 82))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 19, Short.MAX_VALUE)
+        );
+
+        btnAlbumes.setBackground(new java.awt.Color(105, 58, 128));
+        btnAlbumes.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        btnAlbumes.setForeground(new java.awt.Color(238, 229, 242));
+        btnAlbumes.setText("Albumes");
+        btnAlbumes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlbumesActionPerformed(evt);
+            }
+        });
+
+        btnCanciones.setBackground(new java.awt.Color(105, 58, 128));
+        btnCanciones.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        btnCanciones.setForeground(new java.awt.Color(238, 229, 242));
+        btnCanciones.setText("Canciones");
+        btnCanciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancionesActionPerformed(evt);
+            }
+        });
+
+        btnPeliculas.setBackground(new java.awt.Color(105, 58, 128));
+        btnPeliculas.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        btnPeliculas.setForeground(new java.awt.Color(238, 229, 242));
+        btnPeliculas.setText("Peliculas");
+        btnPeliculas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPeliculasActionPerformed(evt);
+            }
+        });
+
+        btnSeries.setBackground(new java.awt.Color(105, 58, 128));
+        btnSeries.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        btnSeries.setForeground(new java.awt.Color(238, 229, 242));
+        btnSeries.setText("Series");
+        btnSeries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeriesActionPerformed(evt);
             }
         });
 
@@ -200,24 +229,36 @@ public class MainApp extends javax.swing.JFrame {
         mainContainerPanel.setLayout(mainContainerPanelLayout);
         mainContainerPanelLayout.setHorizontalGroup(
             mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(mainContainerPanelLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(49, 49, 49)
                 .addGroup(mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(comprarBtn)
-                    .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mainTitleLabel))
-                .addContainerGap(46, Short.MAX_VALUE))
+                    .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(mainContainerPanelLayout.createSequentialGroup()
+                        .addComponent(btnCanciones)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAlbumes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSeries)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         mainContainerPanelLayout.setVerticalGroup(
             mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainContainerPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(mainTitleLabel)
-                .addGap(18, 18, 18)
-                .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(comprarBtn)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
+                    .addComponent(btnCanciones, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAlbumes, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSeries, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout backGroundPanelLayout = new javax.swing.GroupLayout(backGroundPanel);
@@ -225,28 +266,30 @@ public class MainApp extends javax.swing.JFrame {
         backGroundPanelLayout.setHorizontalGroup(
             backGroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backGroundPanelLayout.createSequentialGroup()
-                .addComponent(sideMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainContainerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(mainContainerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         backGroundPanelLayout.setVerticalGroup(
             backGroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sideMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(backGroundPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(mainContainerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backGroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(backGroundPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backGroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(backGroundPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -403,12 +446,12 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JButton carritoBtn;
     private javax.swing.JButton comprarBtn;
     private javax.swing.JButton historialBtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel mainContainerPanel;
-    private javax.swing.JLabel mainTitleLabel;
     private javax.swing.JScrollPane panelScrollData;
     private javax.swing.JPanel panelShowData;
-    private javax.swing.JPanel sideMenuPanel;
     private javax.swing.JLabel titleApp;
     // End of variables declaration//GEN-END:variables
 }

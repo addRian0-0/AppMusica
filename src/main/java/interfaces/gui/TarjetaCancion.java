@@ -86,6 +86,8 @@ public class TarjetaCancion extends javax.swing.JPanel {
         reproducirBtn = new javax.swing.JButton();
         agregarLbl = new javax.swing.JButton();
 
+        panelPista.setBackground(new java.awt.Color(219, 182, 235));
+
         javax.swing.GroupLayout imgIconPistaLayout = new javax.swing.GroupLayout(imgIconPista);
         imgIconPista.setLayout(imgIconPistaLayout);
         imgIconPistaLayout.setHorizontalGroup(
@@ -97,18 +99,39 @@ public class TarjetaCancion extends javax.swing.JPanel {
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
+        nombreCancionLbl.setBackground(new java.awt.Color(105, 58, 128));
+        nombreCancionLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        nombreCancionLbl.setForeground(new java.awt.Color(105, 58, 128));
         nombreCancionLbl.setText("Nombre de la cancion");
 
+        tipoLbl.setBackground(new java.awt.Color(105, 58, 128));
+        tipoLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        tipoLbl.setForeground(new java.awt.Color(105, 58, 128));
         tipoLbl.setText("Tipo");
 
+        nombreArtistaLbl.setBackground(new java.awt.Color(105, 58, 128));
+        nombreArtistaLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        nombreArtistaLbl.setForeground(new java.awt.Color(105, 58, 128));
         nombreArtistaLbl.setText("Nombre del artista");
 
+        selloLbl.setBackground(new java.awt.Color(105, 58, 128));
+        selloLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        selloLbl.setForeground(new java.awt.Color(105, 58, 128));
         selloLbl.setText("Sello discografico");
 
+        edicionLbl.setBackground(new java.awt.Color(105, 58, 128));
+        edicionLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        edicionLbl.setForeground(new java.awt.Color(105, 58, 128));
         edicionLbl.setText("Edicion: ");
 
+        generoLbl.setBackground(new java.awt.Color(105, 58, 128));
+        generoLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        generoLbl.setForeground(new java.awt.Color(105, 58, 128));
         generoLbl.setText("Genero:");
 
+        reproducirBtn.setBackground(new java.awt.Color(238, 229, 242));
+        reproducirBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        reproducirBtn.setForeground(new java.awt.Color(105, 58, 128));
         reproducirBtn.setText("Reproducir");
         reproducirBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +139,9 @@ public class TarjetaCancion extends javax.swing.JPanel {
             }
         });
 
+        agregarLbl.setBackground(new java.awt.Color(238, 229, 242));
+        agregarLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        agregarLbl.setForeground(new java.awt.Color(105, 58, 128));
         agregarLbl.setText("Agregar");
         agregarLbl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +162,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
                         .addComponent(nombreCancionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(edicionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 14, Short.MAX_VALUE))
+                        .addGap(0, 12, Short.MAX_VALUE))
                     .addGroup(panelPistaLayout.createSequentialGroup()
                         .addComponent(nombreArtistaLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -145,7 +171,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(selloLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(generoLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(reproducirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(agregarLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
