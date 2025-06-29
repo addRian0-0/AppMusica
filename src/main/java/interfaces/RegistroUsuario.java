@@ -237,21 +237,34 @@ public class RegistroUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_nombresInputActionPerformed
 
     private void registrarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarseBtnActionPerformed
-        
+
+        String apellidoMa = validarDatosI.soloLetras(apellidoMaInput.getText(), "Apellido materno invalido.");
+        String apellidoPa = validarDatosI.soloLetras(apellidoPaInput.getText(), "Apellido paterno invalido.");
+        String nombres = validarDatosI.soloLetras(nombresInput.getText(), "Nombre(s) invalidos.");
+        String correo = validarDatosI.validarCorreo(correoInput.getText());
+        String username = validarDatosI.validarAlfanumericos(usernameInput.getText(), "Nombre de usuario invalido.");
+        String claveAcceso = validarDatosI.validarPassword(passInput.getText());
+
+        // Detén el flujo si alguno es inválido
+        if (apellidoMa == null || apellidoPa == null || nombres == null || correo == null || username == null || claveAcceso == null ||
+                apellidoMa.isEmpty() || apellidoPa.isEmpty() || nombres.isEmpty() || correo.isEmpty() || username.isEmpty() || claveAcceso.isEmpty()) {
+            // Ya deberías haber mostrado el mensaje en los métodos de validación
+            return;
+        }
+
         Usuario usuarioRegistro = new Usuario();
-        
-        usuarioRegistro.setApellidoMa(validarDatosI.soloLetras(apellidoMaInput.getText(), "Apellido materno invalido."));
-        usuarioRegistro.setApellidoPa(validarDatosI.soloLetras(apellidoPaInput.getText(), "Apellido paterno invalido."));
-        usuarioRegistro.setNombres(validarDatosI.soloLetras(nombresInput.getText(), "Nombre(s) invalidos."));
-        usuarioRegistro.setCorreo(validarDatosI.validarCorreo(correoInput.getText()));
-        usuarioRegistro.setUsername(validarDatosI.validarAlfanumericos(usernameInput.getText(), "Nombre de usuario invalido."));
-        usuarioRegistro.setClaveAcceso(validarDatosI.validarPassword(passInput.getText()));
+        usuarioRegistro.setApellidoMa(apellidoMa);
+        usuarioRegistro.setApellidoPa(apellidoPa);
+        usuarioRegistro.setNombres(nombres);
+        usuarioRegistro.setCorreo(correo);
+        usuarioRegistro.setUsername(username);
+        usuarioRegistro.setClaveAcceso(claveAcceso);
         usuarioRegistro.setTipoUsuario(TipoUsuario.USUARIO);
-        
+
         UsuarioDAO dao = new UsuarioDAO();
         dao.registrarUsuario(usuarioRegistro);
         JOptionPane.showMessageDialog(null, "Usuario registrado exitosamente.");
-        
+
         this.dispose();
         Login loginScreen = new Login();
         loginScreen.setVisible(true);

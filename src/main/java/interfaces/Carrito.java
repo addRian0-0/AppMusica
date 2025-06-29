@@ -1,5 +1,6 @@
 package interfaces;
 
+import model.Album;
 import model.Cancion;
 
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ public class Carrito {
     // Lista estática (carrito global)
     private static final List<Cancion> canciones = new ArrayList<>();
 
+    private static final List<Album> albums = new ArrayList<>();
+
     // Métodos estáticos
     public static void agregarCancion(Cancion c) {
         canciones.add(c);
@@ -17,4 +20,8 @@ public class Carrito {
     public static List<Cancion> getCanciones() {
         return canciones;
     }
+
+    public static void agregarAlbum(Album a){albums.add(a);}
+
+    public static List<Album> getAlbums(){return albums;}
 }

@@ -1,126 +1,83 @@
-[
-    {
-        "fechaCompra": "2025-06-28T21:47:36",
-        "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
-        "contenidoComprado": [{
-            "artistas": "Deftones",
+[{
+    "fechaCompra": "2025-06-29T14:18:51",
+    "estadoCompra": true,
+    "correoUsuario": "micorreo@ejemplo.com",
+    "codigoCompra": "CDC000001",
+    "contenidoComprado": [
+        {
+            "artistas": "PINK FLOYD",
             "precio": 0,
-            "tipo": "Original",
+            "tipo": "ORIGINAL",
             "generos": "Generos default",
-            "titulo": "Lhabia",
-            "selloDiscografico": "Maverick",
+            "titulo": "ON THE RUN",
+            "selloDiscografico": "COLUMBIA RECORDS",
             "cancionesAlbum": [],
-            "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+            "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
             "anio": 2000
-        }],
-        "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
-            "estadoDescarga": false,
-            "penalizacion": 5,
-            "fechaExpiracion": "2025-07-05T21:47:36",
-            "fechaGeneracion": "2025-06-28T21:47:36",
-            "fechaDescarga": null,
-            "estadoPenalizacion": true
-        }]
-    },
-    {
-        "fechaCompra": "2025-06-28T21:51:37",
-        "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
-        "contenidoComprado": [
-            {
-                "artistas": "Deftones",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Lhabia",
-                "selloDiscografico": "Maverick",
-                "cancionesAlbum": [],
-                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
-                "anio": 2000
-            },
-            {
-                "artistas": "Arctic monkeys",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "This house is a circus",
-                "selloDiscografico": "Domino records",
-                "cancionesAlbum": [],
-                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg",
-                "anio": 2000
-            },
-            {
-                "artistas": "THE DOORS",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "MY EYES HAVES SEEN YOU",
-                "selloDiscografico": "RHINO RECORDS",
-                "cancionesAlbum": [],
-                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/b/b6/Doors_matrix.jpg",
-                "anio": 2000
-            },
-            {
-                "artistas": "ASTROPHYSICS",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "ENJOY THE SILENCE",
-                "selloDiscografico": "CRYPTON FUTURE MEDIA",
-                "cancionesAlbum": [],
-                "urlPortada": "https://s.songswave.com/album-images/vol32/3002/3002850/4894356-big/The-First-Sound-Of-The-Future-Past-cover.jpg",
-                "anio": 2000
-            },
-            {
-                "artistas": "ASTROPHYSICS",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "NIGHTCALL",
-                "selloDiscografico": "CRYPTON FUTURE MEDIA",
-                "cancionesAlbum": [],
-                "urlPortada": "https://s.songswave.com/album-images/vol32/3002/3002850/4894356-big/The-First-Sound-Of-The-Future-Past-cover.jpg",
-                "anio": 2000
-            }
-        ],
-        "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
-            "estadoDescarga": false,
-            "penalizacion": 5,
-            "fechaExpiracion": "2025-07-05T21:51:37",
-            "fechaGeneracion": "2025-06-28T21:51:37",
-            "fechaDescarga": null,
-            "estadoPenalizacion": true
-        }]
-    },
-    {
-        "fechaCompra": "2025-06-29T12:02:13",
-        "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
-        "contenidoComprado": [{
+        },
+        {
+            "artistas": "PINK FLOYD",
+            "precio": 0,
+            "tipo": "ORIGINAL",
+            "generos": "Generos default",
+            "titulo": "THE GREAT GIG IN THE SKY ",
+            "selloDiscografico": "COLUMBIA RECORDS",
+            "cancionesAlbum": [],
+            "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
+            "anio": 2000
+        },
+        {
+            "artistas": "PINK FLOYD",
+            "precio": 0,
+            "tipo": "ORIGINAL",
+            "generos": "Generos default",
+            "titulo": "US AND THEM",
+            "selloDiscografico": "COLUMBIA RECORDS",
+            "cancionesAlbum": [],
+            "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
+            "anio": 2000
+        },
+        {
             "artistas": "Twenty One Pilots",
             "precio": 0,
             "tipo": "Original",
             "generos": "Generos default",
-            "titulo": "Overcompensate",
+            "titulo": "Midwest Indigo",
             "selloDiscografico": "Fueled by Ramen",
             "cancionesAlbum": [],
             "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
             "anio": 2000
-        }],
-        "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
-            "estadoDescarga": false,
-            "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T12:02:13",
-            "fechaGeneracion": "2025-06-29T12:02:13",
-            "fechaDescarga": null,
-            "estadoPenalizacion": true
-        }]
-    }
-]
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipo": "Original",
+            "generos": "Generos default",
+            "titulo": "Next Semester",
+            "selloDiscografico": "Fueled by Ramen",
+            "cancionesAlbum": [],
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipo": "Original",
+            "generos": "Generos default",
+            "titulo": "Routines in the night",
+            "selloDiscografico": "Fueled by Ramen",
+            "cancionesAlbum": [],
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000
+        }
+    ],
+    "listaEnlacesDescarga": [{
+        "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+        "estadoDescarga": false,
+        "penalizacion": 5,
+        "fechaExpiracion": "2025-07-06T14:18:51",
+        "fechaGeneracion": "2025-06-29T14:18:51",
+        "fechaDescarga": null,
+        "estadoPenalizacion": true
+    }]
+}]
