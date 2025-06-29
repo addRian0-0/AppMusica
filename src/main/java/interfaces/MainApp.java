@@ -13,7 +13,6 @@ import SAS.generarCompraTicket;
 import interfaces.gui.*;
 
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -34,7 +33,6 @@ public class MainApp extends javax.swing.JFrame {
      * Creates new form MainApp
      */
     AlbumDAO albumDAO = new AlbumDAO();
-    CancionDAO pistaDAO = new CancionDAO();
     PeliculasDAO peliculaDAO = new PeliculasDAO();
     SeriesDAO seriesDAO = new SeriesDAO();
 
@@ -272,17 +270,18 @@ public class MainApp extends javax.swing.JFrame {
     }                                            
 
     private void btnAlbumesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlbumesActionPerformed
-        panelShowData.setPreferredSize(new Dimension(760, 500));
-        panelShowData.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 16, 16));
-
         panelShowData.removeAll();
-        panelShowData.revalidate();
-        panelShowData.repaint();
+
+        AlbumDAO albumDAO = new AlbumDAO();
+        List<Album> albumsList = albumDAO.getAlbum1();
 
         for (Album a : albumsList) {
             TarjetaAlbum tarjetaAlbum = new TarjetaAlbum(a, panelShowData); // ¡Este es el importante!
             panelShowData.add(tarjetaAlbum);
         }
+
+        panelShowData.revalidate();
+        panelShowData.repaint();
         comprarBtn.setVisible(false);
     }//GEN-LAST:event_btnAlbumesActionPerformed
 
