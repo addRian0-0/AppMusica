@@ -23,7 +23,9 @@ import model.Cancion;
 public class TarjetaCancion extends javax.swing.JPanel {
 
     private Cancion cancion;
-    
+    private Reproducir rep;
+    private boolean estaReproduciendo = false;
+
     public TarjetaCancion(Cancion cancion) {
         this.cancion = cancion;
         initComponents();
@@ -34,7 +36,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
         generoLbl.setText(cancion.getGeneros());
 
         // Cargar imagen
-        if (cancion.getUrlPortada()!= null && !cancion.getUrlPortada().isEmpty()) {
+        if (cancion.getUrlPortada() != null && !cancion.getUrlPortada().isEmpty()) {
             SwingUtilities.invokeLater(() -> {
                 try {
                     URL url = new URL(cancion.getUrlPortada());
@@ -193,8 +195,16 @@ public class TarjetaCancion extends javax.swing.JPanel {
     }
 
     private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed
-        Reproducir rep = new Reproducir();
-        rep.Reproducir(this.cancion.getUrlCancion());
+        if (rep == null || !estaReproduciendo) {
+            rep = new Reproducir();
+            rep.Reproducir(this.cancion.getUrlCancion());
+            estaReproduciendo = true;
+            reproducirBtn.setText("Pausa");
+        } else {
+            rep.Pausar();  // En este caso sería más un 'parar'
+            estaReproduciendo = false;
+            reproducirBtn.setText("Play");
+        }
     }//GEN-LAST:event_reproducirBtnActionPerformed
 
     private void agregarLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarLblActionPerformed

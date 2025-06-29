@@ -31,7 +31,7 @@ public class Reproducir {
 
             //timer para detener la cancion en 1 min
             autoStopTimer = new javax.swing.Timer(60000, evt -> {
-                pausar();
+                Pausar();
                 autoStopTimer.stop();
             });
             autoStopTimer.start();
@@ -40,7 +40,7 @@ public class Reproducir {
             e.printStackTrace();
         }
     }
-    public static void pausar() {
+    public static void Pausar() {
         if (player != null) {
             player.close();
         }

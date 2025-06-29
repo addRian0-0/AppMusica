@@ -25,14 +25,17 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
      * Creates new form TarjetaAlbumCancion
      */
     private Cancion cancion;
+    private Reproducir rep;
+    private boolean estaReproduciendo = false;
+
     public TarjetaAlbumCancion(Cancion cancion) {
-        
+
         initComponents();
         this.cancion = cancion;
         initComponents();
         nombreCancionLbl.setText(cancion.getTitulo());
         duracionLbl.setText(Integer.toString(cancion.getDuracion()));
-        
+
     }
 
     /**
@@ -116,8 +119,16 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
     }//GEN-LAST:event_agregarLblActionPerformed
 
     private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed
-        Reproducir rep = new Reproducir();
-        rep.Reproducir(this.cancion.getUrlCancion());
+        if (rep == null || !estaReproduciendo) {
+            rep = new Reproducir();
+            rep.Reproducir(this.cancion.getUrlCancion());
+            estaReproduciendo = true;
+            reproducirBtn.setText("Pausa");
+        } else {
+            rep.Pausar();  // En este caso sería más un 'parar'
+            estaReproduciendo = false;
+            reproducirBtn.setText("Play");
+        }
     }//GEN-LAST:event_reproducirBtnActionPerformed
 
 
