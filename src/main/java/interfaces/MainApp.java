@@ -9,6 +9,7 @@ import DAO.CancionDAO;
 import DAO.ComprasDAO;
 import DAO.PeliculasDAO;
 import DAO.SeriesDAO;
+import SAS.generarCompraTicket;
 import interfaces.gui.*;
 
 import java.awt.Dimension;
@@ -21,6 +22,7 @@ import model.Cancion;
 import model.Compras;
 import model.Pelicula;
 import model.Serie;
+import org.json.JSONObject;
 
 /**
  *
@@ -190,7 +192,6 @@ public class MainApp extends javax.swing.JFrame {
 
         comprarBtn.setText("Comprar");
         comprarBtn.setDoubleBuffered(true);
-        comprarBtn.setVisible(false);
         comprarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comprarBtnActionPerformed(evt);
@@ -216,9 +217,9 @@ public class MainApp extends javax.swing.JFrame {
                 .addComponent(mainTitleLabel)
                 .addGap(18, 18, 18)
                 .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(comprarBtn)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout backGroundPanelLayout = new javax.swing.GroupLayout(backGroundPanel);
@@ -234,7 +235,9 @@ public class MainApp extends javax.swing.JFrame {
         backGroundPanelLayout.setVerticalGroup(
             backGroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(sideMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(mainContainerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(backGroundPanelLayout.createSequentialGroup()
+                .addComponent(mainContainerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -351,7 +354,10 @@ public class MainApp extends javax.swing.JFrame {
     }//GEN-LAST:event_carritoBtnActionPerformed
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
-        // TODO add your handling code here:
+        JSONObject compra = generarCompraTicket.generarCompra("micorreo@ejemplo.com", interfaces.Carrito.getCanciones());
+        generarCompraTicket.guardarCompra(compra);
+        Carrito.getCanciones().clear();
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Gracias por tu compra!");
     }//GEN-LAST:event_comprarBtnActionPerformed
 
     /**
