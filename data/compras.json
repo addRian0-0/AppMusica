@@ -96,5 +96,31 @@
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
+    },
+    {
+        "fechaCompra": "2025-06-29T12:02:13",
+        "estadoCompra": true,
+        "correoUsuario": "micorreo@ejemplo.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [{
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipo": "Original",
+            "generos": "Generos default",
+            "titulo": "Overcompensate",
+            "selloDiscografico": "Fueled by Ramen",
+            "cancionesAlbum": [],
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000
+        }],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-06T12:02:13",
+            "fechaGeneracion": "2025-06-29T12:02:13",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
     }
 ]

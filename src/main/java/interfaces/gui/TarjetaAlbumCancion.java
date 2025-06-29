@@ -13,6 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
+import interfaces.Carrito;
 import model.Cancion;
 
 /**
@@ -114,8 +116,13 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void agregarAlCarrito() {
+        Carrito.agregarCancion(cancion);
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Canción agregada al carrito!");
+    }
+
     private void agregarLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarLblActionPerformed
-        // TODO add your handling code here:
+        agregarAlCarrito();
     }//GEN-LAST:event_agregarLblActionPerformed
 
     private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed
