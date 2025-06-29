@@ -4,7 +4,8 @@
  */
 package interfaces.gui;
 
-import java.awt.Color;
+import java.awt.*;
+import java.net.URI;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -43,10 +44,27 @@ public class CompraHistorialCarrito extends javax.swing.JPanel {
 
         // Enlaces de descarga
         add(new JLabel("Enlaces de descarga:"));
+
         for (EnlaceDescarga enlace : compra.getListaEnlacesDescarga()) {
             String estado = enlace.isEstadoDescarga() ? "Descargado" : "No descargado";
-            add(new JLabel(" • " + enlace.getEnlaceGenerado() + " [" + estado + "]"));
+            String url = enlace.getEnlaceGenerado();
+
+            // JLabel con link clickeable
+            JLabel linkLabel = new JLabel("<html><a href='" + url + "'>" + url + "</a></html>");
+            linkLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            linkLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    try {
+                        Desktop.getDesktop().browse(new URI(url));
+                    } catch (Exception ex) {
+                        ex.printStackTrace(); // O muestra un JOptionPane con el error
+                    }
+                }
+            });
+            add(linkLabel);
+            add(new JLabel(" [" + estado + "]"));
         }
+
     }
 
     /**

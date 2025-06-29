@@ -5,26 +5,22 @@
 package interfaces.gui;
 
 import Reproducir.Reproducir;
-import java.awt.BorderLayout;
-import java.awt.Image;
-import java.net.URL;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-
 import interfaces.Carrito;
 import model.Cancion;
+
+import javax.swing.*;
+import java.awt.*;
+import java.net.URL;
 
 /**
  *
  * @author cybergato
  */
-public class TarjetaCancion extends javax.swing.JPanel {
+public class TarjetaCancionCompra extends javax.swing.JPanel {
 
     private Cancion cancion;
     
-    public TarjetaCancion(Cancion cancion) {
+    public TarjetaCancionCompra(Cancion cancion) {
         this.cancion = cancion;
         initComponents();
         nombreCancionLbl.setText(cancion.getTitulo());
@@ -81,8 +77,6 @@ public class TarjetaCancion extends javax.swing.JPanel {
         selloLbl = new javax.swing.JLabel();
         edicionLbl = new javax.swing.JLabel();
         generoLbl = new javax.swing.JLabel();
-        reproducirBtn = new javax.swing.JButton();
-        agregarLbl = new javax.swing.JButton();
 
         javax.swing.GroupLayout imgIconPistaLayout = new javax.swing.GroupLayout(imgIconPista);
         imgIconPista.setLayout(imgIconPistaLayout);
@@ -107,20 +101,6 @@ public class TarjetaCancion extends javax.swing.JPanel {
 
         generoLbl.setText("Genero:");
 
-        reproducirBtn.setText("Reproducir");
-        reproducirBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reproducirBtnActionPerformed(evt);
-            }
-        });
-
-        agregarLbl.setText("Agregar");
-        agregarLbl.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarLblActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelPistaLayout = new javax.swing.GroupLayout(panelPista);
         panelPista.setLayout(panelPistaLayout);
         panelPistaLayout.setHorizontalGroup(
@@ -130,49 +110,36 @@ public class TarjetaCancion extends javax.swing.JPanel {
                 .addComponent(imgIconPista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelPistaLayout.createSequentialGroup()
-                        .addComponent(nombreCancionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edicionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 14, Short.MAX_VALUE))
-                    .addGroup(panelPistaLayout.createSequentialGroup()
-                        .addComponent(nombreArtistaLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tipoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(selloLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(generoLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(reproducirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(agregarLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(15, 15, 15))
+                    .addComponent(nombreCancionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreArtistaLbl))
+                .addGap(58, 58, 58)
+                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(edicionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tipoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(generoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selloLbl))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         panelPistaLayout.setVerticalGroup(
             panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPistaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imgIconPista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelPistaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(11, 11, 11)
                         .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nombreCancionLbl)
                             .addComponent(selloLbl)
-                            .addComponent(edicionLbl)
-                            .addComponent(reproducirBtn))
-                        .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelPistaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(nombreArtistaLbl)
-                                    .addComponent(generoLbl)
-                                    .addComponent(tipoLbl)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPistaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(agregarLbl)))))
-                .addContainerGap(14, Short.MAX_VALUE))
+                            .addComponent(edicionLbl))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombreArtistaLbl)
+                            .addComponent(generoLbl)
+                            .addComponent(tipoLbl))))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -186,31 +153,16 @@ public class TarjetaCancion extends javax.swing.JPanel {
             .addComponent(panelPista, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void agregarAlCarrito() {
-        Carrito.agregarCancion(cancion);
-        javax.swing.JOptionPane.showMessageDialog(this, "¡Canción agregada al carrito!");
-    }
-
-    private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed
-        Reproducir rep = new Reproducir();
-        rep.Reproducir(this.cancion.getUrlCancion());
-    }//GEN-LAST:event_reproducirBtnActionPerformed
-
-    private void agregarLblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarLblActionPerformed
-        agregarAlCarrito();
-    }//GEN-LAST:event_agregarLblActionPerformed
+                                          
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton agregarLbl;
     private javax.swing.JLabel edicionLbl;
     private javax.swing.JLabel generoLbl;
     private javax.swing.JPanel imgIconPista;
     private javax.swing.JLabel nombreArtistaLbl;
     private javax.swing.JLabel nombreCancionLbl;
     private javax.swing.JPanel panelPista;
-    private javax.swing.JButton reproducirBtn;
     private javax.swing.JLabel selloLbl;
     private javax.swing.JLabel tipoLbl;
     // End of variables declaration//GEN-END:variables

@@ -9,11 +9,8 @@ import DAO.CancionDAO;
 import DAO.ComprasDAO;
 import DAO.PeliculasDAO;
 import DAO.SeriesDAO;
-import interfaces.gui.CompraHistorialCarrito;
-import interfaces.gui.TarjetaAlbum;
-import interfaces.gui.TarjetaCancion;
-import interfaces.gui.TarjetaPelicula;
-import interfaces.gui.TarjetaSerie;
+import interfaces.gui.*;
+
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.List;
@@ -338,10 +335,11 @@ public class MainApp extends javax.swing.JFrame {
         ComprasDAO comprasDAO = new ComprasDAO();
         List<Compras> lista = comprasDAO.getCarrito(); // o getCarrito()
 
-        for (Compras c : lista) {
-            CompraHistorialCarrito componente = new CompraHistorialCarrito(c);
-            panelShowData.add(componente);
+        for (Cancion c : Carrito.getCanciones()) {
+            TarjetaCancionCompra tarjeta = new TarjetaCancionCompra(c);
+            panelShowData.add(tarjeta);
         }
+
 
         panelShowData.revalidate();
         panelShowData.repaint();
