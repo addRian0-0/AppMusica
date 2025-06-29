@@ -77,29 +77,8 @@ public class MainApp extends javax.swing.JFrame {
         mainContainerPanel = new javax.swing.JPanel();
         mainTitleLabel = new javax.swing.JLabel();
         panelScrollData = new javax.swing.JScrollPane();
-        panelShowData = new javax.swing.JPanel() {
-            @Override
-            public java.awt.Dimension getPreferredSize() {
-                // Alto dinámico, ajusta el valor de 120 según el alto de tus tarjetas
-                return new java.awt.Dimension(800, getComponentCount() * 120);
-            }
-        };
-        panelShowData.setLayout(new javax.swing.BoxLayout(panelShowData, javax.swing.BoxLayout.Y_AXIS));
-        panelShowData.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 16, 16));
-
-
-        this.setMinimumSize(new java.awt.Dimension(1000, 700));
-        this.setPreferredSize(new java.awt.Dimension(1200, 800));
-
-
-        this.setLocationRelativeTo(null); // Centra la ventana en pantalla
-
-        panelScrollData.setViewportView(panelShowData);
-        panelShowData.setPreferredSize(null);
-        panelShowData.revalidate();
-        panelShowData.repaint();
-
-
+        panelShowData = new javax.swing.JPanel();
+        comprarBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -196,8 +175,27 @@ public class MainApp extends javax.swing.JFrame {
 
         mainTitleLabel.setText("Pagina principal");
 
+        javax.swing.GroupLayout panelShowDataLayout = new javax.swing.GroupLayout(panelShowData);
+        panelShowData.setLayout(panelShowDataLayout);
+        panelShowDataLayout.setHorizontalGroup(
+            panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 881, Short.MAX_VALUE)
+        );
+        panelShowDataLayout.setVerticalGroup(
+            panelShowDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 493, Short.MAX_VALUE)
+        );
 
         panelScrollData.setViewportView(panelShowData);
+
+        comprarBtn.setText("Comprar");
+        comprarBtn.setDoubleBuffered(true);
+        comprarBtn.setVisible(false);
+        comprarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainContainerPanelLayout = new javax.swing.GroupLayout(mainContainerPanel);
         mainContainerPanel.setLayout(mainContainerPanelLayout);
@@ -206,6 +204,7 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(mainContainerPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comprarBtn)
                     .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mainTitleLabel))
                 .addContainerGap(46, Short.MAX_VALUE))
@@ -217,7 +216,9 @@ public class MainApp extends javax.swing.JFrame {
                 .addComponent(mainTitleLabel)
                 .addGap(18, 18, 18)
                 .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(comprarBtn)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout backGroundPanelLayout = new javax.swing.GroupLayout(backGroundPanel);
@@ -263,7 +264,9 @@ public class MainApp extends javax.swing.JFrame {
 
         panelShowData.revalidate();
         panelShowData.repaint();
-    }//GEN-LAST:event_btnCancionesActionPerformed
+        comprarBtn.setVisible(false);
+
+    }                                            
 
     private void btnAlbumesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlbumesActionPerformed
         panelShowData.setPreferredSize(new Dimension(760, 500));
@@ -277,6 +280,7 @@ public class MainApp extends javax.swing.JFrame {
             TarjetaAlbum tarjetaAlbum = new TarjetaAlbum(a, panelShowData); // ¡Este es el importante!
             panelShowData.add(tarjetaAlbum);
         }
+        comprarBtn.setVisible(false);
     }//GEN-LAST:event_btnAlbumesActionPerformed
 
     private void btnPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeliculasActionPerformed
@@ -291,6 +295,8 @@ public class MainApp extends javax.swing.JFrame {
             TarjetaPelicula tarjetaPeliculaGUI = new TarjetaPelicula(p);
             panelShowData.add(tarjetaPeliculaGUI);
         }
+        comprarBtn.setVisible(false);
+
     }//GEN-LAST:event_btnPeliculasActionPerformed
 
     private void btnSeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeriesActionPerformed
@@ -305,6 +311,7 @@ public class MainApp extends javax.swing.JFrame {
             TarjetaSerie tarjetaSerie = new TarjetaSerie(s);
             panelShowData.add(tarjetaSerie);
         }
+        comprarBtn.setVisible(false);
 
     }//GEN-LAST:event_btnSeriesActionPerformed
 
@@ -322,6 +329,7 @@ public class MainApp extends javax.swing.JFrame {
             panelShowData.add(componente);
         }
 
+        comprarBtn.setVisible(false);
         panelShowData.revalidate();
         panelShowData.repaint();
     }//GEN-LAST:event_historialBtnActionPerformed
@@ -332,18 +340,19 @@ public class MainApp extends javax.swing.JFrame {
 
         panelShowData.removeAll();
 
-        ComprasDAO comprasDAO = new ComprasDAO();
-        List<Compras> lista = comprasDAO.getCarrito(); // o getCarrito()
-
         for (Cancion c : Carrito.getCanciones()) {
             TarjetaCancionCompra tarjeta = new TarjetaCancionCompra(c);
             panelShowData.add(tarjeta);
         }
 
-
+        comprarBtn.setVisible(true);
         panelShowData.revalidate();
         panelShowData.repaint();
     }//GEN-LAST:event_carritoBtnActionPerformed
+
+    private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comprarBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -387,6 +396,7 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JButton btnPeliculas;
     private javax.swing.JButton btnSeries;
     private javax.swing.JButton carritoBtn;
+    private javax.swing.JButton comprarBtn;
     private javax.swing.JButton historialBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainContainerPanel;

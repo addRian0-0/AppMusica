@@ -5,8 +5,7 @@ import com.azure.storage.blob.sas.*;
 import java.time.OffsetDateTime;
 
 public class AzureSAS{
-
-    // Método para generar un SAS URL de descarga para un blob específico
+    
     public static String generateDownloadSAS(String connectionString, String containerName, String blobName) {
         // Crea el cliente principal
         BlobServiceClient serviceClient = new BlobServiceClientBuilder()
