@@ -169,14 +169,16 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        
+
         UsuarioDAO dao = new UsuarioDAO();
-        dao.iniciarSesion(usernameInput.getText(), passInput.getText());
+        boolean state = dao.iniciarSesion(usernameInput.getText(), passInput.getText());
         
-        MainApp mainScreen = new MainApp();
-        mainScreen.setVisible(true);
-        mainScreen.setLocationRelativeTo(null);
-        this.dispose();
+        if (state == true) {
+            MainApp mainScreen = new MainApp();
+            mainScreen.setVisible(true);
+            mainScreen.setLocationRelativeTo(null);
+            this.dispose();
+        }
 
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
@@ -189,12 +191,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_usernameInputActionPerformed
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
-        
+
         RegistroUsuario registroScreen = new RegistroUsuario();
         this.dispose();
         registroScreen.setVisible(true);
         registroScreen.setLocationRelativeTo(null);
-        
+
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     /**

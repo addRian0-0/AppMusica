@@ -62,9 +62,28 @@ public class UsuarioDAO {
         }
     }
 
+    public boolean iniciarSesion(String username, String password) {
+        try (Connection conn = Conexion.getConnection()) {
+            // Consulta para verificar usuario y contraseña
+            String sql = "SELECT * FROM USUARIOS WHERE USERNAME = ? AND CLAVEACCESO = ?";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, username);
+                stmt.setString(2, password); // En sistemas reales deberías usar hash + salt
 
-    public boolean iniciarSesion(String username, String password){
-        return true;
+                try (ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. Bienvenido " + rs.getString("NOMBRES"));
+                        return true;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos.");
+                        return false;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al conectar a la base de datos:\n" + e.getMessage());
+            return false;
+        }
     }
-    
+
 }
