@@ -11,9 +11,12 @@ import java.util.List;
 
 public class generarCompraTicket {
 
-    private static int contador = 1;
+    private static int contador;
 
     public static JSONObject generarCompra(String correoUsuario, List<Cancion> carrito) {
+        if (contador == 0) {
+            contador = 1;
+        }
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         String fechaActual = LocalDateTime.now().format(formato);
         String codigoCompra = String.format("CDC%06d", contador++);
