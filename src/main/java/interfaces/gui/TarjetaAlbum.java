@@ -19,6 +19,7 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
 import DAO.CancionDAO;
+import interfaces.Carrito;
 import model.Album;
 import model.Cancion;
 
@@ -121,6 +122,11 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         anoLbl.setText("Año de creacion");
 
         agregarBtn.setText("Agregar");
+        agregarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarBtnActionPerformed(evt);
+            }
+        });
 
         verCancionesBtn.setText("Ver canciones");
         verCancionesBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -193,6 +199,16 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         panelShowData.repaint();
         
     }//GEN-LAST:event_verCancionesBtnActionPerformed
+
+    private void agregarAlCarrito() {
+
+        Carrito.agregarAlbum(album);
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Album agregado al carrito!");
+    }
+
+    private void agregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBtnActionPerformed
+        agregarAlCarrito();
+    }//GEN-LAST:event_agregarBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
