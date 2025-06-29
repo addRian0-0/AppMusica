@@ -80,7 +80,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="reproducirBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Play"/>
+            <Property name="text" type="java.lang.String" value="Reproducir"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reproducirBtnActionPerformed"/>
@@ -88,7 +88,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="agregarLbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Add"/>
+            <Property name="text" type="java.lang.String" value="Agregar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agregarLblActionPerformed"/>

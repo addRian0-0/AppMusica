@@ -22,25 +22,6 @@ import model.Album;
  */
 public class AlbumDAO {
 
-    public List<Album> getAlbum() {
-        List<Album> lista = new ArrayList<>();
-
-        try {
-            // Cambia la ruta si ejecutas desde otra ubicación
-            FileReader reader = new FileReader("data/multimedia1.json");
-
-            Gson gson = new Gson();
-            java.lang.reflect.Type albumListType = new TypeToken<List<Album>>() {}.getType();
-            lista = gson.fromJson(reader, albumListType);
-
-            reader.close();
-        } catch (Exception e) {
-            System.out.println("Error al leer el archivo JSON: " + e.getMessage());
-        }
-
-        return lista;
-    }
-    
     public List<Album> getAlbum1() {
 
         List<Album> lista = new ArrayList<>();
@@ -49,18 +30,19 @@ public class AlbumDAO {
 
             Connection conn = Conexion.getConnection();
 
-            String query = "SELECT NOMBRE_ALBUM, FECHA_LANZAMIENTO, ARTISTA, URL_ICONO FROM ALBUMES";
+            String query = "SELECT ID_ALBUM, NOMBRE_ALBUM, FECHA_LANZAMIENTO, ARTISTA, URL_ICONO FROM ALBUMES";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
 
+                String idAlbum = rs.getString("ID_ALBUM");
                 String nombre = rs.getString("NOMBRE_ALBUM");
                 int anio = Integer.parseInt(rs.getString("FECHA_LANZAMIENTO"));
                 String artistas = rs.getString("ARTISTA");
                 String urlPortada = rs.getString("URL_ICONO");
 
-                Album albumAdd = new Album(nombre, "Generos default", urlPortada, anio, 0, artistas);
+                Album albumAdd = new Album(idAlbum,artistas,"","",null,nombre,"Genero default",urlPortada,anio,0);
                 lista.add(albumAdd);
 
             }

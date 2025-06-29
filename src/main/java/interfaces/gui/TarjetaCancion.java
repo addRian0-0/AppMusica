@@ -203,7 +203,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
         } else {
             rep.Pausar();  // En este caso sería más un 'parar'
             estaReproduciendo = false;
-            reproducirBtn.setText("Play");
+            reproducirBtn.setText("Reproducir");
         }
     }//GEN-LAST:event_reproducirBtnActionPerformed
 

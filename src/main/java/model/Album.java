@@ -14,16 +14,22 @@ public class Album extends Multimedia{
     
     private String artistas, selloDiscografico, tipo;
     private List<Cancion> cancionesAlbum;
+    private String idAlbum;
+
 
     public Album(){}
-    
-    public Album(String artistas, String selloDiscografico, String tipo, List<Cancion> cancionesAlbum, String titulo, String generos, String urlPortada, int anio, float precio) {
+
+    public Album(String idAlbum, String artistas, String selloDiscografico, String tipo, List<Cancion> cancionesAlbum, String titulo, String generos, String urlPortada, int anio, float precio) {
         super(titulo, generos, urlPortada, anio, precio);
+        this.idAlbum = idAlbum;
         this.artistas = artistas;
         this.selloDiscografico = selloDiscografico;
         this.tipo = tipo;
         this.cancionesAlbum = cancionesAlbum;
     }
+
+
+
     
     public Album( String titulo, String generos, String urlPortada, int anio, float precio, String artistas){
         super(titulo, generos,urlPortada, anio, precio);
@@ -61,6 +67,15 @@ public class Album extends Multimedia{
     public void setCancionesAlbum(List<Cancion> cancionesAlbum) {
         this.cancionesAlbum = cancionesAlbum;
     }
+
+    public String getIdAlbum() {
+        return idAlbum;
+    }
+
+    public void setIdAlbum(String idAlbum) {
+        this.idAlbum = idAlbum;
+    }
+
     
     
     

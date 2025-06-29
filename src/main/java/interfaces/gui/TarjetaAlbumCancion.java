@@ -59,14 +59,14 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
 
         duracionLbl.setText("Duracion");
 
-        reproducirBtn.setText("Play");
+        reproducirBtn.setText("Reproducir");
         reproducirBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reproducirBtnActionPerformed(evt);
             }
         });
 
-        agregarLbl.setText("Add");
+        agregarLbl.setText("Agregar");
         agregarLbl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarLblActionPerformed(evt);
@@ -127,7 +127,7 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
         } else {
             rep.Pausar();  // En este caso sería más un 'parar'
             estaReproduciendo = false;
-            reproducirBtn.setText("Play");
+            reproducirBtn.setText("Reproducir");
         }
     }//GEN-LAST:event_reproducirBtnActionPerformed
 

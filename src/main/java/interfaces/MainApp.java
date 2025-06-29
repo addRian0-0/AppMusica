@@ -38,7 +38,7 @@ public class MainApp extends javax.swing.JFrame {
     PeliculasDAO peliculaDAO = new PeliculasDAO();
     SeriesDAO seriesDAO = new SeriesDAO();
 
-    List<Album> albumsList = albumDAO.getAlbum();
+    List<Album> albumsList = albumDAO.getAlbum1();
     List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
     List<Serie> seriesList = seriesDAO.getSeries();
 

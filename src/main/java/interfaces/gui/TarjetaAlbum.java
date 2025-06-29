@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.net.URL;
+import java.util.List;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -16,7 +17,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
+import DAO.CancionDAO;
 import model.Album;
+import model.Cancion;
 
 /**
  *
@@ -178,6 +182,10 @@ public class TarjetaAlbum extends javax.swing.JPanel {
             System.err.println("panelShowData es null");
             return;
         }
+        CancionDAO cancionDAO = new CancionDAO();
+        List<Cancion> canciones = cancionDAO.getCancionesPorAlbum(album.getIdAlbum());
+        album.setCancionesAlbum(canciones);
+        PanelPanelSongs panelCanciones = new PanelPanelSongs(album);
         panelShowData.removeAll();
         panelShowData.setLayout(new BorderLayout()); // o el layout que uses
         panelShowData.add(new PanelPanelSongs(album), BorderLayout.CENTER);
