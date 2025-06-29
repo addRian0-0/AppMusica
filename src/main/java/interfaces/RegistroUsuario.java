@@ -52,6 +52,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         registrarseBtn = new javax.swing.JButton();
         volverBtn = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        java.awt.Color shadowColor = new java.awt.Color(90, 40, 110);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,34 +78,34 @@ public class RegistroUsuario extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(105, 58, 128));
         jLabel5.setText("Apellido materno:");
 
-        nombresInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        nombresInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
         nombresInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombresInputActionPerformed(evt);
             }
         });
 
-        apellidoPaInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        apellidoPaInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
 
-        apellidoMaInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        apellidoMaInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
 
         jLabel6.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(105, 58, 128));
         jLabel6.setText("Correo: ");
 
-        correoInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        correoInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
 
         jLabel7.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(105, 58, 128));
         jLabel7.setText("Nombre de usuario:");
 
-        usernameInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        usernameInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
 
         jLabel8.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(105, 58, 128));
         jLabel8.setText("Contraseña: ");
 
-        passInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), null));
+        passInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 245), shadowColor));
 
         registrarseBtn.setBackground(new java.awt.Color(105, 58, 128));
         registrarseBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N

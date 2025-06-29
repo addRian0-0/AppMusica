@@ -107,5 +107,21 @@
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
+    },
+    {
+        "fechaCompra": "2025-06-29T17:02:25",
+        "estadoCompra": true,
+        "correoUsuario": "micorreo@ejemplo.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-06T17:02:25",
+            "fechaGeneracion": "2025-06-29T17:02:25",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
     }
 ]

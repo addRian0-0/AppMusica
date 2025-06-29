@@ -37,6 +37,9 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        
+        // Definir un color shadow válido
+        java.awt.Color shadowColor = new java.awt.Color(90, 40, 110);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,14 +69,21 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        usernameInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 128), null));
+        // Aplicar los bordes con el color definido
+        usernameInput.setBorder(new javax.swing.border.SoftBevelBorder(
+            javax.swing.border.BevelBorder.RAISED,
+            new java.awt.Color(105, 58, 128),
+            shadowColor));
         usernameInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameInputActionPerformed(evt);
             }
         });
 
-        passInput.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(105, 58, 128), null));
+        passInput.setBorder(new javax.swing.border.SoftBevelBorder(
+            javax.swing.border.BevelBorder.RAISED,
+            new java.awt.Color(105, 58, 128),
+            shadowColor));
         passInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passInputActionPerformed(evt);
