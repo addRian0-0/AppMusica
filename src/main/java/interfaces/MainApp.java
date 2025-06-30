@@ -371,7 +371,7 @@ public class MainApp extends javax.swing.JFrame {
         panelShowData.removeAll();
 
         ComprasDAO comprasDAO = new ComprasDAO();
-        List<Compras> lista = comprasDAO.getCompras(); // o getCarrito()
+        List<Compras> lista = comprasDAO.getCompras(u.getCorreo()); // o getCarrito()
 
         for (Compras c : lista) {
             CompraHistorialCarrito componente = new CompraHistorialCarrito(c);
