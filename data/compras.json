@@ -123,5 +123,66 @@
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
+    },
+    {
+        "fechaCompra": "2025-06-29T18:26:33",
+        "estadoCompra": true,
+        "correoUsuario": "micorreo@ejemplo.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "THE DOORS",
+                "precio": 0,
+                "tipo": "ORIGINAL",
+                "generos": "Generos default",
+                "titulo": "SUMMER ALMOST GONE",
+                "selloDiscografico": "RHINO RECORDS",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/b/b6/Doors_matrix.jpg",
+                "anio": 2000
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipo": "Original",
+                "generos": "Generos default",
+                "titulo": "Mascara",
+                "selloDiscografico": "Maverick",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipo": "Original",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "selloDiscografico": "Maverick",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipo": "Original",
+                "generos": "Generos default",
+                "titulo": "Lotion",
+                "selloDiscografico": "Maverick",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-06T18:26:33",
+            "fechaGeneracion": "2025-06-29T18:26:33",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
     }
 ]

@@ -42,6 +42,8 @@ public class MainApp extends javax.swing.JFrame {
     public MainApp() {
 
         initComponents();
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
 
@@ -52,6 +54,14 @@ public class MainApp extends javax.swing.JFrame {
 
         panelShowData.revalidate();
         panelShowData.repaint();
+    }
+
+    public static void setFixedSize(java.awt.Component component, int width) {
+        java.awt.Dimension d = new java.awt.Dimension(width, component.getHeight());
+        component.setPreferredSize(d);
+        component.setMinimumSize(d);
+        component.setMaximumSize(d);
+        component.setSize(d);
     }
 
     /**
@@ -164,10 +174,9 @@ public class MainApp extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(historialBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(carritoBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(comprarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(titleApp)))
+                    .addComponent(carritoBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(comprarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(titleApp))
                 .addGap(82, 82, 82))
         );
 
@@ -242,7 +251,7 @@ public class MainApp extends javax.swing.JFrame {
                         .addComponent(btnPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSeries)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         mainContainerPanelLayout.setVerticalGroup(
             mainContainerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,7 +265,7 @@ public class MainApp extends javax.swing.JFrame {
                     .addComponent(btnSeries, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelScrollData, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -264,31 +273,22 @@ public class MainApp extends javax.swing.JFrame {
         backGroundPanel.setLayout(backGroundPanelLayout);
         backGroundPanelLayout.setHorizontalGroup(
             backGroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backGroundPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainContainerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(mainContainerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         backGroundPanelLayout.setVerticalGroup(
             backGroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backGroundPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainContainerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(mainContainerPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(backGroundPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(backGroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(backGroundPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(backGroundPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -308,8 +308,10 @@ public class MainApp extends javax.swing.JFrame {
         panelShowData.revalidate();
         panelShowData.repaint();
         comprarBtn.setVisible(false);
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
 
-    }                                            
+    }
 
     private void btnAlbumesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlbumesActionPerformed
         panelShowData.removeAll();
@@ -325,6 +327,9 @@ public class MainApp extends javax.swing.JFrame {
         panelShowData.revalidate();
         panelShowData.repaint();
         comprarBtn.setVisible(false);
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
+
     }//GEN-LAST:event_btnAlbumesActionPerformed
 
     private void btnPeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeliculasActionPerformed
@@ -340,6 +345,9 @@ public class MainApp extends javax.swing.JFrame {
             panelShowData.add(tarjetaPeliculaGUI);
         }
         comprarBtn.setVisible(false);
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
+
 
     }//GEN-LAST:event_btnPeliculasActionPerformed
 
@@ -356,6 +364,9 @@ public class MainApp extends javax.swing.JFrame {
             panelShowData.add(tarjetaSerie);
         }
         comprarBtn.setVisible(false);
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
+
 
     }//GEN-LAST:event_btnSeriesActionPerformed
 
@@ -376,6 +387,9 @@ public class MainApp extends javax.swing.JFrame {
         comprarBtn.setVisible(false);
         panelShowData.revalidate();
         panelShowData.repaint();
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
+
     }//GEN-LAST:event_historialBtnActionPerformed
 
     private void carritoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carritoBtnActionPerformed
@@ -392,6 +406,9 @@ public class MainApp extends javax.swing.JFrame {
         comprarBtn.setVisible(true);
         panelShowData.revalidate();
         panelShowData.repaint();
+        //setFixedSize(panelShowData, 881);
+        setFixedSize(panelScrollData, 881); // O el tamaño que quieras
+
     }//GEN-LAST:event_carritoBtnActionPerformed
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
