@@ -169,5 +169,336 @@
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
+    },
+    {
+        "fechaCompra": "2025-06-30T09:00:51",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "The black eyed peas",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "The E.N.D. (The energy never dies) Deluxe",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://ia600801.us.archive.org/13/items/the-e.n.d.-deluxe-edition/Front%20Cover%20%28Deluxe%20Edition%29.jpg?cnt=0",
+                "anio": 2009
+            },
+            {
+                "artistas": "MF Doom",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "Mm.. Food",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://ia802305.us.archive.org/34/items/mf-doom-mm-food/MM..Food/cover.jpg?cnt=0",
+                "anio": 2004
+            },
+            {
+                "artistas": "Arctic monkeys",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Brianstorm",
+                "duracion": 0,
+                "selloDiscografico": "Domino records",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20Brianstorm.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "precio": 19.99,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Legendary Pictures",
+                "director": "Christopher Nolan",
+                "formato": "Blu-ray",
+                "generos": "Ciencia ficción, Acción",
+                "titulo": "Inception",
+                "duracion": "2h 28min",
+                "urlPortada": "https://example.com/inception-poster.jpg",
+                "anio": 2010
+            },
+            {
+                "precio": 0,
+                "temporadas": 5,
+                "tipoMultimedia": "Serie",
+                "director": "Vince Gilligan",
+                "formato": "Digital",
+                "generos": "Drama, Crimen",
+                "titulo": "Breaking Bad",
+                "urlPortada": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                "anio": 2008
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T09:00:51",
+            "fechaGeneracion": "2025-06-30T09:00:51",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T09:33:43",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Astrophysics",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "The first sound of the future",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://s.songswave.com/album-images/vol32/3002/3002850/4894356-big/The-First-Sound-Of-The-Future-Past-cover.jpg",
+                "anio": 2023
+            },
+            {
+                "artistas": "MF Doom",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Gumbo",
+                "duracion": 0,
+                "selloDiscografico": "Rhymesayers Entertainment",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/08-Gumbo.mp3",
+                "urlPortada": "https://ia802305.us.archive.org/34/items/mf-doom-mm-food/MM..Food/cover.jpg?cnt=0",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "precio": 19.99,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Legendary Pictures",
+                "director": "Christopher Nolan",
+                "formato": "Blu-ray",
+                "generos": "Ciencia ficción, Acción",
+                "titulo": "Inception",
+                "duracion": "2h 28min",
+                "urlPortada": "https://example.com/inception-poster.jpg",
+                "anio": 2010
+            },
+            {
+                "precio": 0,
+                "temporadas": 1,
+                "tipoMultimedia": "Serie",
+                "director": "Mike Flanagan",
+                "formato": "Streaming",
+                "generos": "Terror, Drama",
+                "titulo": "The Haunting of Hill House",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/6/61/The_Haunting_of_Hill_House.png",
+                "anio": 2018
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T09:33:43",
+            "fechaGeneracion": "2025-06-30T09:33:43",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T10:01:03",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "White pony",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://akamai.sscdn.co/uploadfile/letras/albuns/a/4/8/f/46481684259853.jpg",
+                "anio": 2000
+            },
+            {
+                "precio": 19.99,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Legendary Pictures",
+                "director": "Christopher Nolan",
+                "formato": "Blu-ray",
+                "generos": "Ciencia ficción, Acción",
+                "titulo": "Inception",
+                "duracion": "2h 28min",
+                "urlPortada": "https://example.com/inception-poster.jpg",
+                "anio": 2010
+            },
+            {
+                "precio": 0,
+                "temporadas": 5,
+                "tipoMultimedia": "Serie",
+                "director": "Vince Gilligan",
+                "formato": "Digital",
+                "generos": "Drama, Crimen",
+                "titulo": "Breaking Bad",
+                "urlPortada": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                "anio": 2008
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T10:01:03",
+            "fechaGeneracion": "2025-06-30T10:01:03",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T10:02:53",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000002",
+        "contenidoComprado": [
+            {
+                "precio": 0,
+                "temporadas": 5,
+                "tipoMultimedia": "Serie",
+                "director": "Vince Gilligan",
+                "formato": "Digital",
+                "generos": "Drama, Crimen",
+                "titulo": "Breaking Bad",
+                "urlPortada": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                "anio": 2008
+            },
+            {
+                "precio": 0,
+                "temporadas": 8,
+                "tipoMultimedia": "Serie",
+                "director": "David Benioff & D. B. Weiss",
+                "formato": "Digital",
+                "generos": "Fantasía, Drama",
+                "titulo": "Game of Thrones",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg",
+                "anio": 2011
+            },
+            {
+                "precio": 19.99,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Legendary Pictures",
+                "director": "Christopher Nolan",
+                "formato": "Blu-ray",
+                "generos": "Ciencia ficción, Acción",
+                "titulo": "Inception",
+                "duracion": "2h 28min",
+                "urlPortada": "https://example.com/inception-poster.jpg",
+                "anio": 2010
+            },
+            {
+                "precio": 17.5,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Warner Bros.",
+                "director": "Christopher Nolan",
+                "formato": "DVD",
+                "generos": "Acción, Crimen, Drama",
+                "titulo": "The Dark Knight",
+                "duracion": "2h 32min",
+                "urlPortada": "https://example.com/dark-knight.jpg",
+                "anio": 2008
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000002/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T10:02:53",
+            "fechaGeneracion": "2025-06-30T10:02:53",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T10:03:36",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000003",
+        "contenidoComprado": [
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "Clancy",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2025
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "Around the fur",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 1997
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "White pony",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://akamai.sscdn.co/uploadfile/letras/albuns/a/4/8/f/46481684259853.jpg",
+                "anio": 2000
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000003/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T10:03:36",
+            "fechaGeneracion": "2025-06-30T10:03:36",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T10:04:30",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [{
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Album",
+            "generos": "Genero default",
+            "titulo": "Clancy",
+            "selloDiscografico": "",
+            "cancionesAlbum": [],
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2025
+        }],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T10:04:30",
+            "fechaGeneracion": "2025-06-30T10:04:30",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
     }
 ]

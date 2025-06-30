@@ -418,7 +418,7 @@ public class MainApp extends javax.swing.JFrame {
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
         JSONObject compra = generarCompraTicket.generarCompra(u.getCorreo(), CarritoDAO.getListaMultimedia());
-        generarCompraTicket.guardarCompra(compra);
+        generarCompraTicket.guardarCompra(compra, u.getCorreo());
         CarritoDAO.getListaMultimedia().clear();
         javax.swing.JOptionPane.showMessageDialog(this, "¡Gracias por tu compra!");
     }//GEN-LAST:event_comprarBtnActionPerformed

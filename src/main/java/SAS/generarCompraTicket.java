@@ -11,6 +11,10 @@ import model.Serie;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.List;
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
+
+import java.util.Properties;
 
 public class generarCompraTicket {
 
@@ -52,7 +56,7 @@ public class generarCompraTicket {
     }
 
 
-    public static void guardarCompra(JSONObject compra) {
+    public static void guardarCompra(JSONObject compra, String correo) {
         String filename = "data/compras.json";
         JSONArray comprasArray = new JSONArray();
 
@@ -78,6 +82,7 @@ public class generarCompraTicket {
 
         // Agrega la nueva compra al historial
         comprasArray.put(compra);
+        CorreoUtil.enviarCorreo(correo, "Compra de contenido", compra.toString(4));
 
         // Escribe de regreso el historial actualizado
         try (FileWriter file = new FileWriter(filename)) {
@@ -88,6 +93,11 @@ public class generarCompraTicket {
             e.printStackTrace();
         }
     }
+
+
+
+
+
 
 }
 
