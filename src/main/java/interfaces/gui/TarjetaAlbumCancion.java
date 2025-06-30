@@ -57,10 +57,17 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(881, 53));
 
+        panelPista.setBackground(new java.awt.Color(219, 182, 235));
+
+        nombreCancionLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         nombreCancionLbl.setText("Nombre de la cancion");
 
+        duracionLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         duracionLbl.setText("Duracion");
 
+        reproducirBtn.setBackground(new java.awt.Color(105, 58, 128));
+        reproducirBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        reproducirBtn.setForeground(new java.awt.Color(235, 220, 236));
         reproducirBtn.setText("Reproducir");
         reproducirBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +75,9 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
             }
         });
 
+        agregarLbl.setBackground(new java.awt.Color(105, 58, 128));
+        agregarLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        agregarLbl.setForeground(new java.awt.Color(235, 220, 236));
         agregarLbl.setText("Agregar");
         agregarLbl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +98,7 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
                 .addComponent(nombreCancionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(duracionLbl)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(490, Short.MAX_VALUE))
         );
         panelPistaLayout.setVerticalGroup(
             panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,16 +109,14 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
                     .addComponent(agregarLbl)
                     .addComponent(duracionLbl)
                     .addComponent(nombreCancionLbl))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelPista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelPista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
