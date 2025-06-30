@@ -5,6 +5,7 @@
 package interfaces;
 
 import DAO.UsuarioDAO;
+import model.Usuario;
 
 /**
  *
@@ -171,9 +172,12 @@ public class Login extends javax.swing.JFrame {
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
 
         UsuarioDAO dao = new UsuarioDAO();
-        boolean state = dao.iniciarSesion(usernameInput.getText(), passInput.getText());
+        Usuario usuarioLogin  = dao.iniciarSesion(usernameInput.getText(), passInput.getText());
         
-        if (state == true) {
+        if (usuarioLogin != null) {
+            
+             SesionUsuario.setUsuario(usuarioLogin);
+            
             MainApp mainScreen = new MainApp();
             mainScreen.setVisible(true);
             mainScreen.setLocationRelativeTo(null);

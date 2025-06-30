@@ -27,6 +27,7 @@ public class MainApp extends javax.swing.JFrame {
     AlbumDAO albumDAO = new AlbumDAO();
     PeliculasDAO peliculaDAO = new PeliculasDAO();
     SeriesDAO seriesDAO = new SeriesDAO();
+    Usuario u = SesionUsuario.getUsuario();
 
     List<Album> albumsList = albumDAO.getAlbum1();
     List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
@@ -408,7 +409,7 @@ public class MainApp extends javax.swing.JFrame {
     }//GEN-LAST:event_carritoBtnActionPerformed
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
-        JSONObject compra = generarCompraTicket.generarCompra("micorreo123@ejemplo.com", CarritoDAO.getCanciones());
+        JSONObject compra = generarCompraTicket.generarCompra(u.getCorreo(), CarritoDAO.getCanciones());
         generarCompraTicket.guardarCompra(compra);
         CarritoDAO.getCanciones().clear();
         javax.swing.JOptionPane.showMessageDialog(this, "¡Gracias por tu compra!");

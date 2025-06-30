@@ -62,28 +62,36 @@ public class UsuarioDAO {
         }
     }
 
-    public boolean iniciarSesion(String username, String password) {
-        try (Connection conn = Conexion.getConnection()) {
-            // Consulta para verificar usuario y contraseña
-            String sql = "SELECT * FROM USUARIOS WHERE USERNAME = ? AND CLAVEACCESO = ?";
-            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-                stmt.setString(1, username);
-                stmt.setString(2, password); // En sistemas reales deberías usar hash + salt
+    public Usuario iniciarSesion(String username, String password) {
+    try (Connection conn = Conexion.getConnection()) {
+        String sql = "SELECT * FROM USUARIOS WHERE USERNAME = ? AND CLAVEACCESO = ?";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            stmt.setString(2, password); // Nota: No recomendado usar texto plano en producción
 
-                try (ResultSet rs = stmt.executeQuery()) {
-                    if (rs.next()) {
-                        JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. Bienvenido " + rs.getString("NOMBRES"));
-                        return true;
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos.");
-                        return false;
-                    }
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    Usuario usuario = new Usuario();
+                    usuario.setUsername(rs.getString("USERNAME"));
+                    usuario.setNombres(rs.getString("NOMBRES"));
+                    usuario.setApellidoPa(rs.getString("APELLIDOP"));
+                    usuario.setApellidoMa(rs.getString("APELLIDOMA"));
+                    usuario.setCorreo(rs.getString("CORREO_ELECTRONICO"));
+                    usuario.setClaveAcceso(rs.getString("CLAVEACCESO")); // ⚠️ No recomendado mostrarla o guardarla como texto plano
+                    
+                    JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. Bienvenido " + usuario.getNombres());
+                    return usuario;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos.");
+                    return null;
                 }
             }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error al conectar a la base de datos:\n" + e.getMessage());
-            return false;
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error al conectar a la base de datos:\n" + e.getMessage());
+        return null;
     }
+}
+
 
 }
