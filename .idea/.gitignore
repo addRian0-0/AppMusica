@@ -9,3 +9,4 @@
 /dataSources/
 /dataSources.local.xml
 .env
+/src/resources/config.properties
