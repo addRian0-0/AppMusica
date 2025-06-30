@@ -23,7 +23,7 @@ public class AzureSAS{
 
         // Define vigencia: por ejemplo, 30 minutos desde ahora
         BlobServiceSasSignatureValues sasValues = new BlobServiceSasSignatureValues(
-                OffsetDateTime.now().plusMinutes(30),
+                OffsetDateTime.now().plusMinutes(5),
                 permissions
         );
 

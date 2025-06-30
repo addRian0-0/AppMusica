@@ -6,6 +6,9 @@ import java.time.format.DateTimeFormatter;
 
 import model.Cancion;
 import model.Multimedia;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import model.Pelicula;
 import model.Serie;
 import org.json.JSONArray;
@@ -13,6 +16,7 @@ import org.json.JSONObject;
 import java.util.List;
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
+import utils.ConfigLoader;
 
 import java.util.Properties;
 
@@ -21,9 +25,8 @@ public class generarCompraTicket {
     private static int contador;
 
     public static JSONObject generarCompra(String correoUsuario, List<Multimedia> carrito) {
-        if (contador == 0) {
-            contador = 1;
-        }
+        if (contador == 0) contador = 1;
+
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         String fechaActual = LocalDateTime.now().format(formato);
         String codigoCompra = String.format("CDC%06d", contador++);
@@ -32,17 +35,46 @@ public class generarCompraTicket {
         for (Multimedia item : carrito) {
             contenidoComprado.put(item.toJSON()); // Polimorfismo: cada clase sabe cómo representarse
         }
-
         JSONArray listaEnlacesDescarga = new JSONArray();
-        JSONObject enlace = new JSONObject();
-        enlace.put("enlaceGenerado", "https://descargas.example.com/" + codigoCompra + "/1");
-        enlace.put("fechaGeneracion", fechaActual);
-        enlace.put("fechaDescarga", JSONObject.NULL);
-        enlace.put("fechaExpiracion", LocalDateTime.now().plusDays(7).format(formato));
-        enlace.put("estadoDescarga", false);
-        enlace.put("estadoPenalizacion", true);
-        enlace.put("penalizacion", 5.0);
-        listaEnlacesDescarga.put(enlace);
+
+        // Parámetros de Azure (ajústalos a tu entorno)
+        String connectionString = ConfigLoader.get("azure.connectionString");
+        String containerName = ConfigLoader.get("azure.containerName");
+
+        for (Multimedia item : carrito) {
+            contenidoComprado.put(item.toJSON());
+
+            String enlaceGenerado = "N/A";
+
+            if (item instanceof Cancion) {
+                Cancion cancion = (Cancion) item;
+                String url = cancion.getUrlCancion();
+
+                try {
+                    // Obtener blobName limpio y decodificado
+                    URL azureUrl = new URL(url);
+                    String path = azureUrl.getPath(); // Ej: "/canciones/05%20-%20Deftones%20-%20Rickets.mp3"
+                    String blobName = path.replaceFirst("/" + containerName + "/", "");
+                    blobName = URLDecoder.decode(blobName, StandardCharsets.UTF_8); // "05 - Deftones - Rickets.mp3"
+
+                    // Generar SAS
+                    enlaceGenerado = AzureSAS.generateDownloadSAS(connectionString, containerName, blobName);
+                } catch (Exception e) {
+                    System.out.println(" Error generando SAS para: " + url);
+                    e.printStackTrace();
+                }
+            }
+
+
+            JSONObject enlace = new JSONObject();
+            enlace.put("enlaceGenerado", enlaceGenerado);
+            enlace.put("fechaGeneracion", fechaActual);
+            enlace.put("fechaDescarga", JSONObject.NULL);
+            enlace.put("fechaExpiracion", LocalDateTime.now().plusDays(7).format(formato));
+            enlace.put("estadoDescarga", false);
+            enlace.put("estadoPenalizacion", false);
+            listaEnlacesDescarga.put(enlace);
+        }
 
         JSONObject compra = new JSONObject();
         compra.put("fechaCompra", fechaActual);
@@ -93,11 +125,5 @@ public class generarCompraTicket {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
 }
 
