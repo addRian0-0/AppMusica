@@ -4,6 +4,9 @@
  */
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.List;
 
 /**
@@ -27,8 +30,6 @@ public class Album extends Multimedia{
         this.tipo = tipo;
         this.cancionesAlbum = cancionesAlbum;
     }
-
-
 
     
     public Album( String titulo, String generos, String urlPortada, int anio, float precio, String artistas){
@@ -76,7 +77,20 @@ public class Album extends Multimedia{
         this.idAlbum = idAlbum;
     }
 
-    
-    
-    
+    @Override
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        json.put("tipoMultimedia", "Album");
+        json.put("titulo", getTitulo());
+        json.put("generos", getGeneros());
+        json.put("urlPortada", getUrlPortada());
+        json.put("anio", getAnio());
+        json.put("precio", getPrecio());
+        json.put("artistas", getArtistas());
+        json.put("selloDiscografico", getSelloDiscografico());
+        json.put("cancionesAlbum", new JSONArray(getCancionesAlbum())); // asumiendo que es List<String>
+        return json;
+    }
+
+
 }

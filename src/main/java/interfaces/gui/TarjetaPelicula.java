@@ -11,6 +11,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
+import DAO.CarritoDAO;
 import model.Pelicula;
 
 /**
@@ -22,6 +24,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
     private Pelicula pelicula;
     public TarjetaPelicula(Pelicula pelicula) {
         initComponents();
+        this.pelicula = pelicula;
         tituloLabel.setText(pelicula.getTitulo());
         sinopsisLabel.setText(pelicula.getSinopsis());
         actoresLabel.setText(pelicula.getActores());
@@ -58,6 +61,11 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         imgPortada.repaint();
         
         
+    }
+
+    private void agregarAlCarrito() {
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Pelicula agregada al carrito!");
+        CarritoDAO.agregarMultimedia(pelicula);
     }
 
     /**
@@ -264,7 +272,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void agregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBtnActionPerformed
-        // TODO add your handling code here:
+        agregarAlCarrito();
     }//GEN-LAST:event_agregarBtnActionPerformed
 
 

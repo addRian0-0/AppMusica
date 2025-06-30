@@ -4,6 +4,8 @@
  */
 package model;
 
+import org.json.JSONObject;
+
 import java.util.List;
 
 /**
@@ -75,5 +77,21 @@ public class Serie extends Multimedia{
     public void setListaCapitulos(List<Capitulos> listaCapitulos) {
         this.listaCapitulos = listaCapitulos;
     }
-    
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        json.put("tipoMultimedia", "Serie");
+        json.put("titulo", getTitulo());
+        json.put("generos", getGeneros());
+        json.put("urlPortada", getUrlPortada());
+        json.put("anio", getAnio());
+        json.put("precio", getPrecio());
+        json.put("temporadas", getTemporadas());
+        json.put("formato", getFormato());
+        json.put("director", getDirector());
+        return json;
+    }
+
+
 }

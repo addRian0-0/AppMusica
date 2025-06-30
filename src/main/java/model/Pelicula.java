@@ -4,6 +4,8 @@
  */
 package model;
 
+import org.json.JSONObject;
+
 /**
  *
  * @author cybergato
@@ -89,7 +91,22 @@ public class Pelicula extends Multimedia{
     public void setDuracion(String duracion) {
         this.duracion = duracion;
     }
-    
-    
-    
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        json.put("tipoMultimedia", "Pelicula");
+        json.put("titulo", getTitulo());
+        json.put("generos", getGeneros());
+        json.put("urlPortada", getUrlPortada());
+        json.put("anio", getAnio());
+        json.put("precio", getPrecio());
+        json.put("duracion", getDuracion());
+        json.put("formato", getFormato());
+        json.put("director", getDirector());
+        json.put("casaProductora", getCasaProductora());
+        return json;
+    }
+
+
 }

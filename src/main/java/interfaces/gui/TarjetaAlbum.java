@@ -210,7 +210,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
 
     private void agregarAlCarrito() {
 
-        CarritoDAO.agregarAlbum(album);
+        CarritoDAO.agregarMultimedia(album);
         javax.swing.JOptionPane.showMessageDialog(this, "¡Album agregado al carrito!");
     }
 

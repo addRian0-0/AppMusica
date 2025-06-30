@@ -4,6 +4,8 @@
  */
 package model;
 
+import org.json.JSONObject;
+
 /**
  *
  * @author cybergato
@@ -63,7 +65,9 @@ public class Multimedia {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-    
-    
-    
+
+    public JSONObject toJSON() {
+        return null;
+    }
+
 }

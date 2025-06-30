@@ -4,6 +4,9 @@
  */
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 /**
  *
  * 
@@ -74,7 +77,25 @@ public class Cancion extends Multimedia{
     public void setSello(String sello) {
         this.sello = sello;
     }
-    
-    
-    
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        json.put("tipoMultimedia", "Cancion");
+        json.put("titulo", getTitulo());
+        json.put("generos", getGeneros());
+        json.put("urlPortada", getUrlPortada());
+        json.put("anio", getAnio());
+        json.put("precio", getPrecio());
+        json.put("formato", getFormato());
+        json.put("edicion", getEdicion());
+        json.put("artistas", getArtistas());
+        json.put("selloDiscografico", getSello());
+        json.put("duracion", getDuracion());
+        json.put("urlCancion", getUrlCancion());
+        return json;
+    }
+
+
+
 }

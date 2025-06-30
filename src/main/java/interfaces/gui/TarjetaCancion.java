@@ -216,8 +216,9 @@ public class TarjetaCancion extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void agregarAlCarrito() {
-        CarritoDAO.agregarCancion(cancion);
         javax.swing.JOptionPane.showMessageDialog(this, "¡Canción agregada al carrito!");
+        //
+        CarritoDAO.agregarMultimedia(cancion);
     }
 
     private void reproducirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reproducirBtnActionPerformed

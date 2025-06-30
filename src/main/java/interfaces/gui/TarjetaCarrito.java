@@ -4,7 +4,7 @@
  */
 package interfaces.gui;
 
-import model.Cancion;
+import model.Multimedia;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,24 +14,23 @@ import java.net.URL;
  *
  * @author cybergato
  */
-public class TarjetaCancionCompra extends javax.swing.JPanel {
+public class TarjetaCarrito extends javax.swing.JPanel {
 
-    private Cancion cancion;
-    
-    public TarjetaCancionCompra(Cancion cancion) {
-        this.cancion = cancion;
+    private Multimedia multimedia;
+
+    public TarjetaCarrito(Multimedia multimedia) {
+        this.multimedia = multimedia;
         initComponents();
-        nombreCancionLbl.setText(cancion.getTitulo());
-        nombreArtistaLbl.setText(cancion.getArtistas());
-        edicionLbl.setText(cancion.getEdicion());
-        selloLbl.setText(cancion.getSello());
-        generoLbl.setText(cancion.getGeneros());
+        nombreMultimediaLbl.setText(multimedia.getTitulo());
+        generoLbl.setText(multimedia.getGeneros());
+        anioLbl.setText(String.valueOf(multimedia.getAnio()));
+        precioLbl.setText("$" + multimedia.getPrecio());
 
         // Cargar imagen
-        if (cancion.getUrlPortada()!= null && !cancion.getUrlPortada().isEmpty()) {
+        if (multimedia.getUrlPortada()!= null && !multimedia.getUrlPortada().isEmpty()) {
             SwingUtilities.invokeLater(() -> {
                 try {
-                    URL url = new URL(cancion.getUrlPortada());
+                    URL url = new URL(multimedia.getUrlPortada());
                     ImageIcon icon = new ImageIcon(url);
                     Image img = icon.getImage().getScaledInstance(
                             imgIconPista.getWidth() > 0 ? imgIconPista.getWidth() : 100,
@@ -69,11 +68,11 @@ public class TarjetaCancionCompra extends javax.swing.JPanel {
 
         panelPista = new javax.swing.JPanel();
         imgIconPista = new javax.swing.JPanel();
-        nombreCancionLbl = new javax.swing.JLabel();
+        nombreMultimediaLbl = new javax.swing.JLabel();
         tipoLbl = new javax.swing.JLabel();
         nombreArtistaLbl = new javax.swing.JLabel();
-        selloLbl = new javax.swing.JLabel();
-        edicionLbl = new javax.swing.JLabel();
+        precioLbl = new javax.swing.JLabel();
+        anioLbl = new javax.swing.JLabel();
         generoLbl = new javax.swing.JLabel();
 
         javax.swing.GroupLayout imgIconPistaLayout = new javax.swing.GroupLayout(imgIconPista);
@@ -87,15 +86,15 @@ public class TarjetaCancionCompra extends javax.swing.JPanel {
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        nombreCancionLbl.setText("Nombre de la cancion");
+        nombreMultimediaLbl.setText("Nombre de la cancion");
 
         tipoLbl.setText("Tipo");
 
         nombreArtistaLbl.setText("Nombre del artista");
 
-        selloLbl.setText("Sello discografico");
+        precioLbl.setText("Sello discografico");
 
-        edicionLbl.setText("Edicion: ");
+        anioLbl.setText("Edicion: ");
 
         generoLbl.setText("Genero:");
 
@@ -108,16 +107,16 @@ public class TarjetaCancionCompra extends javax.swing.JPanel {
                 .addComponent(imgIconPista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreCancionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreMultimediaLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nombreArtistaLbl))
                 .addGap(58, 58, 58)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(edicionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anioLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tipoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(generoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(selloLbl))
+                    .addComponent(precioLbl))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         panelPistaLayout.setVerticalGroup(
@@ -129,9 +128,9 @@ public class TarjetaCancionCompra extends javax.swing.JPanel {
                     .addGroup(panelPistaLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nombreCancionLbl)
-                            .addComponent(selloLbl)
-                            .addComponent(edicionLbl))
+                            .addComponent(nombreMultimediaLbl)
+                            .addComponent(precioLbl)
+                            .addComponent(anioLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nombreArtistaLbl)
@@ -155,13 +154,13 @@ public class TarjetaCancionCompra extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel edicionLbl;
+    private javax.swing.JLabel anioLbl;
     private javax.swing.JLabel generoLbl;
     private javax.swing.JPanel imgIconPista;
     private javax.swing.JLabel nombreArtistaLbl;
-    private javax.swing.JLabel nombreCancionLbl;
+    private javax.swing.JLabel nombreMultimediaLbl;
     private javax.swing.JPanel panelPista;
-    private javax.swing.JLabel selloLbl;
+    private javax.swing.JLabel precioLbl;
     private javax.swing.JLabel tipoLbl;
     // End of variables declaration//GEN-END:variables
 }

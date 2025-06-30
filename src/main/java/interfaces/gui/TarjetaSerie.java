@@ -11,6 +11,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
+import DAO.CarritoDAO;
 import model.Serie;
 
 /**
@@ -22,8 +24,10 @@ public class TarjetaSerie extends javax.swing.JPanel {
     /**
      * Creates new form TarjetaSerie
      */
+    private Serie serie;
     public TarjetaSerie(Serie serie) {
         initComponents();
+        this.serie = serie;
         tituloLabel.setText(serie.getTitulo());
         sinopsisLabel.setText(serie.getSinopsis());
         anioLabel.setText(Integer.toString(serie.getAnio()));
@@ -121,6 +125,11 @@ public class TarjetaSerie extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(235, 220, 236));
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         precioLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N
         precioLabel.setForeground(new java.awt.Color(105, 58, 128));
@@ -251,6 +260,14 @@ public class TarjetaSerie extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       agregarAlCarrito();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    private void agregarAlCarrito() {
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Serie agregada al carrito!");
+        CarritoDAO.agregarMultimedia(serie);
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

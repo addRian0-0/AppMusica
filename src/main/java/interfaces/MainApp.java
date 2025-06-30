@@ -392,12 +392,20 @@ public class MainApp extends javax.swing.JFrame {
 
         panelShowData.removeAll();
 
-        for (Multimedia c : CarritoDAO.getCanciones()) {
+        for (Multimedia c : CarritoDAO.getListaMultimedia()) {
             if (c instanceof Cancion) {
-                TarjetaCancionCompra tarjeta = new TarjetaCancionCompra((Cancion) c);
+                TarjetaCarrito tarjeta = new TarjetaCarrito((Cancion) c);
+                panelShowData.add(tarjeta);
+            } else if (c instanceof Album) {
+                TarjetaCarrito tarjeta = new TarjetaCarrito((Album) c);
+                panelShowData.add(tarjeta);
+            }else if(c instanceof Pelicula){
+                TarjetaCarrito tarjeta = new TarjetaCarrito((Pelicula) c);
+                panelShowData.add(tarjeta);// Puedes agregar más condiciones para otros tipos
+            }else if(c instanceof Serie){
+                TarjetaCarrito tarjeta = new TarjetaCarrito((Serie) c);
                 panelShowData.add(tarjeta);
             }
-
         }
 
         comprarBtn.setVisible(true);
@@ -409,9 +417,9 @@ public class MainApp extends javax.swing.JFrame {
     }//GEN-LAST:event_carritoBtnActionPerformed
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
-        JSONObject compra = generarCompraTicket.generarCompra(u.getCorreo(), CarritoDAO.getCanciones());
+        JSONObject compra = generarCompraTicket.generarCompra(u.getCorreo(), CarritoDAO.getListaMultimedia());
         generarCompraTicket.guardarCompra(compra);
-        CarritoDAO.getCanciones().clear();
+        CarritoDAO.getListaMultimedia().clear();
         javax.swing.JOptionPane.showMessageDialog(this, "¡Gracias por tu compra!");
     }//GEN-LAST:event_comprarBtnActionPerformed
 

@@ -16,7 +16,7 @@ public class generarCompraTicket {
 
     private static int contador;
 
-    public static JSONObject generarCompra(String correoUsuario, List<Cancion> carrito) {
+    public static JSONObject generarCompra(String correoUsuario, List<Multimedia> carrito) {
         if (contador == 0) {
             contador = 1;
         }
@@ -25,18 +25,8 @@ public class generarCompraTicket {
         String codigoCompra = String.format("CDC%06d", contador++);
 
         JSONArray contenidoComprado = new JSONArray();
-        for (Cancion cancion : carrito) {
-            JSONObject jsonCancion = new JSONObject();
-            jsonCancion.put("titulo", cancion.getTitulo());
-            jsonCancion.put("generos", cancion.getGeneros());
-            jsonCancion.put("urlPortada", cancion.getUrlPortada());
-            jsonCancion.put("anio", cancion.getAnio());
-            jsonCancion.put("precio", cancion.getPrecio());
-            jsonCancion.put("artistas", cancion.getArtistas());
-            jsonCancion.put("selloDiscografico", cancion.getSello());
-            jsonCancion.put("tipo", cancion.getEdicion());
-            jsonCancion.put("cancionesAlbum", new JSONArray());
-            contenidoComprado.put(jsonCancion);
+        for (Multimedia item : carrito) {
+            contenidoComprado.put(item.toJSON()); // Polimorfismo: cada clase sabe cómo representarse
         }
 
         JSONArray listaEnlacesDescarga = new JSONArray();
@@ -60,6 +50,7 @@ public class generarCompraTicket {
 
         return compra;
     }
+
 
     public static void guardarCompra(JSONObject compra) {
         String filename = "data/compras.json";

@@ -79,5 +79,95 @@
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
+    },
+    {
+        "fechaCompra": "2025-06-29T22:38:09",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipo": "Original",
+                "generos": "Generos default",
+                "titulo": "Mascara",
+                "selloDiscografico": "Maverick",
+                "cancionesAlbum": [],
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000
+            },
+            {
+                "artistas": "MF Doom",
+                "precio": 0,
+                "tipo": "Original",
+                "generos": "Generos default",
+                "titulo": "Potholderz",
+                "selloDiscografico": "Rhymesayers Entertainment",
+                "cancionesAlbum": [],
+                "urlPortada": "https://ia802305.us.archive.org/34/items/mf-doom-mm-food/MM..Food/cover.jpg?cnt=0",
+                "anio": 2000
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-06T22:38:09",
+            "fechaGeneracion": "2025-06-29T22:38:09",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T08:45:53",
+        "estadoCompra": true,
+        "correoUsuario": "nico@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "precio": 0,
+                "temporadas": 8,
+                "tipoMultimedia": "Serie",
+                "director": "David Benioff & D. B. Weiss",
+                "formato": "Digital",
+                "generos": "Fantasía, Drama",
+                "titulo": "Game of Thrones",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg",
+                "anio": 2011
+            },
+            {
+                "precio": 0,
+                "temporadas": 5,
+                "tipoMultimedia": "Serie",
+                "director": "Vince Gilligan",
+                "formato": "Digital",
+                "generos": "Drama, Crimen",
+                "titulo": "Breaking Bad",
+                "urlPortada": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                "anio": 2008
+            },
+            {
+                "precio": 17.5,
+                "tipoMultimedia": "Pelicula",
+                "casaProductora": "Warner Bros.",
+                "director": "Christopher Nolan",
+                "formato": "DVD",
+                "generos": "Acción, Crimen, Drama",
+                "titulo": "The Dark Knight",
+                "duracion": "2h 32min",
+                "urlPortada": "https://example.com/dark-knight.jpg",
+                "anio": 2008
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "estadoDescarga": false,
+            "penalizacion": 5,
+            "fechaExpiracion": "2025-07-07T08:45:53",
+            "fechaGeneracion": "2025-06-30T08:45:53",
+            "fechaDescarga": null,
+            "estadoPenalizacion": true
+        }]
     }
 ]
