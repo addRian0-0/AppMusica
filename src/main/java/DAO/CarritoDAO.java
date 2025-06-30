@@ -1,4 +1,4 @@
-package interfaces;
+package DAO;
 
 import model.Album;
 import model.Cancion;
@@ -6,7 +6,7 @@ import model.Cancion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Carrito {
+public class CarritoDAO {
     // Lista estática (carrito global)
     private static final List<Cancion> canciones = new ArrayList<>();
 

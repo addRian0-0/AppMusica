@@ -10,16 +10,13 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.net.URL;
 import java.util.List;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
 
 import DAO.CancionDAO;
-import interfaces.Carrito;
+import DAO.CarritoDAO;
 import model.Album;
 import model.Cancion;
 
@@ -213,7 +210,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
 
     private void agregarAlCarrito() {
 
-        Carrito.agregarAlbum(album);
+        CarritoDAO.agregarAlbum(album);
         javax.swing.JOptionPane.showMessageDialog(this, "¡Album agregado al carrito!");
     }
 

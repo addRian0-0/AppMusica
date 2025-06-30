@@ -4,22 +4,15 @@
  */
 package interfaces;
 
-import DAO.AlbumDAO;
-import DAO.CancionDAO;
-import DAO.ComprasDAO;
-import DAO.PeliculasDAO;
-import DAO.SeriesDAO;
+import DAO.*;
 import SAS.generarCompraTicket;
 import interfaces.gui.*;
 
 import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import model.Album;
-import model.Cancion;
-import model.Compras;
-import model.Pelicula;
-import model.Serie;
+
+import model.*;
 import org.json.JSONObject;
 
 /**
@@ -398,9 +391,12 @@ public class MainApp extends javax.swing.JFrame {
 
         panelShowData.removeAll();
 
-        for (Cancion c : Carrito.getCanciones()) {
-            TarjetaCancionCompra tarjeta = new TarjetaCancionCompra(c);
-            panelShowData.add(tarjeta);
+        for (Multimedia c : CarritoDAO.getCanciones()) {
+            if (c instanceof Cancion) {
+                TarjetaCancionCompra tarjeta = new TarjetaCancionCompra((Cancion) c);
+                panelShowData.add(tarjeta);
+            }
+
         }
 
         comprarBtn.setVisible(true);
@@ -412,46 +408,15 @@ public class MainApp extends javax.swing.JFrame {
     }//GEN-LAST:event_carritoBtnActionPerformed
 
     private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
-        JSONObject compra = generarCompraTicket.generarCompra("micorreo@ejemplo.com", interfaces.Carrito.getCanciones());
+        JSONObject compra = generarCompraTicket.generarCompra("micorreo123@ejemplo.com", CarritoDAO.getCanciones());
         generarCompraTicket.guardarCompra(compra);
-        Carrito.getCanciones().clear();
+        CarritoDAO.getCanciones().clear();
         javax.swing.JOptionPane.showMessageDialog(this, "¡Gracias por tu compra!");
     }//GEN-LAST:event_comprarBtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainApp().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backGroundPanel;

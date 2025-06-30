@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-import interfaces.Carrito;
+import DAO.CarritoDAO;
 import model.Cancion;
 
 /**
@@ -216,7 +216,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void agregarAlCarrito() {
-        Carrito.agregarCancion(cancion);
+        CarritoDAO.agregarCancion(cancion);
         javax.swing.JOptionPane.showMessageDialog(this, "¡Canción agregada al carrito!");
     }
 

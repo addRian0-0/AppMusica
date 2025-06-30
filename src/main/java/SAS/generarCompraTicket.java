@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import model.Cancion;
+import model.Multimedia;
+import model.Pelicula;
+import model.Serie;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.List;

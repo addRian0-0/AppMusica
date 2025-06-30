@@ -1,91 +1,24 @@
 [
     {
-        "fechaCompra": "2025-06-29T14:18:51",
+        "fechaCompra": "2025-06-29T21:44:13",
         "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
+        "correoUsuario": "micorreo123@ejemplo.com",
         "codigoCompra": "CDC000001",
-        "contenidoComprado": [
-            {
-                "artistas": "PINK FLOYD",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "ON THE RUN",
-                "selloDiscografico": "COLUMBIA RECORDS",
-                "cancionesAlbum": [],
-                "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
-                "anio": 2000
-            },
-            {
-                "artistas": "PINK FLOYD",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "THE GREAT GIG IN THE SKY ",
-                "selloDiscografico": "COLUMBIA RECORDS",
-                "cancionesAlbum": [],
-                "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
-                "anio": 2000
-            },
-            {
-                "artistas": "PINK FLOYD",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "US AND THEM",
-                "selloDiscografico": "COLUMBIA RECORDS",
-                "cancionesAlbum": [],
-                "urlPortada": "https://ia601705.us.archive.org/8/items/pink-floyd-bbc-archives-1970-1971-london/Pink%20Floyd%20BBC%20Archives%201970-1971%20London.JPG?cnt=0",
-                "anio": 2000
-            },
-            {
-                "artistas": "Twenty One Pilots",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Midwest Indigo",
-                "selloDiscografico": "Fueled by Ramen",
-                "cancionesAlbum": [],
-                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
-                "anio": 2000
-            },
-            {
-                "artistas": "Twenty One Pilots",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Next Semester",
-                "selloDiscografico": "Fueled by Ramen",
-                "cancionesAlbum": [],
-                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
-                "anio": 2000
-            },
-            {
-                "artistas": "Twenty One Pilots",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Routines in the night",
-                "selloDiscografico": "Fueled by Ramen",
-                "cancionesAlbum": [],
-                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
-                "anio": 2000
-            }
-        ],
+        "contenidoComprado": [],
         "listaEnlacesDescarga": [{
             "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
             "estadoDescarga": false,
             "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T14:18:51",
-            "fechaGeneracion": "2025-06-29T14:18:51",
+            "fechaExpiracion": "2025-07-06T21:44:13",
+            "fechaGeneracion": "2025-06-29T21:44:13",
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
     },
     {
-        "fechaCompra": "2025-06-29T16:34:19",
+        "fechaCompra": "2025-06-29T21:48:39",
         "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
+        "correoUsuario": "micorreo123@ejemplo.com",
         "codigoCompra": "CDC000001",
         "contenidoComprado": [{
             "artistas": "Twenty One Pilots",
@@ -102,56 +35,18 @@
             "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
             "estadoDescarga": false,
             "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T16:34:19",
-            "fechaGeneracion": "2025-06-29T16:34:19",
+            "fechaExpiracion": "2025-07-06T21:48:39",
+            "fechaGeneracion": "2025-06-29T21:48:39",
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
     },
     {
-        "fechaCompra": "2025-06-29T17:02:25",
+        "fechaCompra": "2025-06-29T21:49:27",
         "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
-        "contenidoComprado": [],
-        "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
-            "estadoDescarga": false,
-            "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T17:02:25",
-            "fechaGeneracion": "2025-06-29T17:02:25",
-            "fechaDescarga": null,
-            "estadoPenalizacion": true
-        }]
-    },
-    {
-        "fechaCompra": "2025-06-29T18:26:33",
-        "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
+        "correoUsuario": "micorreo123@ejemplo.com",
+        "codigoCompra": "CDC000002",
         "contenidoComprado": [
-            {
-                "artistas": "THE DOORS",
-                "precio": 0,
-                "tipo": "ORIGINAL",
-                "generos": "Generos default",
-                "titulo": "SUMMER ALMOST GONE",
-                "selloDiscografico": "RHINO RECORDS",
-                "cancionesAlbum": [],
-                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/b/b6/Doors_matrix.jpg",
-                "anio": 2000
-            },
-            {
-                "artistas": "Deftones",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Mascara",
-                "selloDiscografico": "Maverick",
-                "cancionesAlbum": [],
-                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
-                "anio": 2000
-            },
             {
                 "artistas": "Deftones",
                 "precio": 0,
@@ -168,7 +63,7 @@
                 "precio": 0,
                 "tipo": "Original",
                 "generos": "Generos default",
-                "titulo": "Lotion",
+                "titulo": "Mascara",
                 "selloDiscografico": "Maverick",
                 "cancionesAlbum": [],
                 "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
@@ -176,50 +71,11 @@
             }
         ],
         "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
+            "enlaceGenerado": "https://descargas.example.com/CDC000002/1",
             "estadoDescarga": false,
             "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T18:26:33",
-            "fechaGeneracion": "2025-06-29T18:26:33",
-            "fechaDescarga": null,
-            "estadoPenalizacion": true
-        }]
-    },
-    {
-        "fechaCompra": "2025-06-29T19:50:33",
-        "estadoCompra": true,
-        "correoUsuario": "micorreo@ejemplo.com",
-        "codigoCompra": "CDC000001",
-        "contenidoComprado": [
-            {
-                "artistas": "Twenty One Pilots",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Paladin Strait",
-                "selloDiscografico": "Fueled by Ramen",
-                "cancionesAlbum": [],
-                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
-                "anio": 2000
-            },
-            {
-                "artistas": "Twenty One Pilots",
-                "precio": 0,
-                "tipo": "Original",
-                "generos": "Generos default",
-                "titulo": "Backslide",
-                "selloDiscografico": "Fueled by Ramen",
-                "cancionesAlbum": [],
-                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
-                "anio": 2000
-            }
-        ],
-        "listaEnlacesDescarga": [{
-            "enlaceGenerado": "https://descargas.example.com/CDC000001/1",
-            "estadoDescarga": false,
-            "penalizacion": 5,
-            "fechaExpiracion": "2025-07-06T19:50:33",
-            "fechaGeneracion": "2025-06-29T19:50:33",
+            "fechaExpiracion": "2025-07-06T21:49:27",
+            "fechaGeneracion": "2025-06-29T21:49:27",
             "fechaDescarga": null,
             "estadoPenalizacion": true
         }]
