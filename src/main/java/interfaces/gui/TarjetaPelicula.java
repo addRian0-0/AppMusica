@@ -87,6 +87,8 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         precioLabel = new javax.swing.JLabel();
 
+        jPanel1.setBackground(new java.awt.Color(219, 182, 235));
+
         javax.swing.GroupLayout imgPortadaLayout = new javax.swing.GroupLayout(imgPortada);
         imgPortada.setLayout(imgPortadaLayout);
         imgPortadaLayout.setHorizontalGroup(
@@ -98,30 +100,58 @@ public class TarjetaPelicula extends javax.swing.JPanel {
             .addGap(0, 118, Short.MAX_VALUE)
         );
 
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(105, 58, 128));
         jLabel1.setText("Titulo: ");
 
+        jLabel2.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(105, 58, 128));
         jLabel2.setText("Genero(s):");
 
+        jLabel3.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(105, 58, 128));
         jLabel3.setText("Año de lanzamiento: ");
 
+        jLabel4.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(105, 58, 128));
         jLabel4.setText("Sinopsis: ");
 
+        sinopsisLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        sinopsisLabel.setForeground(new java.awt.Color(105, 58, 128));
         sinopsisLabel.setText("jLabel5");
+        sinopsisLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
+        anioLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        anioLabel.setForeground(new java.awt.Color(105, 58, 128));
         anioLabel.setText("anioLabel");
 
+        generosLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        generosLabel.setForeground(new java.awt.Color(105, 58, 128));
         generosLabel.setText("generosLabel");
 
+        tituloLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N
+        tituloLabel.setForeground(new java.awt.Color(105, 58, 128));
         tituloLabel.setText("titulo");
 
+        jLabel5.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(105, 58, 128));
         jLabel5.setText("Actore(s):");
 
+        actoresLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        actoresLabel.setForeground(new java.awt.Color(105, 58, 128));
         actoresLabel.setText("jLabel6");
 
+        jLabel6.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(105, 58, 128));
         jLabel6.setText("Duracion: ");
 
+        duracionLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        duracionLabel.setForeground(new java.awt.Color(105, 58, 128));
         duracionLabel.setText("jLabel7");
 
+        agregarBtn.setBackground(new java.awt.Color(105, 58, 128));
+        agregarBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        agregarBtn.setForeground(new java.awt.Color(235, 220, 236));
         agregarBtn.setText("Agregar");
         agregarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,8 +159,12 @@ public class TarjetaPelicula extends javax.swing.JPanel {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(105, 58, 128));
         jLabel7.setText("Precio:");
 
+        precioLabel.setFont(new java.awt.Font("Franklin Gothic Book", 1, 18)); // NOI18N
+        precioLabel.setForeground(new java.awt.Color(105, 58, 128));
         precioLabel.setText("precio");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -138,20 +172,17 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(agregarBtn)
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(5, 5, 5)
-                                .addComponent(precioLabel))
-                            .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)))
+                        .addGap(25, 25, 25)
+                        .addComponent(agregarBtn))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(5, 5, 5)
+                        .addComponent(precioLabel)))
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -161,11 +192,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel3)
                             .addGap(18, 18, 18)
-                            .addComponent(anioLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(sinopsisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(anioLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
@@ -177,15 +204,27 @@ public class TarjetaPelicula extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(actoresLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addComponent(actoresLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sinopsisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(agregarBtn)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(precioLabel)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(tituloLabel))
@@ -193,29 +232,23 @@ public class TarjetaPelicula extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(generosLabel))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(anioLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(actoresLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(duracionLabel))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(sinopsisLabel))
-                        .addGap(11, 11, 11))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(imgPortada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(actoresLabel)
-                    .addComponent(agregarBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(duracionLabel)
-                    .addComponent(jLabel7)
-                    .addComponent(precioLabel))
-                .addGap(8, 8, 8))
+                            .addComponent(sinopsisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

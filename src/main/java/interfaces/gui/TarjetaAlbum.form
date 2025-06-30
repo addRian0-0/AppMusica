@@ -27,6 +27,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="panelAlbum">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="eb" green="b6" red="db" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -44,7 +49,7 @@
                       <Component id="verCancionesBtn" min="-2" max="-2" attributes="0"/>
                       <Component id="anoLbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="61" max="32767" attributes="0"/>
+                  <EmptySpace pref="57" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -56,7 +61,7 @@
                       <Component id="imagenIconContainer" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="nombreAlbumLbl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="nombreArtistaLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="anoLbl" min="-2" max="-2" attributes="0"/>
@@ -67,7 +72,7 @@
                       <Component id="agregarBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="verCancionesBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -90,21 +95,39 @@
         </Container>
         <Component class="javax.swing.JLabel" name="nombreAlbumLbl">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Franklin Gothic Book" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Nombre del album"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nombreArtistaLbl">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Franklin Gothic Book" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Nombre del artista"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="anoLbl">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Franklin Gothic Book" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="A&#xf1;o de creacion"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="agregarBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="80" green="3a" red="69" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Franklin Gothic Book" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="dc" red="eb" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Agregar"/>
           </Properties>
           <Events>
@@ -113,6 +136,15 @@
         </Component>
         <Component class="javax.swing.JButton" name="verCancionesBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="80" green="3a" red="69" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Franklin Gothic Book" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="dc" red="eb" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ver canciones"/>
           </Properties>
           <Events>

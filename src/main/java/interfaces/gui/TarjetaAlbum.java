@@ -104,6 +104,8 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         agregarBtn = new javax.swing.JButton();
         verCancionesBtn = new javax.swing.JButton();
 
+        panelAlbum.setBackground(new java.awt.Color(219, 182, 235));
+
         javax.swing.GroupLayout imagenIconContainerLayout = new javax.swing.GroupLayout(imagenIconContainer);
         imagenIconContainer.setLayout(imagenIconContainerLayout);
         imagenIconContainerLayout.setHorizontalGroup(
@@ -115,12 +117,18 @@ public class TarjetaAlbum extends javax.swing.JPanel {
             .addGap(0, 77, Short.MAX_VALUE)
         );
 
+        nombreAlbumLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         nombreAlbumLbl.setText("Nombre del album");
 
+        nombreArtistaLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         nombreArtistaLbl.setText("Nombre del artista");
 
+        anoLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
         anoLbl.setText("Año de creacion");
 
+        agregarBtn.setBackground(new java.awt.Color(105, 58, 128));
+        agregarBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        agregarBtn.setForeground(new java.awt.Color(235, 220, 236));
         agregarBtn.setText("Agregar");
         agregarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +136,9 @@ public class TarjetaAlbum extends javax.swing.JPanel {
             }
         });
 
+        verCancionesBtn.setBackground(new java.awt.Color(105, 58, 128));
+        verCancionesBtn.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        verCancionesBtn.setForeground(new java.awt.Color(235, 220, 236));
         verCancionesBtn.setText("Ver canciones");
         verCancionesBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +161,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                     .addComponent(nombreArtistaLbl)
                     .addComponent(verCancionesBtn)
                     .addComponent(anoLbl))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         panelAlbumLayout.setVerticalGroup(
             panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +171,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                     .addComponent(imagenIconContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelAlbumLayout.createSequentialGroup()
                         .addComponent(nombreAlbumLbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(nombreArtistaLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(anoLbl)))
@@ -168,7 +179,7 @@ public class TarjetaAlbum extends javax.swing.JPanel {
                 .addGroup(panelAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregarBtn)
                     .addComponent(verCancionesBtn))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
