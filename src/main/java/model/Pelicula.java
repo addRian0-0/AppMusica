@@ -15,7 +15,11 @@ public class Pelicula extends Multimedia{
     private Album soundtrack;
     private String director, casaProductora, formato, sinopsis, actores, duracion;
 
-    public Pelicula(Album soundtrack, String director, String casaProductora, String formato, String sinopsis, String actores, String duracion, String titulo, String generos, String urlPortada, int anio, float precio) {
+    public Pelicula() {
+    }
+
+
+    public Pelicula(String director, String casaProductora, String formato, String sinopsis, String actores, String duracion, String titulo, String generos, String urlPortada, int anio, float precio) {
         super(titulo, generos, urlPortada, anio, precio);
         this.soundtrack = soundtrack;
         this.director = director;

@@ -4,35 +4,56 @@
  */
 package DAO;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.io.FileReader;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import bd.Conexion;
 import model.Pelicula;
 
-/**
- *
- * @author PC
- */
 public class PeliculasDAO {
-    
-    public List<Pelicula> getPeliculas() {
+
+    public List<Pelicula> getPeliculas1() {
+
         List<Pelicula> listaPeliculas = new ArrayList<>();
 
         try {
-            FileReader reader = new FileReader("data/peliculas.json");
+            Connection conn = Conexion.getConnection();
 
-            Gson gson = new Gson();
-            java.lang.reflect.Type peliculaListType = new TypeToken<List<Pelicula>>() {}.getType();
-            listaPeliculas = gson.fromJson(reader, peliculaListType);
+            String query = "SELECT ID_PELICULA_SERIE, TITULO, GENERO, ANIO_ESTRENO, FORMATO, DIRECTOR, PRODUCTORA, ID_ALBUM_SOUNDTRACK,sinopsis,duracion,urlPortada,precio FROM PELICULAS_SERIES";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
 
-            reader.close();
+            while (rs.next()) {
+                int precio = rs.getInt("precio");
+                String urlPortada = rs.getString("urlportada");
+                int duracion= rs.getInt("duracion");
+                String duracionString = String.valueOf(duracion);
+                String sinopsis = rs.getString("sinopsis");
+                String id = rs.getString("ID_PELICULA_SERIE");
+                String titulo = rs.getString("TITULO");
+                String genero = rs.getString("GENERO");
+                int anio = rs.getInt("ANIO_ESTRENO");
+                String formato = rs.getString("FORMATO");
+                String director = rs.getString("DIRECTOR");
+                String productora = rs.getString("PRODUCTORA");
+                String idAlbum = rs.getString("ID_ALBUM_SOUNDTRACK");
+
+                // Ajusta este constructor según lo que tengas en tu clase Pelicula
+                Pelicula pelicula = new Pelicula("",director,productora,formato,sinopsis,duracionString,titulo,genero,urlPortada,anio,precio);
+
+                listaPeliculas.add(pelicula);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
         } catch (Exception e) {
-            System.out.println("Error al leer el archivo JSON de películas: " + e.getMessage());
+            System.out.println("Error al obtener películas: " + e);
         }
 
         return listaPeliculas;
     }
-    
 }
+

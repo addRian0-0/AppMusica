@@ -8,6 +8,7 @@ import interfaces.Login;
 
 /**
  *
+ * @author JheromScript
  * @author cybergato
  */
 public class MusicaPOO {

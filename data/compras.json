@@ -1626,5 +1626,56 @@
                 "estadoPenalizacion": false
             }
         ]
+    },
+    {
+        "fechaCompra": "2025-06-30T20:21:48",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [{
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Album",
+            "generos": "Genero default",
+            "titulo": "Clancy",
+            "selloDiscografico": "",
+            "cancionesAlbum": [],
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2025
+        }],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "N/A",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-07T20:21:48",
+            "fechaGeneracion": "2025-06-30T20:21:48",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T21:16:47",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [{
+            "precio": 10,
+            "tipoMultimedia": "Pelicula",
+            "casaProductora": "Guillermo Rios",
+            "director": "",
+            "formato": "Corazon Films",
+            "generos": "Drama",
+            "titulo": "Perras",
+            "duracion": "93",
+            "urlPortada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7LrL2QGrpKQcZdko9RV8mOCsqPxAqouhd0sUHt2CgjDIBeCVVOn8-A5g&s=10",
+            "anio": 2011
+        }],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "N/A",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-07T21:16:47",
+            "fechaGeneracion": "2025-06-30T21:16:47",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        }]
     }
 ]

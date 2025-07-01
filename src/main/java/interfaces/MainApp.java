@@ -25,12 +25,10 @@ public class MainApp extends javax.swing.JFrame {
      * Creates new form MainApp
      */
     AlbumDAO albumDAO = new AlbumDAO();
-    PeliculasDAO peliculaDAO = new PeliculasDAO();
     SeriesDAO seriesDAO = new SeriesDAO();
     Usuario u = SesionUsuario.getUsuario();
 
     List<Album> albumsList = albumDAO.getAlbum1();
-    List<Pelicula> peliculasList = peliculaDAO.getPeliculas();
     List<Serie> seriesList = seriesDAO.getSeries();
 
     public MainApp() {
@@ -242,7 +240,7 @@ public class MainApp extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAlbumes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSeries)))
                 .addContainerGap(75, Short.MAX_VALUE))
@@ -330,6 +328,8 @@ public class MainApp extends javax.swing.JFrame {
         panelShowData.setLayout(new BoxLayout(panelShowData, BoxLayout.Y_AXIS));
         panelShowData.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
 
+        PeliculasDAO peliculaDAO = new PeliculasDAO();
+        List<Pelicula> peliculasList = peliculaDAO.getPeliculas1();
         panelShowData.removeAll();
         panelShowData.revalidate();
         panelShowData.repaint();
