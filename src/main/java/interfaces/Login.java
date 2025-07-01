@@ -34,7 +34,7 @@ public class Login extends javax.swing.JFrame {
         btnIniciarSesion = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
         usernameInput = new javax.swing.JTextField();
-        passInput = new javax.swing.JTextField();
+        passInput = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
