@@ -20,14 +20,13 @@ public class Serie extends Multimedia{
     
     public Serie(){}
 
-    public Serie(String formato, String director, String casaProductora, String sinopsis, int temporadas, List<Capitulos> listaCapitulos, String titulo, String generos, String urlPortada, int anio, float precio) {
+    public Serie(String formato, String director, String casaProductora, String sinopsis, int temporadas, String listaCapitulos, String titulo, String generos, String urlPortada, int anio, float precio) {
         super(titulo, generos, urlPortada, anio, precio);
         this.formato = formato;
         this.director = director;
         this.casaProductora = casaProductora;
         this.sinopsis = sinopsis;
         this.temporadas = temporadas;
-        this.listaCapitulos = listaCapitulos;
     }
 
     public String getFormato() {

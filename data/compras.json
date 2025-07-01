@@ -1677,5 +1677,30 @@
             "fechaDescarga": null,
             "estadoPenalizacion": false
         }]
+    },
+    {
+        "fechaCompra": "2025-06-30T21:27:19",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [{
+            "precio": 340,
+            "temporadas": 1,
+            "tipoMultimedia": "Serie",
+            "director": "Hwang Dong-hyuk",
+            "formato": "MP4",
+            "generos": "Suspenso y drama",
+            "titulo": "El Juego del Calamar",
+            "urlPortada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyxXPz8Kz5iQO_D81ObSQQw7ZqQOqpNc4omBvE3PdIxbq4Px691z7k0g&s=10",
+            "anio": 2021
+        }],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "N/A",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-07T21:27:19",
+            "fechaGeneracion": "2025-06-30T21:27:19",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        }]
     }
 ]
