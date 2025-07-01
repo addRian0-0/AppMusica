@@ -8,10 +8,7 @@ import Reproducir.Reproducir;
 import java.awt.BorderLayout;
 import java.awt.Image;
 import java.net.URL;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import DAO.CarritoDAO;
 import model.Cancion;
@@ -37,8 +34,9 @@ public class TarjetaCancion extends javax.swing.JPanel {
 
         // Cargar imagen
         if (cancion.getUrlPortada() != null && !cancion.getUrlPortada().isEmpty()) {
-            SwingUtilities.invokeLater(() -> {
-                try {
+            new SwingWorker<ImageIcon, Void>() {
+                @Override
+                protected ImageIcon doInBackground() throws Exception {
                     URL url = new URL(cancion.getUrlPortada());
                     ImageIcon icon = new ImageIcon(url);
                     Image img = icon.getImage().getScaledInstance(
@@ -46,20 +44,27 @@ public class TarjetaCancion extends javax.swing.JPanel {
                             imgIconPista.getHeight() > 0 ? imgIconPista.getHeight() : 100,
                             Image.SCALE_SMOOTH
                     );
-
-                    JLabel imgLabel = new JLabel(new ImageIcon(img));
-                    imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-                    imgLabel.setVerticalAlignment(SwingConstants.CENTER);
-
-                    imgIconPista.setLayout(new BorderLayout());
-                    imgIconPista.add(imgLabel, BorderLayout.CENTER);
-                    imgIconPista.revalidate();
-                    imgIconPista.repaint();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    return new ImageIcon(img);
                 }
-            });
+
+                @Override
+                protected void done() {
+                    try {
+                        ImageIcon iconoFinal = get();
+                        JLabel imgLabel = new JLabel(iconoFinal);
+                        imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+                        imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+                        imgIconPista.setLayout(new BorderLayout());
+                        imgIconPista.add(imgLabel, BorderLayout.CENTER);
+                        imgIconPista.revalidate();
+                        imgIconPista.repaint();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.execute();
         }
+
 
         // Refrescar panel
         imgIconPista.revalidate();

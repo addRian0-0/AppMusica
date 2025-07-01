@@ -7,10 +7,7 @@ package interfaces.gui;
 import java.awt.BorderLayout;
 import java.awt.Image;
 import java.net.URL;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import DAO.CarritoDAO;
 import model.Serie;
@@ -35,30 +32,37 @@ public class TarjetaSerie extends javax.swing.JPanel {
         precioLabel.setText(Float.toString(serie.getPrecio()));
         formatoLabel.setText(serie.getFormato());
         temporadasLabel.setText(Integer.toString(serie.getTemporadas()));
-        
-        if (serie.getUrlPortada()!= null && !serie.getUrlPortada().isEmpty()) {
-            SwingUtilities.invokeLater(() -> {
-                try {
+
+        if (serie.getUrlPortada() != null && !serie.getUrlPortada().isEmpty()) {
+            new SwingWorker<ImageIcon, Void>() {
+                @Override
+                protected ImageIcon doInBackground() throws Exception {
                     URL url = new URL(serie.getUrlPortada());
                     ImageIcon icon = new ImageIcon(url);
                     Image img = icon.getImage().getScaledInstance(
-                           imgPortada.getWidth() > 0 ?imgPortada.getWidth() : 100,
-                           imgPortada.getHeight() > 0 ?imgPortada.getHeight() : 100,
+                            imgPortada.getWidth() > 0 ? imgPortada.getWidth() : 100,
+                            imgPortada.getHeight() > 0 ? imgPortada.getHeight() : 100,
                             Image.SCALE_SMOOTH
                     );
-
-                    JLabel imgLabel = new JLabel(new ImageIcon(img));
-                    imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-                    imgLabel.setVerticalAlignment(SwingConstants.CENTER);
-
-                   imgPortada.setLayout(new BorderLayout());
-                   imgPortada.add(imgLabel, BorderLayout.CENTER);
-                   imgPortada.revalidate();
-                   imgPortada.repaint();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    return new ImageIcon(img);
                 }
-            });
+
+                @Override
+                protected void done() {
+                    try {
+                        ImageIcon iconoFinal = get();
+                        JLabel imgLabel = new JLabel(iconoFinal);
+                        imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+                        imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+                        imgPortada.setLayout(new BorderLayout());
+                        imgPortada.add(imgLabel, BorderLayout.CENTER);
+                        imgPortada.revalidate();
+                        imgPortada.repaint();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.execute();
         }
         
         imgPortada.revalidate();

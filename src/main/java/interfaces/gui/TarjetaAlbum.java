@@ -10,10 +10,7 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.net.URL;
 import java.util.List;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 
 import DAO.CancionDAO;
 import DAO.CarritoDAO;
@@ -45,13 +42,35 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         
         // Cargar imagen
         if (album.getUrlPortada() != null && !album.getUrlPortada().isEmpty()) {
-            imagenIconContainer.addComponentListener(new ComponentAdapter() {
+            new SwingWorker<ImageIcon, Void>() {
                 @Override
-                public void componentResized(ComponentEvent e) {
-                    imagenIconContainer.removeComponentListener(this); // Para que no se llame más de una vez
-                    cargarImagen(album.getUrlPortada());
+                protected ImageIcon doInBackground() throws Exception {
+                    URL url = new URL(album.getUrlPortada());
+                    ImageIcon icon = new ImageIcon(url);
+                    Image img = icon.getImage().getScaledInstance(
+                            imagenIconContainer.getWidth() > 0 ? imagenIconContainer.getWidth() : 100,
+                            imagenIconContainer.getHeight() > 0 ? imagenIconContainer.getHeight() : 100,
+                            Image.SCALE_SMOOTH
+                    );
+                    return new ImageIcon(img);
                 }
-            });
+
+                @Override
+                protected void done() {
+                    try {
+                        ImageIcon iconoFinal = get();
+                        JLabel imgLabel = new JLabel(iconoFinal);
+                        imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+                        imgLabel.setVerticalAlignment(SwingConstants.CENTER);
+                        imagenIconContainer.setLayout(new BorderLayout());
+                        imagenIconContainer.add(imgLabel, BorderLayout.CENTER);
+                        imagenIconContainer.revalidate();
+                        imagenIconContainer.repaint();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.execute();
         }
 
         // Refrescar panel
@@ -59,30 +78,6 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         imagenIconContainer.repaint();
     }
 
-    private void cargarImagen(String urlStr) {
-        try {
-            URL url = new URL(urlStr);
-            ImageIcon icon = new ImageIcon(url);
-            Image img = icon.getImage().getScaledInstance(
-                    imagenIconContainer.getWidth(),
-                    imagenIconContainer.getHeight(),
-                    Image.SCALE_SMOOTH
-            );
-
-            JLabel imgLabel = new JLabel(new ImageIcon(img));
-            imgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            imgLabel.setVerticalAlignment(SwingConstants.CENTER);
-
-            imagenIconContainer.setLayout(new BorderLayout());
-            imagenIconContainer.removeAll(); // Limpia imágenes anteriores
-            imagenIconContainer.add(imgLabel, BorderLayout.CENTER);
-            imagenIconContainer.revalidate();
-            imagenIconContainer.repaint();
-        } catch (Exception e) {
-            System.out.println("Error cargando imagen: " + urlStr);
-            e.printStackTrace();
-        }
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
