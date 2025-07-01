@@ -151,8 +151,8 @@ public class generarCompraTicket {
 
             comprasArray.put(compra);
 
-            String plantilla = CorreoUtil.cargarHtml("src/main/java/SAS/index.html");
-            String htmlConDatos = CorreoUtil.rellenarPlantilla(plantilla, datos);
+            String html = CorreoUtil.cargarHtml("plantilla.html");
+            String htmlConDatos = CorreoUtil.rellenarPlantilla(html, datos);
             CorreoUtil.enviarCorreo(correo, "Compra de contenido", htmlConDatos);
         }
 

@@ -5,8 +5,7 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 
@@ -15,17 +14,26 @@ public class CorreoUtil {
     private static final String REMITENTE = "flores.zamora.ithan@gmail.com";
     private static final String PASSWORD = "tikcuceujrhfufrb";
 
-    //tikc uceu jrhf ufrb
-
-    public static String cargarHtml(String rutaArchivo) {
-        try {
-            return new String(Files.readAllBytes(Paths.get(rutaArchivo)));
+    /**
+     * Carga una plantilla HTML desde la carpeta /resources del proyecto.
+     * Asegúrate de tener "plantilla.html" en src/main/resources
+     */
+    public static String cargarHtml(String nombreArchivo) {
+        try (InputStream input = CorreoUtil.class.getClassLoader().getResourceAsStream(nombreArchivo)) {
+            if (input == null) {
+                System.err.println("❌ Archivo no encontrado en resources: " + nombreArchivo);
+                return "<p>Error: archivo no encontrado</p>";
+            }
+            return new String(input.readAllBytes());
         } catch (IOException e) {
             e.printStackTrace();
             return "<p>Error al cargar la plantilla</p>";
         }
     }
 
+    /**
+     * Reemplaza variables {{variable}} en el HTML por los valores del mapa.
+     */
     public static String rellenarPlantilla(String html, Map<String, String> valores) {
         for (Map.Entry<String, String> entry : valores.entrySet()) {
             html = html.replace("{{" + entry.getKey() + "}}", entry.getValue());
@@ -33,7 +41,9 @@ public class CorreoUtil {
         return html;
     }
 
-
+    /**
+     * Envía un correo con formato HTML.
+     */
     public static void enviarCorreo(String destinatario, String asunto, String mensajeHtml) {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -56,10 +66,10 @@ public class CorreoUtil {
 
             Transport.send(mensaje);
 
-            System.out.println("Correo enviado a " + destinatario);
+            System.out.println("✅ Correo enviado a " + destinatario);
         } catch (MessagingException e) {
             e.printStackTrace();
-            System.out.println("Error al enviar correo: " + e.getMessage());
+            System.out.println("❌ Error al enviar correo: " + e.getMessage());
         }
     }
 }
