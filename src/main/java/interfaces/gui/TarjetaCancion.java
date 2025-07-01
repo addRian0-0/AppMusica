@@ -31,6 +31,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
         edicionLbl.setText(cancion.getEdicion());
         selloLbl.setText(cancion.getSello());
         generoLbl.setText(cancion.getGeneros());
+        precioLbl.setText(String.valueOf(cancion.getPrecio()));
 
         // Cargar imagen
         if (cancion.getUrlPortada() != null && !cancion.getUrlPortada().isEmpty()) {
@@ -83,7 +84,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
         panelPista = new javax.swing.JPanel();
         imgIconPista = new javax.swing.JPanel();
         nombreCancionLbl = new javax.swing.JLabel();
-        tipoLbl = new javax.swing.JLabel();
+        precioLbl = new javax.swing.JLabel();
         nombreArtistaLbl = new javax.swing.JLabel();
         selloLbl = new javax.swing.JLabel();
         edicionLbl = new javax.swing.JLabel();
@@ -109,10 +110,10 @@ public class TarjetaCancion extends javax.swing.JPanel {
         nombreCancionLbl.setForeground(new java.awt.Color(105, 58, 128));
         nombreCancionLbl.setText("Nombre de la cancion");
 
-        tipoLbl.setBackground(new java.awt.Color(105, 58, 128));
-        tipoLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
-        tipoLbl.setForeground(new java.awt.Color(105, 58, 128));
-        tipoLbl.setText("Tipo");
+        precioLbl.setBackground(new java.awt.Color(105, 58, 128));
+        precioLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
+        precioLbl.setForeground(new java.awt.Color(105, 58, 128));
+        precioLbl.setText("precio");
 
         nombreArtistaLbl.setBackground(new java.awt.Color(105, 58, 128));
         nombreArtistaLbl.setFont(new java.awt.Font("Franklin Gothic Book", 1, 12)); // NOI18N
@@ -171,7 +172,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
                     .addGroup(panelPistaLayout.createSequentialGroup()
                         .addComponent(nombreArtistaLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tipoLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(precioLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(selloLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,7 +202,7 @@ public class TarjetaCancion extends javax.swing.JPanel {
                                 .addGroup(panelPistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(nombreArtistaLbl)
                                     .addComponent(generoLbl)
-                                    .addComponent(tipoLbl)))
+                                    .addComponent(precioLbl)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPistaLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(agregarLbl)))))
@@ -252,8 +253,8 @@ public class TarjetaCancion extends javax.swing.JPanel {
     private javax.swing.JLabel nombreArtistaLbl;
     private javax.swing.JLabel nombreCancionLbl;
     private javax.swing.JPanel panelPista;
+    private javax.swing.JLabel precioLbl;
     private javax.swing.JButton reproducirBtn;
     private javax.swing.JLabel selloLbl;
-    private javax.swing.JLabel tipoLbl;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,7 +31,7 @@ public class CancionDAO {
 
             Connection conn = Conexion.getConnection();
 
-            String query = "SELECT TIPO_PISTA, NOMBRE_ARTISTA, ID_ALBUM, SELLO_DISCOGRAFICO, FORMATO, EDICION, NOMBRE_PISTA, GENERO, URL_ICONO, URL_PISTA FROM PISTAS";
+            String query = "SELECT TIPO_PISTA, NOMBRE_ARTISTA, ID_ALBUM, SELLO_DISCOGRAFICO, FORMATO, EDICION, NOMBRE_PISTA, GENERO, URL_ICONO, URL_PISTA,anio,precio FROM PISTAS";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
@@ -46,8 +46,10 @@ public class CancionDAO {
                 String genero = rs.getString("GENERO");
                 String urlPortada = rs.getString("URL_ICONO");
                 String urlCancion = rs.getString("URL_PISTA");
+                float precio = rs.getInt("precio");
+                int anio = rs.getInt("anio");
 
-                Cancion cancionAdd = new Cancion(0, formato, edicion, genero, selloDiscografico, nombreArtista, nombrePista, "Generos default", urlPortada, 2000, 0, urlCancion);
+                Cancion cancionAdd = new Cancion(0, formato, edicion, genero, selloDiscografico, nombreArtista, nombrePista, genero, urlPortada,anio,precio, urlCancion);
 
                 listaCanciones.add(cancionAdd);
 

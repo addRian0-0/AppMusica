@@ -50,7 +50,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="nombreArtistaLbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="tipoLbl" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="precioLbl" min="-2" pref="102" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -87,7 +87,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="nombreArtistaLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="generoLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tipoLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="precioLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -132,7 +132,7 @@
             <Property name="text" type="java.lang.String" value="Nombre de la cancion"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tipoLbl">
+        <Component class="javax.swing.JLabel" name="precioLbl">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="80" green="3a" red="69" type="rgb"/>
@@ -143,7 +143,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="80" green="3a" red="69" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tipo"/>
+            <Property name="text" type="java.lang.String" value="precio"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nombreArtistaLbl">

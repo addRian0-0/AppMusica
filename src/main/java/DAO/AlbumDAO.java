@@ -30,19 +30,21 @@ public class AlbumDAO {
 
             Connection conn = Conexion.getConnection();
 
-            String query = "SELECT ID_ALBUM, NOMBRE_ALBUM, FECHA_LANZAMIENTO, ARTISTA, URL_ICONO FROM ALBUMES";
+            String query = "SELECT ID_ALBUM, NOMBRE_ALBUM, FECHA_LANZAMIENTO, ARTISTA, URL_ICONO,precio,generos FROM ALBUMES";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
 
+                String generos = rs.getString("generos");
                 String idAlbum = rs.getString("ID_ALBUM");
                 String nombre = rs.getString("NOMBRE_ALBUM");
                 int anio = Integer.parseInt(rs.getString("FECHA_LANZAMIENTO"));
                 String artistas = rs.getString("ARTISTA");
                 String urlPortada = rs.getString("URL_ICONO");
+                float precio = rs.getInt("precio");
 
-                Album albumAdd = new Album(idAlbum,artistas,"","",null,nombre,"Genero default",urlPortada,anio,0);
+                Album albumAdd = new Album(idAlbum,artistas,"","",null,nombre,generos,urlPortada,anio,precio);
                 lista.add(albumAdd);
 
             }

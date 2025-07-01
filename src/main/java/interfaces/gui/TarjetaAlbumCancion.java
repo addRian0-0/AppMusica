@@ -28,7 +28,7 @@ public class TarjetaAlbumCancion extends javax.swing.JPanel {
         this.cancion = cancion;
         initComponents();
         nombreCancionLbl.setText(cancion.getTitulo());
-        duracionLbl.setText(Integer.toString(cancion.getDuracion()));
+        duracionLbl.setText(String.valueOf(cancion.getPrecio()));
 
     }
 
