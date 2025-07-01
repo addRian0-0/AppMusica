@@ -3,7 +3,6 @@ package SAS;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import model.Cancion;
 import model.Multimedia;
 import java.net.URL;
@@ -13,12 +12,16 @@ import model.Pelicula;
 import model.Serie;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import java.util.HashMap;
 import java.util.List;
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
 import utils.ConfigLoader;
-
+import java.util.Map;
 import java.util.Properties;
+
+import SAS.UsuarioDAO;
+
 
 public class generarCompraTicket {
 
@@ -32,18 +35,13 @@ public class generarCompraTicket {
         String codigoCompra = String.format("CDC%06d", contador++);
 
         JSONArray contenidoComprado = new JSONArray();
-        for (Multimedia item : carrito) {
-            contenidoComprado.put(item.toJSON()); // Polimorfismo: cada clase sabe cómo representarse
-        }
         JSONArray listaEnlacesDescarga = new JSONArray();
 
-        // Parámetros de Azure (ajústalos a tu entorno)
         String connectionString = ConfigLoader.get("azure.connectionString");
         String containerName = ConfigLoader.get("azure.containerName");
 
         for (Multimedia item : carrito) {
             contenidoComprado.put(item.toJSON());
-
             String enlaceGenerado = "N/A";
 
             if (item instanceof Cancion) {
@@ -51,20 +49,17 @@ public class generarCompraTicket {
                 String url = cancion.getUrlCancion();
 
                 try {
-                    // Obtener blobName limpio y decodificado
                     URL azureUrl = new URL(url);
-                    String path = azureUrl.getPath(); // Ej: "/canciones/05%20-%20Deftones%20-%20Rickets.mp3"
+                    String path = azureUrl.getPath();
                     String blobName = path.replaceFirst("/" + containerName + "/", "");
-                    blobName = URLDecoder.decode(blobName, StandardCharsets.UTF_8); // "05 - Deftones - Rickets.mp3"
+                    blobName = URLDecoder.decode(blobName, StandardCharsets.UTF_8);
 
-                    // Generar SAS
                     enlaceGenerado = AzureSAS.generateDownloadSAS(connectionString, containerName, blobName);
                 } catch (Exception e) {
                     System.out.println(" Error generando SAS para: " + url);
                     e.printStackTrace();
                 }
             }
-
 
             JSONObject enlace = new JSONObject();
             enlace.put("enlaceGenerado", enlaceGenerado);
@@ -87,12 +82,38 @@ public class generarCompraTicket {
         return compra;
     }
 
+    public static String generarHtmlCanciones(JSONArray contenidoComprado) {
+        StringBuilder htmlBuilder = new StringBuilder();
+        for (int i = 0; i < contenidoComprado.length(); i++) {
+            JSONObject item = contenidoComprado.getJSONObject(i);
+            String titulo = item.optString("titulo", "Sin título");
+            String artistas = item.optString("artistas", "Desconocido");
+            String genero = item.optString("generos", "No especificado");
+            String urlPortada = item.optString("urlPortada", "");
+            int anio = item.optInt("anio", 0);
+            float precio = (float) item.optDouble("precio", 0);
+            String urlCancion = item.optString("urlCancion", "#");
+
+            htmlBuilder.append("<div style=\"margin-bottom: 30px; padding: 20px; background-color: #2c1f2e; border-radius: 12px; color: white; text-align: center; max-width: 500px; margin-left: auto; margin-right: auto;\">");
+            htmlBuilder.append("<img src=\"").append(urlPortada).append("\" alt=\"Portada\" style=\"width: 200px; height: auto; border-radius: 8px; margin-bottom: 10px;\"><br>");
+            htmlBuilder.append("<strong style=\"font-size: 22px;\">").append(titulo).append("</strong><br>");
+            htmlBuilder.append("Artista(s): ").append(artistas).append("<br>");
+            htmlBuilder.append("Género: ").append(genero).append("<br>");
+            htmlBuilder.append("Año: ").append(anio).append("<br>");
+            htmlBuilder.append("Precio: $").append(precio).append("<br><br>");
+            htmlBuilder.append("<a href=\"").append(urlCancion).append("\" style=\"display:inline-block;background-color:#9e4ed3;color:white;padding:10px 16px;border-radius:5px;text-decoration:none;\">Link de descarga</a>");
+            htmlBuilder.append("</div>");
+        }
+        return htmlBuilder.toString();
+    }
 
     public static void guardarCompra(JSONObject compra, String correo) {
         String filename = "data/compras.json";
         JSONArray comprasArray = new JSONArray();
 
-        // Lee historial existente, si hay
+
+        String usuario = UsuarioDAO.obtenerUsuarioPorCorreo(correo);
+
         try {
             File file = new File(filename);
             if (file.exists()) {
@@ -108,17 +129,35 @@ public class generarCompraTicket {
                 }
             }
         } catch (Exception e) {
-            // Si algo falla leyendo, solo crea un nuevo array vacío
             comprasArray = new JSONArray();
         }
 
-        // Agrega la nueva compra al historial
-        comprasArray.put(compra);
-        CorreoUtil.enviarCorreo(correo, "Compra de contenido", compra.toString(4));
+        JSONArray enlaces = compra.getJSONArray("listaEnlacesDescarga");
+        if (enlaces.length() > 0) {
+            JSONObject enlace = enlaces.getJSONObject(0);
+            String htmlCanciones = generarHtmlCanciones(compra.getJSONArray("contenidoComprado"));
 
-        // Escribe de regreso el historial actualizado
+            Map<String, String> datos = new HashMap<>();
+            datos.put("usuario", usuario);
+            datos.put("correoUsuario", correo);
+            datos.put("codigoCompra", compra.optString("codigoCompra", "—"));
+            datos.put("enlaceGenerado", enlace.getString("enlaceGenerado"));
+            datos.put("fechaGeneracion", enlace.getString("fechaGeneracion"));
+            datos.put("fechaDescarga", enlace.opt("fechaDescarga") == JSONObject.NULL ? "—" : enlace.getString("fechaDescarga"));
+            datos.put("fechaExpiracion", enlace.getString("fechaExpiracion"));
+            datos.put("estadoDescarga", String.valueOf(enlace.getBoolean("estadoDescarga")));
+            datos.put("estadoPenalizacion", String.valueOf(enlace.getBoolean("estadoPenalizacion")));
+            datos.put("canciones_html", htmlCanciones);
+
+            comprasArray.put(compra);
+
+            String plantilla = CorreoUtil.cargarHtml("src/main/java/SAS/index.html");
+            String htmlConDatos = CorreoUtil.rellenarPlantilla(plantilla, datos);
+            CorreoUtil.enviarCorreo(correo, "Compra de contenido", htmlConDatos);
+        }
+
         try (FileWriter file = new FileWriter(filename)) {
-            file.write(comprasArray.toString(4)); // Pretty print
+            file.write(comprasArray.toString(4));
             file.flush();
             System.out.println("Compra registrada en historial correctamente.");
         } catch (IOException e) {
@@ -126,4 +165,3 @@ public class generarCompraTicket {
         }
     }
 }
-

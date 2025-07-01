@@ -994,5 +994,637 @@
                 "estadoPenalizacion": false
             }
         ]
+    },
+    {
+        "fechaCompra": "2025-06-30T17:38:10",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "Clancy",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2025
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Navegating",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/09%20-%20Deftones%20-%20Passenger.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Album",
+                "generos": "Genero default",
+                "titulo": "Clancy",
+                "selloDiscografico": "",
+                "cancionesAlbum": [],
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2025
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Navegating",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/09%20-%20Deftones%20-%20Passenger.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "N/A",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:38:10",
+                "fechaGeneracion": "2025-06-30T17:38:10",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3?sv=2024-05-04&se=2025-06-30T23%3A43%3A11Z&sr=b&sp=r&sig=45H8AtkGKEJxYhG8mbFV6IexqlisM%2FdJOMHhIlzMMgU%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:38:11",
+                "fechaGeneracion": "2025-06-30T17:38:10",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/09%20-%20Deftones%20-%20Passenger.mp3?sv=2024-05-04&se=2025-06-30T23%3A43%3A11Z&sr=b&sp=r&sig=MhBd2rS1c8%2BjU7c0%2FOOOyNSkV%2FyfX9ew2xRgmTfXEbs%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:38:11",
+                "fechaGeneracion": "2025-06-30T17:38:10",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T17:43:13",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Around the fur",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Deftones%20-%20Around%20The%20Fur.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lotion",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/07%20-%20Deftones%20-%20Lotion.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Around the fur",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Deftones%20-%20Around%20The%20Fur.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lotion",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/07%20-%20Deftones%20-%20Lotion.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3?sv=2024-05-04&se=2025-06-30T23%3A48%3A14Z&sr=b&sp=r&sig=S2JzxaOoncLkl1psMe31bAP%2FXqWpcQGxLCvrJSNfL8s%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:43:14",
+                "fechaGeneracion": "2025-06-30T17:43:13",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Deftones%20-%20Around%20The%20Fur.mp3?sv=2024-05-04&se=2025-06-30T23%3A48%3A14Z&sr=b&sp=r&sig=3ieMkxq3SwRPl4wYD7aL0f9GuYU9spt42k2QO6rGY10%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:43:14",
+                "fechaGeneracion": "2025-06-30T17:43:13",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/07%20-%20Deftones%20-%20Lotion.mp3?sv=2024-05-04&se=2025-06-30T23%3A48%3A14Z&sr=b&sp=r&sig=mtkaFouDmRq935U8rgegL8FNgpHpHFugOzeCbt4lfow%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T17:43:14",
+                "fechaGeneracion": "2025-06-30T17:43:13",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T18:22:02",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [{
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3?sv=2024-05-04&se=2025-07-01T00%3A27%3A03Z&sr=b&sp=r&sig=Wq0KRf0QTQ9XbiWKq1tOHJ2x%2BsE%2Bjm%2BpxzebrHFmBXU%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-07T18:22:03",
+            "fechaGeneracion": "2025-06-30T18:22:02",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        }]
+    },
+    {
+        "fechaCompra": "2025-06-30T19:21:04",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Midwest Indigo",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Midwest%20Indigo.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Paladin Strait",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/13%20-%20Paladin%20Strait.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3?sv=2024-05-04&se=2025-07-01T01%3A26%3A04Z&sr=b&sp=r&sig=IvB%2F9ARUfwXtOPooi%2BxaWIjf9UGCp2KO0UPY90FGJqk%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:21:04",
+                "fechaGeneracion": "2025-06-30T19:21:04",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Midwest%20Indigo.mp3?sv=2024-05-04&se=2025-07-01T01%3A26%3A04Z&sr=b&sp=r&sig=QgLBz8E3tglnQd7bBDMWQaxnXvrmAJse2XGadHcgBXU%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:21:04",
+                "fechaGeneracion": "2025-06-30T19:21:04",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/13%20-%20Paladin%20Strait.mp3?sv=2024-05-04&se=2025-07-01T01%3A26%3A04Z&sr=b&sp=r&sig=UbFkz9My2XgOcexf82EJLeiu3rOXB5xyWIC%2FfHX9598%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:21:04",
+                "fechaGeneracion": "2025-06-30T19:21:04",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T19:46:29",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Overcompensate",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Twenty One Pilots",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Next Semester",
+                "duracion": 0,
+                "selloDiscografico": "Fueled by Ramen",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Next%20Semester.mp3",
+                "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3?sv=2024-05-04&se=2025-07-01T01%3A51%3A29Z&sr=b&sp=r&sig=li6E5r8PcD4rC%2FVHR1965lb75hTwOgGzVdkdr5uMZRA%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:46:29",
+                "fechaGeneracion": "2025-06-30T19:46:29",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Next%20Semester.mp3?sv=2024-05-04&se=2025-07-01T01%3A51%3A29Z&sr=b&sp=r&sig=5jmvihQMz56wWMtSbiBbpwoG16w8uOEvA3jGIh2NUfw%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:46:29",
+                "fechaGeneracion": "2025-06-30T19:46:29",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T19:48:52",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Mascara",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/03%20-%20Deftones%20-%20Mascara.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Around the fur",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Deftones%20-%20Around%20The%20Fur.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3?sv=2024-05-04&se=2025-07-01T01%3A53%3A52Z&sr=b&sp=r&sig=xd%2FDEtRTVlh32ehVX9aE0RgOEuBeKxfb1ajtQ5UjkeI%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:48:52",
+                "fechaGeneracion": "2025-06-30T19:48:52",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/03%20-%20Deftones%20-%20Mascara.mp3?sv=2024-05-04&se=2025-07-01T01%3A53%3A52Z&sr=b&sp=r&sig=hRP9AIjs%2Foiuv0BVsXyC8XwW7e%2FeavhAUwFyxNv0bVs%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:48:52",
+                "fechaGeneracion": "2025-06-30T19:48:52",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Deftones%20-%20Around%20The%20Fur.mp3?sv=2024-05-04&se=2025-07-01T01%3A53%3A52Z&sr=b&sp=r&sig=ERRas%2FtvufXxniJJgbzg9AhU5rDLZoeQdtxreoBIA6o%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:48:52",
+                "fechaGeneracion": "2025-06-30T19:48:52",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T19:57:29",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "DEFTONES",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "DIGITAL",
+                "generos": "Generos default",
+                "titulo": "DIGITAL BATH",
+                "duracion": 0,
+                "selloDiscografico": "MAVERIK",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Digital%20Bath.mp3",
+                "urlPortada": "https://akamai.sscdn.co/uploadfile/letras/albuns/a/4/8/f/46481684259853.jpg",
+                "anio": 2000,
+                "edicion": "ORIGINAL"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3?sv=2024-05-04&se=2025-07-01T02%3A02%3A30Z&sr=b&sp=r&sig=bARwFbBROeEzv8Pf7KopMT1FSgjddyz7uvhg7%2BFJV9U%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:57:30",
+                "fechaGeneracion": "2025-06-30T19:57:29",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Digital%20Bath.mp3?sv=2024-05-04&se=2025-07-01T02%3A02%3A30Z&sr=b&sp=r&sig=1AGRS1IsrrfNPmXJuXzPU1hGd43TM11A15YCn2z2Cvk%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T19:57:30",
+                "fechaGeneracion": "2025-06-30T19:57:29",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
+    },
+    {
+        "fechaCompra": "2025-06-30T20:09:18",
+        "estadoCompra": true,
+        "correoUsuario": "Jheromscript@gmail.com",
+        "codigoCompra": "CDC000001",
+        "contenidoComprado": [
+            {
+                "artistas": "Deftones",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "Lhabia",
+                "duracion": 0,
+                "selloDiscografico": "Maverick",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3",
+                "urlPortada": "https://upload.wikimedia.org/wikipedia/en/2/21/Deftones_-_Around_the_Fur.jpg",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "The Black Eyed Peas",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "Digital",
+                "generos": "Generos default",
+                "titulo": "One Tribe",
+                "duracion": 0,
+                "selloDiscografico": "Interscope Records",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/14.%20One%20Tribe.mp3",
+                "urlPortada": "https://ia600801.us.archive.org/13/items/the-e.n.d.-deluxe-edition/Front%20Cover%20%28Deluxe%20Edition%29.jpg?cnt=0",
+                "anio": 2000,
+                "edicion": "Original"
+            },
+            {
+                "artistas": "DEFTONES",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "DIGITAL",
+                "generos": "Generos default",
+                "titulo": "BACK TO SCHOOL",
+                "duracion": 0,
+                "selloDiscografico": "MAVERIK",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/08%20Sextape.mp3",
+                "urlPortada": "https://akamai.sscdn.co/uploadfile/letras/albuns/a/4/8/f/46481684259853.jpg",
+                "anio": 2000,
+                "edicion": "ORIGINAL"
+            },
+            {
+                "artistas": "ASTROPHYSICS",
+                "precio": 0,
+                "tipoMultimedia": "Cancion",
+                "formato": "DIGITAL",
+                "generos": "Generos default",
+                "titulo": "SAVE YOUR TEARS",
+                "duracion": 0,
+                "selloDiscografico": "CRYPTON FUTURE MEDIA",
+                "urlCancion": "https://poomsc.blob.core.windows.net/canciones/Astrophysics%20&%20Hatsune%20Miku%20-%20The%20First%20Sound%20of%20The%20Future%20Past%20-%2008%20Save%20Your%20Tears.mp3",
+                "urlPortada": "https://s.songswave.com/album-images/vol32/3002/3002850/4894356-big/The-First-Sound-Of-The-Future-Past-cover.jpg",
+                "anio": 2000,
+                "edicion": "ORIGINAL"
+            }
+        ],
+        "listaEnlacesDescarga": [
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Deftones%20-%20Lhabia.mp3?sv=2024-05-04&se=2025-07-01T02%3A14%3A18Z&sr=b&sp=r&sig=FgXS5csSgUYKo%2Bqd4kWMQlfXG1hhiiXdiBGvKoO8wIw%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T20:09:18",
+                "fechaGeneracion": "2025-06-30T20:09:18",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/14.%20One%20Tribe.mp3?sv=2024-05-04&se=2025-07-01T02%3A14%3A18Z&sr=b&sp=r&sig=N5nRQdSiSHMzVk6YEf2dNPqc55EQ6ex6utLLii5AfF0%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T20:09:18",
+                "fechaGeneracion": "2025-06-30T20:09:18",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/08%20Sextape.mp3?sv=2024-05-04&se=2025-07-01T02%3A14%3A18Z&sr=b&sp=r&sig=b8FGJSh019yQAh9Caix3dDlrEEIYrghgEW4ztbhApW0%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T20:09:18",
+                "fechaGeneracion": "2025-06-30T20:09:18",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            },
+            {
+                "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/Astrophysics%20%26%20Hatsune%20Miku%20-%20The%20First%20Sound%20of%20The%20Future%20Past%20-%2008%20Save%20Your%20Tears.mp3?sv=2024-05-04&se=2025-07-01T02%3A14%3A18Z&sr=b&sp=r&sig=I%2FGfKbLDMiVNvpPyNoe%2FUMqTUJzndyYJtylbPIG0uAA%3D",
+                "estadoDescarga": false,
+                "fechaExpiracion": "2025-07-07T20:09:18",
+                "fechaGeneracion": "2025-06-30T20:09:18",
+                "fechaDescarga": null,
+                "estadoPenalizacion": false
+            }
+        ]
     }
 ]
