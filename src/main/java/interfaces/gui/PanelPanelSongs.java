@@ -8,6 +8,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.net.URL;
+import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -15,6 +16,9 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+
+import DAO.CancionDAO;
+import DAO.CarritoDAO;
 import model.Album;
 import model.Cancion;
 
@@ -27,9 +31,14 @@ public class PanelPanelSongs extends javax.swing.JPanel {
     /**
      * Creates new form PanelPanelSongs
      */
+
+    private Album album;
+
+
     public PanelPanelSongs(Album album) {
         initComponents();
 
+        this.album = album;
         tituloLabel.setText(album.getTitulo());
         artistasLabel.setText(album.getArtistas());
         anioLabel.setText(Integer.toString(album.getAnio()));
@@ -140,6 +149,11 @@ public class PanelPanelSongs extends javax.swing.JPanel {
         selloLabel.setText("Sello");
 
         agregarBtn.setText("Agregar");
+        agregarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -192,13 +206,25 @@ public class PanelPanelSongs extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void agregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBtnActionPerformed
+        CancionDAO cancionDAO = new CancionDAO();
+        List<Cancion> canciones = cancionDAO.getCancionesPorAlbum(album.getIdAlbum());
+
+        for (Cancion cancion : canciones) {
+            CarritoDAO.agregarMultimedia(cancion); // Agrega cada canción al backend
+        }
+
+        CarritoDAO.agregarVisualmente(album); // Solo para mostrar el álbum en la vista
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Álbum agregado al carrito!");
+    }//GEN-LAST:event_agregarBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

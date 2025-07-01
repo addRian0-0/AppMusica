@@ -301,7 +301,6 @@ public class MainApp extends javax.swing.JFrame {
         panelShowData.revalidate();
         panelShowData.repaint();
         comprarBtn.setVisible(false);
-        //setFixedSize(panelShowData, 881);
         setFixedSize(panelScrollData, 881); // O el tamaño que quieras
 
     }

@@ -1,3 +1,274 @@
-[
-
-]
+[{
+    "fechaCompra": "2025-07-01T00:58:35",
+    "estadoCompra": true,
+    "correoUsuario": "Jheromscript@gmail.com",
+    "codigoCompra": "CDC000001",
+    "contenidoComprado": [
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Overcompensate",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Next Semester",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Next%20Semester.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Midwest Indigo",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Midwest%20Indigo.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Vignette",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/06%20-%20Vignette.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Paladin Strait",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/13%20-%20Paladin%20Strait.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Backslide",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/03%20-%20Backslide.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Routines in the night",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/05%20-%20Routines%20In%20The%20Night.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Lavish",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/08%20-%20Lavish.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Navegating",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/09%20-%20Navigating.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Snap back",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/10%20-%20Snap%20Back.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "Oldies station",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/11%20-%20Oldies%20Station.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        },
+        {
+            "artistas": "Twenty One Pilots",
+            "precio": 0,
+            "tipoMultimedia": "Cancion",
+            "formato": "Digital",
+            "generos": "Generos default",
+            "titulo": "At the risk of a feeling dumb",
+            "duracion": 0,
+            "selloDiscografico": "Fueled by Ramen",
+            "urlCancion": "https://poomsc.blob.core.windows.net/canciones/12%20-%20At%20The%20Risk%20Of%20Feeling%20Dumb.mp3",
+            "urlPortada": "https://preview.redd.it/clancy-decals-at-school-v0-rxejcn71c11d1.jpg?width=320&format=pjpg&auto=webp&s=9282940783035a0d13036f235453368382f43af2",
+            "anio": 2000,
+            "edicion": "Original"
+        }
+    ],
+    "listaEnlacesDescarga": [
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/01%20-%20Overcompensate.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=y6%2BOQ%2FJUgxxX43Iykq7xU4gq7vST3wPMrY9KrmEluh4%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/02%20-%20Next%20Semester.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=Q%2FNVhrSKoX3UHE6BkCor%2Bm1fV7MZV%2FR0QCAOEKo3cxk%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/04%20-%20Midwest%20Indigo.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=X3CWlc%2FeZfybI4BhqDUDM1zKYDOhX6%2Bz0Mzgvsk40UM%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/06%20-%20Vignette.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=KPgtxOiytnl6oOnaDzLVad78PGO%2BC2ZnlCydnHiyGrw%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/13%20-%20Paladin%20Strait.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=PBwsVudfiS93rGLeW0OApSR663QW7njWHxoaOFYO%2FmE%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/03%20-%20Backslide.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=gq1CVTCO%2B6G5daseQWOA6HBMC4xS3Q8eNIPGZxZPfy4%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/05%20-%20Routines%20In%20The%20Night.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=6nwM5Rb6xR7gDk9nvy4JcC%2FbbCj1kPCllkcqyvUFB6c%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/08%20-%20Lavish.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=dz%2FUpTRSoqRkGBuXBCV9eUnmrmyzLaFHO8sVEbWtEYA%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/09%20-%20Navigating.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=zvYrx6JJF0TpdPP%2BnXbCUN728V%2BoPS4ZRjm%2BTOPO7EE%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/10%20-%20Snap%20Back.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=whDtT98sBzRYeWKcte6MgBo0MSA%2Feaj6xOkPuWVc2%2BM%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/11%20-%20Oldies%20Station.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=vvlVPplqF98Ezdf0%2FNPnrScISaCT85g2rZgCOOmGB3o%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        },
+        {
+            "enlaceGenerado": "https://poomsc.blob.core.windows.net/canciones/12%20-%20At%20The%20Risk%20Of%20Feeling%20Dumb.mp3?sv=2024-05-04&se=2025-07-01T07%3A03%3A35Z&sr=b&sp=r&sig=7vLo0K7TnTDHZnhUDzioFA2qtyYJF1pA7Xr5%2BMmyT%2F0%3D",
+            "estadoDescarga": false,
+            "fechaExpiracion": "2025-07-08T00:58:35",
+            "fechaGeneracion": "2025-07-01T00:58:35",
+            "fechaDescarga": null,
+            "estadoPenalizacion": false
+        }
+    ]
+}]
