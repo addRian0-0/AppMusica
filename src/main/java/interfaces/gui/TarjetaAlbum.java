@@ -199,7 +199,6 @@ public class TarjetaAlbum extends javax.swing.JPanel {
         CancionDAO cancionDAO = new CancionDAO();
         List<Cancion> canciones = cancionDAO.getCancionesPorAlbum(album.getIdAlbum());
         album.setCancionesAlbum(canciones);
-        PanelPanelSongs panelCanciones = new PanelPanelSongs(album);
         panelShowData.removeAll();
         panelShowData.setLayout(new BorderLayout()); // o el layout que uses
         panelShowData.add(new PanelPanelSongs(album), BorderLayout.CENTER);
@@ -209,10 +208,17 @@ public class TarjetaAlbum extends javax.swing.JPanel {
     }//GEN-LAST:event_verCancionesBtnActionPerformed
 
     private void agregarAlCarrito() {
+        CancionDAO cancionDAO = new CancionDAO();
+        List<Cancion> canciones = cancionDAO.getCancionesPorAlbum(album.getIdAlbum());
 
-        CarritoDAO.agregarMultimedia(album);
-        javax.swing.JOptionPane.showMessageDialog(this, "¡Album agregado al carrito!");
+        for (Cancion cancion : canciones) {
+            CarritoDAO.agregarMultimedia(cancion); // Agrega cada canción al backend
+        }
+
+        CarritoDAO.agregarVisualmente(album); // Solo para mostrar el álbum en la vista
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Álbum agregado al carrito!");
     }
+
 
     private void agregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBtnActionPerformed
         agregarAlCarrito();

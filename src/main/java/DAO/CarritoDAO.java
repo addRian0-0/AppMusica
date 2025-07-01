@@ -2,12 +2,12 @@ package DAO;
 
 import model.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class CarritoDAO {
     // Lista estática (carrito global)
-    private static final List<Cancion> canciones = new ArrayList<>();
+    private static final List<Object> listaVisual = new ArrayList<>();
+    private static final Set<String> albumesVisuales = new HashSet<>();
 
     public static final List<Multimedia> listaMultimedia = new ArrayList<>();
 
@@ -15,10 +15,25 @@ public class CarritoDAO {
         return listaMultimedia;
     }
 
-    public static List<Multimedia> agregarMultimedia(Multimedia multimedia){
+    public static void agregarMultimedia(Multimedia multimedia){
+        listaMultimedia.add(multimedia); // canciones, películas, etc.
+    }
 
-        listaMultimedia.add(multimedia);
-        return listaMultimedia;
+    public static void agregarVisualmente(Album album) {
+        if (!albumesVisuales.contains(album.getIdAlbum())) {
+            listaVisual.add(album); // se muestra solo el álbum
+            albumesVisuales.add(album.getIdAlbum());
+        }
+    }
+
+    public static List<Object> getItems() {
+        return Collections.singletonList(listaMultimedia);
+    }
+
+    public static void limpiar() {
+        listaMultimedia.clear();
+        listaVisual.clear();
+        albumesVisuales.clear();
     }
 
 }
