@@ -28,6 +28,7 @@ interfaces\MainApp$5.class
 interfaces\gui\TarjetaCapitulo.class
 interfaces\Login$2.class
 interfaces\RegistroUsuario$4.class
+interfaces\gui\PanelPanelSongs$1.class
 interfaces\RegistroUsuario.class
 model\Compras.class
 DAO\UsuarioDAO.class
