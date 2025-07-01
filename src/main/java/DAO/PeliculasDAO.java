@@ -25,7 +25,7 @@ public class PeliculasDAO {
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
-                int precio = rs.getInt("precio");
+                float precio = rs.getInt("precio");
                 String urlPortada = rs.getString("urlportada");
                 int duracion= rs.getInt("duracion");
                 String duracionString = String.valueOf(duracion);
@@ -39,8 +39,7 @@ public class PeliculasDAO {
                 String productora = rs.getString("PRODUCTORA");
                 String idAlbum = rs.getString("ID_ALBUM_SOUNDTRACK");
 
-                // Ajusta este constructor según lo que tengas en tu clase Pelicula
-                Pelicula pelicula = new Pelicula("",director,productora,formato,sinopsis,duracionString,titulo,genero,urlPortada,anio,precio);
+                Pelicula pelicula = new Pelicula(director,productora,formato,sinopsis,"",duracionString,titulo,genero,urlPortada,anio,precio);
 
                 listaPeliculas.add(pelicula);
             }

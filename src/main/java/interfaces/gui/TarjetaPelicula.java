@@ -28,6 +28,7 @@ public class TarjetaPelicula extends javax.swing.JPanel {
         anioLabel.setText(Integer.toString(pelicula.getAnio()));
         duracionLabel.setText(pelicula.getDuracion());
         generosLabel.setText(pelicula.getGeneros());
+        precioLabel.setText(Float.toString(pelicula.getPrecio()));
 
         if (pelicula.getUrlPortada() != null && !pelicula.getUrlPortada().isEmpty()) {
             new SwingWorker<ImageIcon, Void>() {
