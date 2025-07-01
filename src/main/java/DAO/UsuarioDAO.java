@@ -79,7 +79,6 @@ public class UsuarioDAO {
                     usuario.setCorreo(rs.getString("CORREO_ELECTRONICO"));
                     usuario.setClaveAcceso(rs.getString("CLAVEACCESO")); // ⚠️ No recomendado mostrarla o guardarla como texto plano
                     
-                    JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. Bienvenido " + usuario.getNombres());
                     return usuario;
                 } else {
                     JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos.");

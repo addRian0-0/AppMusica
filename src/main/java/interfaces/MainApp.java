@@ -124,6 +124,7 @@ public class MainApp extends javax.swing.JFrame {
         comprarBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartphone_credit_card_buy_payment_icon_143289.png"))); // NOI18N
         comprarBtn.setDoubleBuffered(true);
         comprarBtn.setOpaque(true);
+        comprarBtn.setVisible(false);
         comprarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comprarBtnActionPerformed(evt);
@@ -397,7 +398,7 @@ public class MainApp extends javax.swing.JFrame {
                 TarjetaCarrito tarjeta = new TarjetaCarrito((Cancion) c);
                 panelShowData.add(tarjeta);
             } else if (c instanceof Album) {
-                TarjetaCarrito tarjeta = new TarjetaCarrito((Album) c);
+                TarjetaAlbum tarjeta = new TarjetaAlbum((Album) c, null);
                 panelShowData.add(tarjeta);
             }else if(c instanceof Pelicula){
                 TarjetaCarrito tarjeta = new TarjetaCarrito((Pelicula) c);

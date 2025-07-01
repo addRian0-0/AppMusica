@@ -5,8 +5,8 @@ import model.*;
 import java.util.*;
 
 public class CarritoDAO {
-    // Lista estática (carrito global)
     private static final List<Object> listaVisual = new ArrayList<>();
+
     private static final Set<String> albumesVisuales = new HashSet<>();
 
     public static final List<Multimedia> listaMultimedia = new ArrayList<>();
@@ -21,13 +21,14 @@ public class CarritoDAO {
 
     public static void agregarVisualmente(Album album) {
         if (!albumesVisuales.contains(album.getIdAlbum())) {
-            listaVisual.add(album); // se muestra solo el álbum
+            listaVisual.add(album); // solo para mostrar
             albumesVisuales.add(album.getIdAlbum());
         }
     }
 
+
     public static List<Object> getItems() {
-        return Collections.singletonList(listaMultimedia);
+        return listaVisual; // solo los álbumes visuales
     }
 
     public static void limpiar() {
